@@ -4,6 +4,7 @@ import * as React from 'react';
 import Map from '../components/map';
 import Layout from './Layout';
 import ControlPanel from '../components/controlPanel';
+import { ReactComponent as CurcioLogo } from '../assets/images/logo-curcio.svg';
 
 const dropdownOptions = [
   {
@@ -81,6 +82,20 @@ export default function MapPage() {
           selectedWeek={selectedWeek}
           selectedValue={selectedValue}
         />
+      </div>
+      <div className="bottom-container columns">
+        <div className="investor-logo column">
+          <CurcioLogo />
+        </div>
+        <div className="column">
+          <div className="value-legend">
+            <p>Categorias del ICAire</p>
+            <div>
+              Chart
+            </div>
+            <p>What is this?</p>
+          </div>
+        </div>
       </div>
     </Layout>
   );

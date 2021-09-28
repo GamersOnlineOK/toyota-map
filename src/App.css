@@ -40,7 +40,7 @@ h1 {
   width: 417px;
   height: 205px;
   margin: 336px 826px 259px 0;
-  font-family: "Sahar", "Arial", SansSerif;
+  font-family: "Sahar", "Arial", sans-serif;
   font-size: 20px;
   font-weight: normal;
   font-stretch: normal;
@@ -116,7 +116,6 @@ h1 {
 .dropdown-control {
   background: none !important;
   color: white !important;
-  font-family: Sahar;
   font-size: 1rem !important;
   border-radius: 0 !important;
   border-color: #979797 !important;
@@ -142,8 +141,6 @@ h1 {
   padding: 13px 26px !important;
   font-size: 1rem !important;
   font-color: black;
-  font-family: Sahar;
-  /*font-weight: lighter;*/
 }
 
 .dropdown-item:hover {
@@ -166,12 +163,26 @@ h1 {
 .property-selector button.is-active {
   border-left: solid 1px #00ff9d;
   width: 100px;
-  /*background: #00ff9d !important;*/
   padding: 15px;
   padding-left: 20px;
   padding-right: 40px;
   background: linear-gradient(110deg, #00ff9d 80%, transparent 20%) !important;
   color: black;
   font-weight: bold;
+  font-size: 1rem;
 }
 
+.bottom-container {
+  padding: 50px;
+}
+
+.investor-logo svg {
+  position: absolute;
+  bottom: 50px;
+}
+
+.value-legend {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}

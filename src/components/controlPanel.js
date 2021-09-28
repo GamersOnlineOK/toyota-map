@@ -15,7 +15,7 @@ function ControlPanel(props) {
     selectWeek(id)
   }
 
-  const [activeValueId, setActiveValue] = useState(null);
+  const [activeValueId, setActiveValue] = useState(selectedValue.id);
   const proxySelectValue = (id) => {
     setActiveValue(id)
     selectValue(id)
@@ -44,7 +44,7 @@ function ControlPanel(props) {
       <div className="property-selector mt-6">
         <div className="columns is-multiline is-mobile">
           {valueOptions.map((object, index) => {
-            const className = activeValueId === object.id ? 'is-active' : 'media';
+            const className = activeValueId === object.id ? 'is-active' : '';
             return (
               <div className="column is-full pb-2 pt-2">
                 <button className={className} id={object.id} key={index} onClick={(e) => proxySelectValue(object.id, e)}>{object.text}</button>
