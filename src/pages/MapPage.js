@@ -5,6 +5,9 @@ import Map from '../components/map';
 import Layout from './Layout';
 import ControlPanel from '../components/controlPanel';
 import { ReactComponent as CurcioLogo } from '../assets/images/logo-curcio.svg';
+import MapLegend from '../components/mapLegend';
+import EchoIndexModal from '../components/echoIndexModal';
+import AboutModal from '../components/aboutModal';
 
 const dropdownOptions = [
   {
@@ -63,8 +66,26 @@ export default function MapPage() {
     setValue(val);
   };
 
+  const [showValueDescription, setShowValueDescription] = useState(null);
+  const toggleValueDescription = (value) => () => {
+    console.log(showValueDescription);
+    setShowValueDescription(value);
+  };
+
+  const [showEchoIndexModal, setShowEchoIndexModal] = useState(false);
+  const toggleEchoIndexModal = () => {
+    setShowEchoIndexModal(!showEchoIndexModal);
+  };
+
+  const [showAboutModal, setShowAboutModal] = useState(false);
+  const toggleAboutModal = () => {
+    setShowAboutModal(!showAboutModal);
+  };
+
   return (
-    <Layout>
+    <Layout toggleEchoIndexModal={toggleEchoIndexModal} toggleAboutModal={toggleAboutModal}>
+      <EchoIndexModal toggle={toggleEchoIndexModal} active={showEchoIndexModal} />
+      <AboutModal toggle={toggleAboutModal} active={showAboutModal} />
       <div className="controls-container">
         <h1>MONTEVIDEO</h1>
         <ControlPanel
@@ -88,13 +109,7 @@ export default function MapPage() {
           <CurcioLogo />
         </div>
         <div className="column">
-          <div className="value-legend">
-            <p>Categorias del ICAire</p>
-            <div>
-              Chart
-            </div>
-            <p>What is this?</p>
-          </div>
+          <MapLegend toggleValueDescription={toggleValueDescription(selectedValue)} />
         </div>
       </div>
     </Layout>

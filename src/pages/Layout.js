@@ -1,22 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-// import { NavLink } from 'react-router-dom';
-// import * as Routes from '../constants/routes';
-
-// Logo
-// Echo index title and link to description modal
-// About button link to about modal\
-// Location title
-// Weeks dropdown selector
-// Property selector
-// Property description with close button
-// Investor logo
-// Color leyend with what is this link (this link should open the property description,
-//     the scale will probably be dinamyc
-
 import { ReactComponent as EchoLogo } from '../assets/images/logo-white.svg';
 
 // eslint-disable-next-line react/prop-types
-const Layout = ({ children }) => (
+const Layout = ({ children, toggleEchoIndexModal, toggleAboutModal }) => (
   <>
     <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -24,8 +9,9 @@ const Layout = ({ children }) => (
           <EchoLogo />
         </a>
 
-        <a
-          role="button"
+        <button
+          type="button"
+          // role="button"
           className="navbar-burger"
           aria-label="menu"
           aria-expanded="false"
@@ -34,21 +20,23 @@ const Layout = ({ children }) => (
           <span aria-hidden="true" />
           <span aria-hidden="true" />
           <span aria-hidden="true" />
-        </a>
+        </button>
       </div>
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start navbar-center">
-          <a className="navbar-item">
+          {/* <span className="button modal-button" data-target="about-modal">Open modal</span> */}
+
+          <button style={{ background: 'none', border: 'none' }} type="button" className="navbar-item" onClick={toggleEchoIndexModal}>
             ECHO INDEX
-          </a>
+          </button>
 
         </div>
 
         <div className="navbar-end">
-          <a className="navbar-item padded-about boxy-outline">
+          <button style={{ background: 'none' }} type="button" className="navbar-item padded-about boxy-outline" onClick={toggleAboutModal}>
             ABOUT
-          </a>
+          </button>
         </div>
       </div>
     </nav>

@@ -32,6 +32,13 @@ h1 {
   letter-spacing: 6px;
 }
 
+h2 {
+  text-align: center;
+  color: black;
+  font-size: 99px !important;
+  font-weight: lighter !important;
+}
+
 .default-background {
   background-color: #09101d;
 }
@@ -62,6 +69,10 @@ h1 {
   background-color: transparent !important;
   background-image: none !important;
   padding: 20px 50px;
+}
+
+.navbar button {
+  cursor: pointer;
 }
 
 .navbar-center {
@@ -182,7 +193,28 @@ h1 {
 }
 
 .value-legend {
+  color: white;
+  font-size: 0.8rem;
+  text-align: right;
   position: absolute;
+  width: 25%;
   bottom: 50px;
   right: 50px;
+}
+
+.padded-close-button {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  padding: 40px !important;
+  font-size: x-small;
+  background: none;
+}
+
+.padded-close-button:hover {
+  color: #00ff9d;
+}
+
+.modal-card {
+  padding: 0 50px;
 }
