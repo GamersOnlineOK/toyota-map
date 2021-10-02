@@ -2,9 +2,11 @@
 
 import externalModuleSmallImg from '../assets/images/modulo-externo-small-about-modal.png';
 import externalModuleSmallP2Img from '../assets/images/modulo-externo-small-p2-about-modal.png';
-import devicePieces from '../assets/images/dispositivo-dislocado-about-modal.png';
+// import devicePieces from '../assets/images/dispositivo-dislocado-about-modal.png';
+import devicePieces from '../assets/images/dispositivo-dislocado-text.png';
 import carImage from '../assets/images/cuanto-tiempo-circula-hibrido-modo-electrico.png';
 import profilePicture from '../assets/images/profile-picture.png';
+import Collapsable from './collapsable';
 
 export default function AboutModal(props) {
   const { active, toggle } = props;
@@ -47,10 +49,25 @@ export default function AboutModal(props) {
           </div>
         </div>
         <p><b>Dispositivo dislocado</b></p>
-        <div className="columns">
+        <div style={{ marginBottom: '70px' }} className="columns is-full">
           <img src={devicePieces} alt="device pieces" />
-          Faltan los indicadores
         </div>
+        {/* <div className="columns is-full"> */}
+        {/*  <div className="columns device-indicators"> */}
+        {/*    <div style={{ marginLeft: '20%' }} className="column indicator"> */}
+        {/*      <p>Carcasa</p> */}
+        {/*    </div> */}
+        {/*    <div style={{ marginLeft: '30%' }} className="column indicator"> */}
+        {/*      <p>Paragolpes</p> */}
+        {/*    </div> */}
+        {/*    <div style={{ marginLeft: '9%' }} className="column indicator"> */}
+        {/*      <p>Sello adhesivo</p> */}
+        {/*    </div> */}
+        {/*    <div className="column indicator"> */}
+        {/*      <p>Pieza frontal</p> */}
+        {/*    </div> */}
+        {/*  </div> */}
+        {/* </div> */}
         <img style={{ minWidth: 'calc(100% + 300px)', marginLeft: '-150px' }} src={carImage} alt="car" />
         <div className="section" />
         <h3>About Curcio Capitals</h3>
@@ -73,6 +90,7 @@ export default function AboutModal(props) {
             <img style={{ width: '70%' }} src={profilePicture} alt="" />
           </div>
         </div>
+        <Collapsable />
       </div>
     </div>
   );

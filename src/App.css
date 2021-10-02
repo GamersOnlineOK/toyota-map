@@ -161,7 +161,7 @@ h3 {
 .dropdown-item {
   padding: 13px 26px !important;
   font-size: 1rem !important;
-  font-color: black;
+  color: black;
 }
 
 .dropdown-item:hover {
@@ -232,4 +232,21 @@ h3 {
 .modal-card {
   padding: 0 150px;
   overflow-y: scroll !important;
+  background: #f9f9f9 !important;
+}
+
+.device-indicators {
+  width: 100%;
+  margin-top: -100px !important;
+}
+
+.device-indicators .indicator {
+  font-weight: bold;
+  font-size: 0.6rem;
+  width: 25%;
+  height: 0.1vw;
+  border-left: #00ff9d solid 2px;
+  padding-top: 150px;
+  padding-bottom: 0px;
+  z-index: -100;
 }
