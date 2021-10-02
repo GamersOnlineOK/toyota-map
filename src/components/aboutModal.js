@@ -35,7 +35,7 @@ export default function AboutModal(props) {
           </div>
           <div className="column is-one-fifth">
             <p><b>Modulo externo</b></p>
-            <p>Dispositivo integrado</p>
+            {/* <p>Dispositivo integrado</p> */}
             <img style={{ width: '237px', margin: '10px 0px' }} src={externalModuleSmallImg} alt="external module" />
             <img style={{ width: '237px' }} src={externalModuleSmallP2Img} alt="external module part 2" />
             <small>
