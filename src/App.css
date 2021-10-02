@@ -52,9 +52,6 @@ h3 {
 }
 
 .intro-p {
-  width: 417px;
-  height: 205px;
-  margin: 336px 826px 259px 0;
   font-family: "Sahar", "Arial", sans-serif;
   font-size: 20px;
   font-weight: normal;
@@ -71,6 +68,8 @@ h3 {
   height: 40px;
   padding: 14px 54.5px 10px;
   background-color: #00ff9d;
+  border: none;
+  letter-spacing: 2.4px;
 }
 
 .navbar {
