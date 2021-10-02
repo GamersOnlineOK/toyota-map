@@ -46,7 +46,7 @@ function ControlPanel(props) {
           {valueOptions.map((object, index) => {
             const className = activeValueId === object.id ? 'is-active' : '';
             return (
-              <div className="column is-full pb-2 pt-2">
+              <div key={object.id} className="column is-full pb-2 pt-2">
                 <button className={className} id={object.id} key={index} onClick={(e) => proxySelectValue(object.id, e)}>{object.text}</button>
               </div>
             )

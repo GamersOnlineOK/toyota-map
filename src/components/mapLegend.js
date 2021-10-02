@@ -40,7 +40,14 @@ export default function MapLegend(props) {
           </div>
         ))}
       </div>
-      <button type="button" style={{ marginTop: '10px' }} onClick={toggleValueDescription}>What is this?</button>
+      <button
+        className="map-legend-button"
+        type="button"
+        onClick={toggleValueDescription}
+      >
+        <span style={{ marginRight: '4px' }} className="map-legend-exclamation">!</span>
+        What is this?
+      </button>
     </div>
   );
 }

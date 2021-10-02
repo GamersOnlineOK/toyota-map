@@ -18,6 +18,7 @@ export default function Collapsable() {
     <div>
       {items.map((item) => (
         <div
+          key={item.title}
           style={{
             borderBottom: 'black solid 1px', paddingLeft: 0, paddingRight: 0, position: 'relative',
           }}

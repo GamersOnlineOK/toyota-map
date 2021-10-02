@@ -249,3 +249,45 @@ h3 {
   padding-bottom: 0px;
   z-index: -100;
 }
+
+.map-legend-button {
+  width: 140px;
+  margin-top: 10px;
+  border: none;
+  background: none;
+  color: white;
+  text-align: right;
+  cursor: pointer;
+}
+
+.map-legend-button:hover {
+  color: #00ff9d;
+}
+
+.map-legend-exclamation {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.7rem;
+  border: solid 1px white;
+  border-radius: 50%;
+  width: 15%;
+  display: inline-block;
+  padding-top: 3%;
+}
+
+.map-legend-button:hover > .map-legend-exclamation {
+  border-color: #00ff9d;
+}
+
+.map-legend-container {
+  position: absolute;
+  bottom: 400px;
+  right: 50px;
+  width: 500px;
+  transition: right 0.2s ease-out;
+}
+
+.map-legend-container-hide {
+  right: -1000px;
+  /*z-index: -20000;*/
+}
