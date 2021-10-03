@@ -216,6 +216,9 @@ h3 {
   width: 25%;
   bottom: 50px;
   right: 50px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.45), rgba(0, 0, 0, 0.4) 100%);
+  border-top-left-radius: 250px;
+  box-shadow: -20px 0px 100px 100px rgba(0,0,0,0.43);
 }
 
 .padded-close-button {
@@ -282,15 +285,50 @@ h3 {
   border-color: #00ff9d;
 }
 
-.map-legend-container {
+.map-value-desc-container {
   position: absolute;
-  bottom: 400px;
-  right: 50px;
-  width: 500px;
+  bottom: 250px;
+  right: 0;
+  padding-right: 50px;
+  padding-left: 150px;
+  padding-top: 100px;
+  width: 600px;
   transition: right 0.2s ease-out;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.7) 0, rgba(0,0,0,0.6), rgba(0, 0, 0, 0.45) 100%);
+  border-top-left-radius: 250px;
+  box-shadow: -20px 0px 200px 200px rgba(0,0,0,0.5);
+  z-index: -100;
 }
 
-.map-legend-container-hide {
+.map-value-desc-container-hide {
   right: -1000px;
   /*z-index: -20000;*/
+}
+
+.map-value-desc-container .delete {
+  padding: 15px !important;
+  max-height: 60px !important;
+  max-width: 60px !important;
+}
+
+.close-button-wrapper {
+  position: relative;
+  float: right;
+  display: block;
+  margin-top: -60px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: normal;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  border: solid 1px #979797;
+  border-radius: 20px;
+  background: none;
+}
+
+.close-button-wrapper:hover {
+  color: #00ff9d;
+  border-color: #00ff9d;
 }

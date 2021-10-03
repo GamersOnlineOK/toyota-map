@@ -6,11 +6,18 @@ export default function ValueDescription(props) {
   };
 
   return (
-    <div className={`map-legend-container ${showValueDescription ? '' : 'map-legend-container-hide'}`}>
-      <div style={{ background: 'none' }} className="notification">
-        <button onClick={closeSelectedValue} type="button" className="delete" aria-label="close-button" />
-        <h5 style={{ }}>{showValueDescription && showValueDescription.title}</h5>
-        <p style={{ color: 'white' }}>{showValueDescription && showValueDescription.description}</p>
+    <div className={`map-value-desc-container ${showValueDescription ? '' : 'map-value-desc-container-hide'}`}>
+      <div style={{ background: 'none', paddingRight: '0' }} className="notification">
+        <button type="button" onClick={closeSelectedValue} className="close-button-wrapper">
+          x
+        </button>
+        <h5 style={{
+          marginLeft: '-120px', fontWeight: 'bold', fontSize: '2em', textDecoration: 'underline #00ff9d', paddingBottom: '10px', textUnderlineOffset: '20px',
+        }}
+        >
+          {showValueDescription && showValueDescription.title}
+        </h5>
+        <p style={{ color: 'white', marginTop: '-20px' }}>{showValueDescription && showValueDescription.description}</p>
       </div>
     </div>
   );
