@@ -8,6 +8,7 @@ import geoData from '../assets/data/features.json';
 import weeklyValues from '../assets/data/weekValues.json';
 import { styleLayer } from './mapStyle';
 import updateWeek from '../helpers/utils';
+import useWindowSize from './windowSize';
 
 export default function Map(props) {
   const { selectedWeek, selectedValue } = props;
@@ -21,6 +22,21 @@ export default function Map(props) {
     pitch: 60, // pitch in degrees
     bearing: 50,
   });
+
+  function redrawMap() {
+    setViewport({
+      ...viewport,
+      width: '100%',
+      height: '119vh',
+    });
+  }
+
+  const { windowWidth, windowHeight } = useWindowSize();
+
+  // redraw if the map's parent container or window changes size
+  useEffect(() => {
+    redrawMap();
+  }, [windowWidth, windowHeight]);
 
   const [paintLayer, setPaintLayer] = useState(null);
 

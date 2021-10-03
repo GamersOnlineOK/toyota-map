@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 export default function ValueDescription(props) {
   const { showValueDescription, setShowValueDescription } = props;
 

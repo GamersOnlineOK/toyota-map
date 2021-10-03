@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types,max-len */
-
 import externalModuleSmallImg from '../assets/images/modulo-externo-small-about-modal.png';
 import externalModuleSmallP2Img from '../assets/images/modulo-externo-small-p2-about-modal.png';
 // import devicePieces from '../assets/images/dispositivo-dislocado-about-modal.png';
@@ -24,14 +22,32 @@ export default function AboutModal(props) {
         </div>
         <div className="columns modal-container">
           <div className="column is-two-fifths pr-6">
-            <p>El Proyecto Echo Index es un sistema de recolección de datos sobre diferentes aspectos relativos a la salud de los espacios y el impacto que puede tener en la vida de los seres vivos.</p>
+            <p>
+              El Proyecto Echo Index es un sistema de recolección de datos sobre diferentes aspectos
+              relativos a la salud de los espacios y el impacto que
+              puede tener en la vida de los seres vivos.
+            </p>
             <br />
-            <p>Las diferentes magnitudes relevadas son comunicadas a un servicio en la nube a través del smartphone de los colaboradores, donde son almacenados y preparados para el cálculo del índice Echo de calidad ambiental.</p>
+            <p>
+              Las diferentes magnitudes relevadas son comunicadas a un servicio en la nube a
+              través del smartphone de los colaboradores, donde son almacenados y preparados para el
+              cálculo del índice Echo de calidad ambiental.
+            </p>
             <br />
-            <p>Dicho índice comprende desde magnitudes simples y perceptibles por una persona, como la temperatura ambiente e intensidad sonora, hasta parámetros más sutiles y solo perceptibles a través de instrumentos especiales, como el nivel CO2 junto con la cantidad de partículas y compuestos orgánicos en el aire.</p>
+            <p>
+              Dicho índice comprende desde magnitudes simples y perceptibles por una persona,
+              como la temperatura ambiente e intensidad sonora, hasta parámetros más sutiles y
+              solo perceptibles a través de instrumentos especiales, como el nivel CO2 junto
+              con la cantidad de partículas y compuestos orgánicos en el aire.
+            </p>
           </div>
           <div className="column is-two-fifths pr-6">
-            <p>Estos datos se envían de forma anónima y geolocalizada a la nube, conformando la arquitectura del sistema completo compuesto por varios sensores Echo en movimiento constante. Este movimiento permite generar un mapa dinámico de la calidad ambiental, de cada zona del país.</p>
+            <p>
+              Estos datos se envían de forma anónima y geolocalizada a la nube, conformando
+              la arquitectura del sistema completo compuesto por varios sensores Echo en
+              movimiento constante. Este movimiento permite generar un
+              mapa dinámico de la calidad ambiental, de cada zona del país.
+            </p>
           </div>
           <div className="column is-one-fifth">
             <p><b>Modulo externo</b></p>
@@ -78,8 +94,9 @@ export default function AboutModal(props) {
               principios y creencias. Bajo los paraguas de “mejora contínua”, “respeto hacia
               las personas” y “crecimiento sustentable”, la compañía persigue el ideal
               de siempre procurar superarse a sí misma, cuidando a las personas y al Medio Ambiente.
-              Esta tarea la lleva a cabo mediante la introducción de tecnologías, productos y servicios
-              que contribuyan al bienestar ambiental y hagan más sencilla la vida de las personas en el mundo.
+              Esta tarea la lleva a cabo mediante la introducción de tecnologías,
+              productos y servicios que contribuyan al bienestar ambiental
+              y hagan más sencilla la vida de las personas en el mundo.
             </p>
             <br />
             <br />
