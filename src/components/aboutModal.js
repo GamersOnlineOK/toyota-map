@@ -108,6 +108,7 @@ export default function AboutModal(props) {
           </div>
         </div>
         <Collapsable />
+        <div className="pt-6" />
       </div>
     </div>
   );

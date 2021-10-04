@@ -332,3 +332,26 @@ h3 {
   color: #00ff9d;
   border-color: #00ff9d;
 }
+
+.collapsable-toggle {
+  background: none;
+  border: none;
+  right: 0;
+  position: absolute;
+  font-weight: lighter;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.collapsable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.15s ease-out;
+}
+
+.collapsable-content.expanded {
+  transition: max-height 0.25s ease-in;
+  max-height: 300px;
+  overflow: auto;
+}
+
