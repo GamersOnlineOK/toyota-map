@@ -170,6 +170,10 @@ h3 {
   background: #00ff9d !important;
 }
 
+.property-selector {
+  margin-top: 3rem;
+}
+
 .property-selector button {
   background: none !important;
   border: none;
@@ -197,7 +201,7 @@ h3 {
 
 .bottom-container {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   display: flex;
   width: 100%;
   padding-left: 50px;
@@ -205,7 +209,7 @@ h3 {
 
 .investor-logo svg {
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
 }
 
 .value-legend {
@@ -214,7 +218,7 @@ h3 {
   text-align: right;
   position: absolute;
   width: 25%;
-  bottom: 50px;
+  bottom: 30px;
   right: 50px;
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.45), rgba(0, 0, 0, 0.4) 100%);
   border-top-left-radius: 250px;
@@ -355,3 +359,36 @@ h3 {
   overflow: auto;
 }
 
+@media screen  and (min-height: 0) and (max-height: 750px) {
+
+  .navbar {
+    background-color: transparent !important;
+    background-image: none !important;
+    padding: 0px 50px;
+  }
+
+  .controls-container {
+    top: 120px;
+  }
+
+  .property-selector {
+    margin-top: 1rem !important;
+  }
+
+  .property-selector button {
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+
+  .property-selector button.is-active {
+    width: 100px;
+    /*padding: 10px;*/
+    padding-left: 15px;
+    padding-right: 30px;
+    font-size: 0.7rem;
+  }
+
+  .control-panel {
+    margin-top: 1rem;
+  }
+}

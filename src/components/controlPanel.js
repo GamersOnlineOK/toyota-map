@@ -51,7 +51,7 @@ function ControlPanel(props) {
         </div>
       </div>
 
-      <div className="property-selector mt-6">
+      <div className="property-selector">
         <div className="columns is-multiline is-mobile">
           {valueOptions.map((object) => {
             const className = activeValueId === object.id ? 'is-active' : '';
