@@ -57,7 +57,7 @@ const valueOptions = [
   {
     id: 'uv',
     text: 'UV',
-    title: 'UV: radiación lumínica',
+    title: 'UV',
     description: 'La radiación ultravioleta (UV) es una forma de radiación electromagnética que proviene mayormente del Sol. La exposición sin cuidado a los mismos dañan las células de la piel, lo que puede terminar provocando diferentes tipos de enfermedades.',
   },
 ];
