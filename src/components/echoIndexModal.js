@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types,max-len */
 
 import ToyotaYaris from '../assets/images/toyota-yaris.png';
+import SVG from './svg';
+import EchoLogo from '../assets/images/logo-black.svg';
 
 const chartItems = [
   {
@@ -34,11 +36,24 @@ export default function EchoIndexModal(props) {
 
   return (
     <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeInScale ${active ? 'is-active' : ''}`}>
-      <div style={{ paddingRight: 0 }} className="modal-content modal-card">
-        <h2 style={{ textAlign: 'left', marginTop: '70px', lineHeight: '0.9' }}>What means</h2>
+      <div className="modal-content modal-card modal-index">
+        <div style={{ marginTop: '40px' }} className="modal-nav is-hidden-tablet">
+          <SVG svgImage={EchoLogo} className="nav-logo" />
+          <button
+            type="button"
+            onClick={toggle}
+            className="close-button-wrapper"
+            style={{
+              color: '#979797', marginTop: '-13px', width: '45px', height: '45px',
+            }}
+          >
+            x
+          </button>
+        </div>
+        <h2 className="modal-index-title">What means</h2>
         <div className="columns mt-0">
           <div className="column is-one-third">
-            <h2 style={{ textAlign: 'left', lineHeight: '1' }}>ECHO INDEX?</h2>
+            <h2 className="modal-index-subtitle">ECHO INDEX?</h2>
             <div className="pt-6">
               <b>Adipiscing</b>
               <div className="columns">
@@ -53,7 +68,7 @@ export default function EchoIndexModal(props) {
               </div>
             </div>
           </div>
-          <div className="column is-one-third pl-6 pt-6">
+          <div className="column is-one-third pt-6">
             <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies elit ut scelerisque fringilla</b>
             <br />
             <br />
@@ -64,13 +79,13 @@ export default function EchoIndexModal(props) {
             </p>
             <br />
             <br />
-            <div style={{ border: 'solid rgba(0,0,0,0.2) 2px', padding: '30px' }}>
+            <div className="scale-container">
               <p style={{ letterSpacing: '3px', fontWeight: 'bold', fontSize: '0.5rem' }}>ESCALA TITLE</p>
               <div style={{ display: 'flex', marginTop: '10px' }}>
                 {chartItems.map((item) => (
                   <div key={item.value} style={{ flexGrow: 1 }}>
                     <div style={{ borderBottom: `solid 2px ${item.color}` }} />
-                    <div style={{ textAlign: 'right', fontSize: '0.5rem' }}>{item.value}</div>
+                    <div style={{ textAlign: 'right', fontSize: '0.7rem' }}>{item.value}</div>
                   </div>
                 ))}
               </div>
@@ -79,7 +94,7 @@ export default function EchoIndexModal(props) {
           <div className="column is-one-third">
             <img src={ToyotaYaris} alt="toyota yaris" />
           </div>
-          <button type="button" className="padded-close-button boxy-outline" aria-label="close" onClick={toggle}>
+          <button type="button" className="padded-close-button boxy-outline is-hidden-mobile" aria-label="close" onClick={toggle}>
             CLOSE
           </button>
         </div>

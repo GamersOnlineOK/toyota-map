@@ -292,6 +292,21 @@ h3 {
   background: #f9f9f9 !important;
 }
 
+.modal-index {
+  padding-right: 0;
+}
+
+.modal-index-title {
+  text-align: left;
+  margin-top: 70px;
+  line-height: 0.9;
+}
+
+.modal-index-subtitle {
+  text-align: left;
+  line-height: 1;
+}
+
 .device-indicators {
   width: 100%;
   margin-top: -100px !important;
@@ -417,7 +432,12 @@ h3 {
 }
 
 .profile-picture {
- width: 80%;
+  width: 80%;
+}
+
+.scale-container {
+  border: solid rgba(0,0,0,0.2) 2px;
+  padding: 30px
 }
 
 @media screen and (min-width: 768px) and (max-width: 1080px) {
@@ -433,6 +453,14 @@ h3 {
     height: 125vh !important;
     top: 50%;
     right: -160%;
+  }
+
+  .modal-index-title {
+    font-size: 4rem !important;
+  }
+
+  .modal-index-subtitle {
+    font-size: 4rem !important;
   }
 }
 
@@ -530,6 +558,10 @@ h3 {
     padding: 0 22px;
   }
 
+  .modal-index-title {
+    margin-top: 30px;
+  }
+
   h2 {
     text-align: left;
     font-size: 4rem !important;
@@ -541,6 +573,11 @@ h3 {
 
   .profile-picture {
     width: 100%;
+  }
+
+  .scale-container {
+    border: unset;
+    padding: 30px
   }
 }
 
