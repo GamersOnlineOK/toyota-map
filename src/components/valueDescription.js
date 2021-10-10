@@ -11,10 +11,7 @@ export default function ValueDescription(props) {
         <button type="button" onClick={closeSelectedValue} className="close-button-wrapper">
           x
         </button>
-        <h5 style={{
-          marginLeft: '-120px', fontWeight: 'bold', fontSize: '2em', textDecoration: 'underline #00ff9d', paddingBottom: '10px', textUnderlineOffset: '20px',
-        }}
-        >
+        <h5 className="map-value-desc-title">
           {showValueDescription && showValueDescription.title}
         </h5>
         <p style={{ color: 'white', marginTop: '-20px' }}>{showValueDescription && showValueDescription.description}</p>
