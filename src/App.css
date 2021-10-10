@@ -449,7 +449,7 @@ h3 {
     padding-right: 0;
     padding-left: 20px;
     width: 90px;
-    top: 80px;
+    top: 80px !important;
   }
 
   .control-panel {
