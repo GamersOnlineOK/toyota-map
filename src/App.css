@@ -423,6 +423,7 @@ h3 {
     right: 0;
     left:0;
     top: -4%;
+    height: 25vh !important;
   }
 
   .intro-container {
