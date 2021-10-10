@@ -51,6 +51,21 @@ h3 {
   background-color: #09101d;
 }
 
+#globe-video {
+  transform: rotateY(180deg) translateY(-50%);
+  position: fixed;
+  width: 300%;
+  max-width: 300% !important;
+  height: 125vh !important;
+  z-index: 100;
+  top: 50%;
+  right: -140%;
+}
+
+.intro-container {
+  z-index: 200;
+}
+
 .intro-p {
   font-family: "Sahar", "Arial", sans-serif;
   font-size: 20px;
@@ -359,8 +374,31 @@ h3 {
   overflow: auto;
 }
 
-@media screen  and (min-height: 0) and (max-height: 750px) {
+@media screen and (min-width: 768px) and (max-width: 1080px){
+  #globe-video {
+    width: 300%;
+    height: 125vh !important;
+    top: 50%;
+    right: -160%;
+  }
+}
 
+@media screen and (min-width: 0) and (max-width: 768px){
+  #globe-video {
+    width: 100%;
+    right: 0;
+    left:0;
+    top: -4%;
+  }
+
+  .intro-container {
+    padding: 20% 0 !important;
+    padding-top: 30% !important;
+  }
+
+}
+
+@media screen and (min-height: 0) and (max-height: 750px) {
   .navbar {
     background-color: transparent !important;
     background-image: none !important;
@@ -392,3 +430,4 @@ h3 {
     margin-top: 1rem;
   }
 }
+

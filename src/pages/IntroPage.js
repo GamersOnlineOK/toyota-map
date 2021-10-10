@@ -1,13 +1,17 @@
 import { NavLink } from 'react-router-dom';
 import * as Routes from '../constants/routes';
 import { ReactComponent as EchoLogo } from '../assets/images/logo-white.svg';
+import GlobeVid from '../assets/video/globe.webm';
 
 export default function IntroPage() {
   return (
     <>
+      <video autoPlay loop muted id="globe-video">
+        <source src={GlobeVid} type="video/webm" />
+      </video>
       <div style={{ height: '100vh' }} className="container default-background">
         <div style={{ height: '100vh' }} className="columns is-vcentered">
-          <div className="column is-half">
+          <div className="column is-half intro-container">
             <div className="is-centered has-text-centered is-halfheight">
               <EchoLogo style={{ display: 'inline-block', marginBottom: '10px' }} />
               <p style={{ padding: '60px' }} className="intro-p has-text-centered is-2">
