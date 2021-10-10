@@ -112,6 +112,7 @@ export default function MapPage() {
           selectValue={selectValue}
         />
       </div>
+      <div className="map-mobile-overlay is-hidden-tablet" />
       <div className="map-container">
         <Map
           width="100%"
