@@ -1,4 +1,5 @@
-import { ReactComponent as EchoLogo } from '../assets/images/logo-white.svg';
+import EchoLogo from '../assets/images/logo-white.svg';
+import SVG from '../components/svg';
 
 // eslint-disable-next-line react/prop-types
 const Layout = ({ children, toggleEchoIndexModal, toggleAboutModal }) => (
@@ -6,16 +7,21 @@ const Layout = ({ children, toggleEchoIndexModal, toggleAboutModal }) => (
     <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="/">
-          <EchoLogo />
+          <SVG svgImage={EchoLogo} className="nav-logo" />
         </a>
+
+        <button style={{ background: 'none', border: 'none' }} type="button" className="navbar-item mobile-echo-button" onClick={toggleEchoIndexModal}>
+          ECHO INDEX
+        </button>
 
         <button
           type="button"
           // role="button"
-          className="navbar-burger"
+          className="navbar-burger boxy-outline"
           aria-label="menu"
           aria-expanded="false"
           data-target="navbarBasicExample"
+          onClick={toggleAboutModal}
         >
           <span aria-hidden="true" />
           <span aria-hidden="true" />
