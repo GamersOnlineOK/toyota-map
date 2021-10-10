@@ -1,10 +1,12 @@
 import externalModuleSmallImg from '../assets/images/modulo-externo-small-about-modal.png';
 import externalModuleSmallP2Img from '../assets/images/modulo-externo-small-p2-about-modal.png';
-// import devicePieces from '../assets/images/dispositivo-dislocado-about-modal.png';
 import devicePieces from '../assets/images/dispositivo-dislocado-text.png';
+import devicePiecesMobile from '../assets/images/dispositivo-dislocado-mobile.png';
 import carImage from '../assets/images/cuanto-tiempo-circula-hibrido-modo-electrico.png';
 import profilePicture from '../assets/images/profile-picture.png';
 import Collapsable from './collapsable';
+import SVG from './svg';
+import EchoLogo from '../assets/images/logo-black.svg';
 
 export default function AboutModal(props) {
   const { active, toggle } = props;
@@ -13,8 +15,21 @@ export default function AboutModal(props) {
     <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeInScale ${active ? 'is-active' : ''}`}>
       <div className="modal-content modal-card">
         <div className="columns mt-6">
+          <div className="modal-nav is-hidden-tablet">
+            <SVG svgImage={EchoLogo} className="nav-logo" />
+            <button
+              type="button"
+              onClick={toggle}
+              className="close-button-wrapper"
+              style={{
+                color: '#979797', marginTop: '-13px', width: '45px', height: '45px',
+              }}
+            >
+              x
+            </button>
+          </div>
           <h2 className="column is-four-fifths">ABOUT THE PROJECT</h2>
-          <div className="column is-one-fifths">
+          <div className="column is-one-fifths is-hidden-mobile">
             <button type="button" className="padded-close-button boxy-outline" aria-label="close" onClick={toggle}>
               CLOSE
             </button>
@@ -54,7 +69,7 @@ export default function AboutModal(props) {
             {/* <p>Dispositivo integrado</p> */}
             <img style={{ width: '237px', margin: '10px 0px' }} src={externalModuleSmallImg} alt="external module" />
             <img style={{ width: '237px' }} src={externalModuleSmallP2Img} alt="external module part 2" />
-            <small>
+            <small style={{ display: 'block' }}>
               <small>
                 Previsualizacion del dispositivo
                 <br />
@@ -64,28 +79,12 @@ export default function AboutModal(props) {
             </small>
           </div>
         </div>
-        <p><b>Dispositivo dislocado</b></p>
         <div style={{ marginBottom: '70px' }} className="columns is-full">
-          <img src={devicePieces} alt="device pieces" />
+          <img src={devicePieces} alt="device pieces" className="is-hidden-mobile" />
+          <img src={devicePiecesMobile} alt="device pieces" className="is-hidden-tablet" />
         </div>
-        {/* <div className="columns is-full"> */}
-        {/*  <div className="columns device-indicators"> */}
-        {/*    <div style={{ marginLeft: '20%' }} className="column indicator"> */}
-        {/*      <p>Carcasa</p> */}
-        {/*    </div> */}
-        {/*    <div style={{ marginLeft: '30%' }} className="column indicator"> */}
-        {/*      <p>Paragolpes</p> */}
-        {/*    </div> */}
-        {/*    <div style={{ marginLeft: '9%' }} className="column indicator"> */}
-        {/*      <p>Sello adhesivo</p> */}
-        {/*    </div> */}
-        {/*    <div className="column indicator"> */}
-        {/*      <p>Pieza frontal</p> */}
-        {/*    </div> */}
-        {/*  </div> */}
-        {/* </div> */}
         <img style={{ minWidth: 'calc(100% + 300px)', marginLeft: '-150px' }} src={carImage} alt="car" />
-        <div className="section" />
+        <div className="section mobile-section" />
         <h3>About Curcio Capitals</h3>
         <div style={{ marginTop: '20px' }} className="columns">
           <div className="column is-three-fifths pr-6">
