@@ -416,6 +416,10 @@ h3 {
   overflow: auto;
 }
 
+.profile-picture {
+ width: 80%;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1080px) {
   .mobile-echo-button {
     position: relative;
@@ -533,6 +537,10 @@ h3 {
 
   .mobile-section {
     padding: 15px !important;
+  }
+
+  .profile-picture {
+    width: 100%;
   }
 }
 

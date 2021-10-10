@@ -103,7 +103,7 @@ export default function AboutModal(props) {
             <b style={{ fontSize: '1.3rem' }}>Curcio Capitals, históricamente ha llevado adelante diferentes iniciativas que reflejan esta filosofía.</b>
           </div>
           <div className="column is-two-fifths">
-            <img style={{ width: '70%' }} src={profilePicture} alt="" />
+            <img className="profile-picture" src={profilePicture} alt="" />
           </div>
         </div>
         <Collapsable />
