@@ -5,6 +5,7 @@ import Map from '../components/map';
 import Layout from './Layout';
 import ControlPanel from '../components/controlPanel';
 import { ReactComponent as CurcioLogo } from '../assets/images/logo-curcio.svg';
+import CurcioLogoChico from '../assets/images/logo-curcio-chico.png';
 import MapLegend from '../components/mapLegend';
 import EchoIndexModal from '../components/echoIndexModal';
 import AboutModal from '../components/aboutModal';
@@ -120,7 +121,8 @@ export default function MapPage() {
       </div>
       <div className="bottom-container columns">
         <div className="investor-logo column">
-          <CurcioLogo />
+          <CurcioLogo className="is-hidden-mobile" />
+          <img src={CurcioLogoChico} className="is-hidden-tablet" alt="curcio" />
         </div>
         <div className="column">
           <MapLegend toggleValueDescription={toggleValueDescription} />

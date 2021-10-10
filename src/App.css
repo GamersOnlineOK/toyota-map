@@ -395,7 +395,14 @@ h3 {
   overflow: auto;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1080px){
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+  .mobile-echo-button {
+    position: relative;
+    display: inline !important;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
   #globe-video {
     width: 300%;
     height: 125vh !important;
@@ -405,9 +412,14 @@ h3 {
 }
 
 @media screen and (min-width: 0) and (max-width: 768px) {
+
   .navbar {
     padding: 0 20px;
     padding-top: 20px;
+  }
+
+  .navbar-burger {
+    margin-left: 0 !important;
   }
 
   .nav-logo {
@@ -415,7 +427,10 @@ h3 {
   }
 
   .mobile-echo-button {
+    position: relative;
     display: inline !important;
+    margin-left: auto;
+    margin-right: 20px;
   }
 
   #globe-video {
@@ -423,7 +438,7 @@ h3 {
     right: 0;
     left:0;
     top: -4%;
-    height: 25vh !important;
+    height: auto !important;
   }
 
   .intro-container {
@@ -435,11 +450,20 @@ h3 {
     padding-left: 20px;
     width: 90px;
     top: 80px;
-
   }
 
   .control-panel {
     margin-top: 1rem;
+  }
+
+  .bottom-container {
+    padding-left: 20px;
+  }
+
+  .value-legend {
+    width: 60%;
+    bottom: 10px;
+    right: 20px;
   }
 }
 
