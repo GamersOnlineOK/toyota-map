@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as React from 'react';
 import Map from '../components/map';
 import Layout from './Layout';
@@ -64,6 +64,12 @@ const valueOptions = [
 ];
 
 export default function MapPage() {
+  const [isPageChange, setPageChange] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setPageChange(true), 1300);
+    return () => clearTimeout(timer);
+  }, []);
+
   const [selectedWeek, setWeek] = useState(dropdownOptions[0]);
   const selectWeek = (id) => {
     // Load week data to map for selected value
@@ -99,9 +105,10 @@ export default function MapPage() {
 
   return (
     <Layout toggleEchoIndexModal={toggleEchoIndexModal} toggleAboutModal={toggleAboutModal}>
+      <div className={`default-background loading-screen fade-out-fast ${isPageChange ? 'is-hidden' : ''}`} />
       <EchoIndexModal toggle={toggleEchoIndexModal} active={showEchoIndexModal} />
       <AboutModal toggle={toggleAboutModal} active={showAboutModal} />
-      <div className="controls-container opacity-0 fade-in-delay-1">
+      <div className="controls-container opacity-0 fade-in-delay-2">
         <h1>MONTEVIDEO</h1>
         <ControlPanel
           dropdownOptions={dropdownOptions}
@@ -120,7 +127,7 @@ export default function MapPage() {
           selectedValue={selectedValue}
         />
       </div>
-      <div className="bottom-container columns opacity-0 fade-in-delay-2">
+      <div className="bottom-container columns opacity-0 fade-in-delay-3">
         <div className="investor-logo column">
           <CurcioLogo className="is-hidden-mobile" />
           <img src={CurcioLogoChico} className="is-hidden-tablet" alt="curcio" />

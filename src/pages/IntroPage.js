@@ -1,10 +1,12 @@
-import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import * as Routes from '../constants/routes';
 import { ReactComponent as EchoLogo } from '../assets/images/logo-white.svg';
 import GlobeVid from '../assets/video/globe.webm';
 
 export default function IntroPage() {
+  const history = useHistory();
+
   const [isLoaded, setLoaded] = useState(false);
   const [fillBar, setFillBar] = useState(false);
   const [loadedFadeOut, setLoadedFadeOut] = useState(false);
@@ -27,8 +29,18 @@ export default function IntroPage() {
     return () => clearTimeout(timer);
   };
 
+  const [isPageChange, setPageChange] = useState(false);
+  const clickEnter = () => {
+    setPageChange(true);
+    const timer = setTimeout(() => {
+      history.push(Routes.MAP_PREVIEW);
+      return () => clearTimeout(timer);
+    }, 500);
+  };
+
   return (
     <>
+      <div className={`default-background loading-screen opacity-0 ${isPageChange ? 'fade-in-fast' : 'is-hidden'}`} />
       <div className={`default-background loading-screen  ${loadedFadeOut ? 'loaded-fade-out' : ''} ${isLoaded ? 'is-hidden' : ''}`}>
         <div className={`loading-logo ${fillBar ? 'fully-loaded' : ''}`} />
       </div>
@@ -52,9 +64,7 @@ export default function IntroPage() {
                   Introducing Echo Index, un proyecto para medir el estado de salud
                   de los lugares y el efecto en la vida humana, en tiempo real.
                 </p>
-                <NavLink to={Routes.MAP_PAGE} className={`opacity-0 ${isLoaded ? 'fade-in-delay-1' : ''}`}>
-                  <button className="intro-button" type="button">ENTER</button>
-                </NavLink>
+                <button className={`opacity-0 intro-button ${isLoaded ? 'fade-in-delay-1' : ''}`} type="button" onClick={clickEnter}>ENTER</button>
               </div>
             </div>
           </div>

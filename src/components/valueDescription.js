@@ -6,7 +6,7 @@ export default function ValueDescription(props) {
   };
 
   return (
-    <div className={`opacity-0 fade-in-delay-3 map-value-desc-container ${showValueDescription ? '' : 'map-value-desc-container-hide'}`}>
+    <div className={`map-value-desc-container ${showValueDescription ? '' : 'map-value-desc-container-hide'}`}>
       <div style={{ background: 'none', paddingRight: '0' }} className="notification">
         <button type="button" onClick={closeSelectedValue} className="close-button-wrapper">
           x

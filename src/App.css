@@ -97,6 +97,14 @@ h3 {
   transform: translateY(0);
 }
 
+.fade-out-fast {
+  animation: 0.5s cubic-bezier(0.25, 0.1, 0.1, 1) 1s normal forwards 1 fadeout;
+}
+
+.fade-in-fast {
+  animation: 0.5s cubic-bezier(0.25, 0.1, 0.1, 1) 0s normal forwards 1 fadein;
+}
+
 .fade-in {
   animation: 1s cubic-bezier(0.25, 0.1, 0.1, 1) 0.7s normal forwards 1 fadein;
 }
@@ -116,6 +124,20 @@ h3 {
 .opacity-0 {
   opacity: 0;
 }
+
+/* The fade in and animate up text */
+/*.content_process .is-inview p {*/
+/*  opacity: 1;*/
+/*  transform: translateY(0);*/
+/*  !* -webkit-transform: translateY(0); *!*/
+/*}*/
+/*.content_process p {*/
+/*  opacity: 0;*/
+/*  transform: translateY(40px);*/
+/*  -webkit-transform: translateY(40px);*/
+/*  transition: all 0.75s cubic-bezier(0.25, 0.1, 0.1, 1);*/
+/*  -webkit-transition: all 0.75s cubic-bezier(0.25, 0.1, 0.1, 1);*/
+/*}*/
 
 #globe-video {
   transform: rotateY(180deg) translateY(-50%);
@@ -731,16 +753,24 @@ h3 {
 }
 
 /* animations */
-@keyframes fadein{
-  0% { opacity:0; }
-  /*66% { opacity:0; }*/
-  100% { opacity:1; }
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-@-webkit-keyframes fadein{
-  0% { opacity:0; }
-  /*66% { opacity:0; }*/
-  100% { opacity:1; }
+@-webkit-keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 @keyframes fillBar {
