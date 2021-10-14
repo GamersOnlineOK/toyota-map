@@ -101,7 +101,7 @@ export default function MapPage() {
     <Layout toggleEchoIndexModal={toggleEchoIndexModal} toggleAboutModal={toggleAboutModal}>
       <EchoIndexModal toggle={toggleEchoIndexModal} active={showEchoIndexModal} />
       <AboutModal toggle={toggleAboutModal} active={showAboutModal} />
-      <div className="controls-container">
+      <div className="controls-container opacity-0 fade-in-delay-1">
         <h1>MONTEVIDEO</h1>
         <ControlPanel
           dropdownOptions={dropdownOptions}
@@ -120,7 +120,7 @@ export default function MapPage() {
           selectedValue={selectedValue}
         />
       </div>
-      <div className="bottom-container columns">
+      <div className="bottom-container columns opacity-0 fade-in-delay-2">
         <div className="investor-logo column">
           <CurcioLogo className="is-hidden-mobile" />
           <img src={CurcioLogoChico} className="is-hidden-tablet" alt="curcio" />

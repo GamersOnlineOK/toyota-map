@@ -11,6 +11,17 @@ import EchoLogo from '../assets/images/logo-black.svg';
 export default function AboutModal(props) {
   const { active, toggle } = props;
 
+  //
+  // const [isVisible, setVisible] = useState(false);
+  // const domRef = useRef();
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => setVisible(entry.isIntersecting));
+  //   });
+  //   observer.observe(domRef.current);
+  //   // return () => observer.unobserve(domRef.current); // TODO figure out cleanup
+  // }, []);
+
   return (
     <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeInScale ${active ? 'is-active' : ''}`}>
       <div className="modal-content modal-card">

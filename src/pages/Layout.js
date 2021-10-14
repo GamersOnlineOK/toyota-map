@@ -6,17 +6,16 @@ const Layout = ({ children, toggleEchoIndexModal, toggleAboutModal }) => (
   <>
     <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="/">
+        <a className="navbar-item opacity-0 fade-in" href="/">
           <SVG svgImage={EchoLogo} className="nav-logo" />
         </a>
 
-        <button style={{ background: 'none', border: 'none' }} type="button" className="navbar-item mobile-echo-button" onClick={toggleEchoIndexModal}>
+        <button style={{ background: 'none', border: 'none' }} type="button" className="opacity-0 fade-in navbar-item mobile-echo-button" onClick={toggleEchoIndexModal}>
           ECHO INDEX
         </button>
 
         <button
           type="button"
-          // role="button"
           className="navbar-burger boxy-outline"
           aria-label="menu"
           aria-expanded="false"
@@ -31,16 +30,14 @@ const Layout = ({ children, toggleEchoIndexModal, toggleAboutModal }) => (
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start navbar-center">
-          {/* <span className="button modal-button" data-target="about-modal">Open modal</span> */}
-
-          <button style={{ background: 'none', border: 'none' }} type="button" className="navbar-item" onClick={toggleEchoIndexModal}>
+          <button style={{ background: 'none', border: 'none' }} type="button" className="opacity-0 fade-in navbar-item" onClick={toggleEchoIndexModal}>
             ECHO INDEX
           </button>
 
         </div>
 
         <div className="navbar-end">
-          <button style={{ background: 'none' }} type="button" className="navbar-item padded-about boxy-outline" onClick={toggleAboutModal}>
+          <button style={{ background: 'none' }} type="button" className="opacity-0 fade-in navbar-item padded-about boxy-outline" onClick={toggleAboutModal}>
             ABOUT
           </button>
         </div>
