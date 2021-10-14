@@ -14,7 +14,7 @@ export default function MapPreview() {
     const timer = setTimeout(() => {
       history.push(Routes.MAP_PAGE);
       return () => clearTimeout(timer);
-    }, 6000);
+    }, 10000);
   }, []);
 
   const [viewport, setViewport] = useState({
@@ -30,14 +30,27 @@ export default function MapPreview() {
   return (
     <>
       <div className={`default-background loading-screen fade-out-fast ${isPageChange ? 'is-hidden' : ''}`} />
-      <div className="container has-text-centered ">
-        <h1>ECHO Index</h1>
-        <p style={{ color: 'white' }}>
-          Mide algunos de los factores más importantes relacionados con la salud de los lugares.
+      <div style={{ height: '110vh', background: 'rgba(0,0,0,0.5)' }} className="has-text-centered columns is-vcentered">
+        <div className="column is-centered has-text-centered is-halfheight intro-container pl-6 pr-6">
+          <h1 style={{ fontSize: '1.5rem' }}>ECHO Index</h1>
           <br />
+          <p style={{ color: 'white' }} className="intro-p">
+            Mide algunos de los factores más importantes
+            {' '}
+            <br />
+            {' '}
+            relacionados con la salud de los lugares.
+            <br />
+            <br />
+            Marcá con el cursor cuál deseas conocer y
+            {' '}
+            <br />
+            {' '}
+            desplazate por el mapa
+          </p>
           <br />
-          Marcá con el cursor cuál deseas conocer y desplazate por el mapa
-        </p>
+          <div className="preview-line" />
+        </div>
       </div>
       <div className="map-container">
         <ReactMapGL
