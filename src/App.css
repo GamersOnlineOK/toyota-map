@@ -511,7 +511,7 @@ h3 {
 
 .map-value-desc-container {
   position: absolute;
-  bottom: 250px;
+  bottom: 15vw;
   right: 0;
   padding-right: 50px;
   padding-left: 150px;

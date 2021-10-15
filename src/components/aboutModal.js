@@ -30,7 +30,7 @@ export default function AboutModal(props) {
             </button>
           </div>
           {/* eslint-disable-next-line max-len */}
-          <h2 style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-four-fifths ${active ? 'animated animate__fadeIn' : ''}`}>ABOUT THE PROJECT</h2>
+          <h2 style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-four-fifths ${active ? 'animated animate__fadeInUp' : ''}`}>ABOUT THE PROJECT</h2>
           <div className="column is-one-fifths is-hidden-mobile">
             <button type="button" className="padded-close-button boxy-outline" aria-label="close" onClick={toggle}>
               CLOSE
@@ -39,22 +39,22 @@ export default function AboutModal(props) {
         </div>
         <div className="columns modal-container">
           <div className="column is-two-fifths pr-6">
-            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
-              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeIn' : ''}`}>
+            <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#about-modal">
+              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 El Proyecto Echo Index es un sistema de recolección de
                 datos sobre diferentes aspectos
                 relativos a la salud de los espacios y el impacto que
                 puede tener en la vida de los seres vivos.
               </p>
               <br />
-              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeIn' : ''}`}>
+              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 Las diferentes magnitudes relevadas son comunicadas a un servicio en la nube a
                 través del smartphone de los colaboradores,
                 donde son almacenados y preparados para el
                 cálculo del índice Echo de calidad ambiental.
               </p>
               <br />
-              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeIn' : ''}`}>
+              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 Dicho índice comprende desde magnitudes simples y perceptibles por una persona,
                 como la temperatura ambiente e intensidad sonora, hasta parámetros más sutiles y
                 solo perceptibles a través de instrumentos especiales, como el nivel CO2 junto
@@ -63,8 +63,8 @@ export default function AboutModal(props) {
             </ScrollAnimation>
           </div>
           <div className="column is-two-fifths pr-6">
-            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
-              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeIn' : ''}`}>
+            <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#about-modal">
+              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 Estos datos se envían de forma anónima y geolocalizada a la nube, conformando
                 la arquitectura del sistema completo compuesto por varios sensores Echo en
                 movimiento constante. Este movimiento permite generar un
@@ -74,8 +74,8 @@ export default function AboutModal(props) {
           </div>
           <div className="column is-one-fifth">
             <p><b>Modulo externo</b></p>
-            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
-              <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeIn' : ''}`}>
+            <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#about-modal">
+              <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 <img style={{ width: '237px', margin: '10px 0px' }} src={externalModuleSmallImg} alt="external module" />
                 <img style={{ width: '237px' }} src={externalModuleSmallP2Img} alt="external module part 2" />
                 <small style={{ display: 'block' }}>
@@ -91,21 +91,21 @@ export default function AboutModal(props) {
           </div>
         </div>
         <div style={{ marginBottom: '70px' }} className="columns is-full">
-          <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
+          <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#about-modal">
             <img src={devicePieces} alt="device pieces" className="is-hidden-mobile" />
             <img src={devicePiecesMobile} alt="device pieces" className="is-hidden-tablet" />
           </ScrollAnimation>
         </div>
-        <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
+        <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#about-modal">
           <img style={{ minWidth: 'calc(100% + 300px)', marginLeft: '-150px' }} src={carImage} alt="car" />
         </ScrollAnimation>
         <div className="section mobile-section" />
-        <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
+        <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#about-modal">
           <h3>About Curcio Capitals</h3>
         </ScrollAnimation>
         <div style={{ marginTop: '20px' }} className="columns">
           <div className="column is-three-fifths pr-6">
-            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
+            <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#about-modal">
               <p className="pr-6">
                 Echo Index es un proyecto impulsado por Curcio Capitals, apoyado sobre sus valores,
                 principios y creencias. Bajo los paraguas de “mejora contínua”, “respeto hacia
@@ -120,12 +120,12 @@ export default function AboutModal(props) {
             <br />
             <br />
             <br />
-            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
+            <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#about-modal">
               <b style={{ fontSize: '1.3rem' }}>Curcio Capitals, históricamente ha llevado adelante diferentes iniciativas que reflejan esta filosofía.</b>
             </ScrollAnimation>
           </div>
           <div className="column is-two-fifths">
-            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
+            <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#about-modal">
               <img className="profile-picture" src={profilePicture} alt="" />
             </ScrollAnimation>
           </div>

@@ -51,12 +51,12 @@ export default function EchoIndexModal(props) {
             x
           </button>
         </div>
-        <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#index-modal">
-          <h2 style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`modal-index-title ${active ? 'animated animate__fadeIn' : ''}`}>What means</h2>
+        <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#index-modal">
+          <h2 style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`modal-index-title ${active ? 'animated animate__fadeInUp' : ''}`}>What means</h2>
         </ScrollAnimation>
         <div className="columns mt-0">
-          <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeIn' : ''}`}>
-            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#index-modal">
+          <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeInUp' : ''}`}>
+            <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#index-modal">
               <h2 className="modal-index-subtitle">ECHO INDEX?</h2>
               <div className="pt-6">
                 <b>Adipiscing</b>
@@ -73,8 +73,8 @@ export default function EchoIndexModal(props) {
               </div>
             </ScrollAnimation>
           </div>
-          <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third pt-6 ${active ? 'animated animate__fadeIn' : ''}`}>
-            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#index-modal">
+          <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third pt-6 ${active ? 'animated animate__fadeInUp' : ''}`}>
+            <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#index-modal">
               <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies elit ut scelerisque fringilla</b>
               <br />
               <br />
@@ -98,8 +98,8 @@ export default function EchoIndexModal(props) {
               </div>
             </ScrollAnimation>
           </div>
-          <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeIn' : ''}`}>
-            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#index-modal">
+          <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeInUp' : ''}`}>
+            <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#index-modal">
               <img src={ToyotaYaris} alt="toyota yaris" />
             </ScrollAnimation>
           </div>
