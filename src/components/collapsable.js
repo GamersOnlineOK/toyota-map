@@ -40,16 +40,16 @@ export default function Collapsable() {
   };
 
   return (
-    <div>
-      {collapsableItems.map((item) => (
-        <div
-          key={item.title}
-          style={{
-            borderBottom: 'black solid 1px', paddingLeft: 0, paddingRight: 0, position: 'relative',
-          }}
-          className="column"
-        >
-          <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal" offset="5">
+    <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal" offset="5">
+      <div>
+        {collapsableItems.map((item) => (
+          <div
+            key={item.title}
+            style={{
+              borderBottom: 'black solid 1px', paddingLeft: 0, paddingRight: 0, position: 'relative',
+            }}
+            className="column"
+          >
             <button
               className="collapsable-toggle"
               type="button"
@@ -62,9 +62,9 @@ export default function Collapsable() {
             <div className={`collapsable-content ${item.active ? 'expanded' : ''}`}>
               {item.content}
             </div>
-          </ScrollAnimation>
-        </div>
-      ))}
-    </div>
+          </div>
+        ))}
+      </div>
+    </ScrollAnimation>
   );
 }
