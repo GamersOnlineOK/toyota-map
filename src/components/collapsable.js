@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const items = [
   {
@@ -48,18 +49,20 @@ export default function Collapsable() {
           }}
           className="column"
         >
-          <button
-            className="collapsable-toggle"
-            type="button"
-            onClick={toggleCollapsable(item.id)}
-          >
-            {item.active ? '-' : '+'}
-          </button>
-          <h4 style={{ fontSize: '2rem', color: 'black' }}>{item.title}</h4>
-          <h5 style={{ color: 'black' }}>{item.subtitle}</h5>
-          <div className={`collapsable-content ${item.active ? 'expanded' : ''}`}>
-            {item.content}
-          </div>
+          <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal" offset="5">
+            <button
+              className="collapsable-toggle"
+              type="button"
+              onClick={toggleCollapsable(item.id)}
+            >
+              {item.active ? '-' : '+'}
+            </button>
+            <h4 style={{ fontSize: '2rem', color: 'black' }}>{item.title}</h4>
+            <h5 style={{ color: 'black' }}>{item.subtitle}</h5>
+            <div className={`collapsable-content ${item.active ? 'expanded' : ''}`}>
+              {item.content}
+            </div>
+          </ScrollAnimation>
         </div>
       ))}
     </div>
