@@ -104,7 +104,8 @@ export default function MapPage() {
   };
 
   return (
-    <Layout toggleEchoIndexModal={toggleEchoIndexModal} toggleAboutModal={toggleAboutModal}>
+    // eslint-disable-next-line max-len
+    <Layout toggleEchoIndexModal={toggleEchoIndexModal} toggleAboutModal={toggleAboutModal} showAboutModal={showAboutModal} showEchoIndexModal={showEchoIndexModal}>
       <div className={`default-background loading-screen fade-out-fast ${isPageChange ? 'is-hidden' : ''}`} />
       <EchoIndexModal toggle={toggleEchoIndexModal} active={showEchoIndexModal} />
       <AboutModal toggle={toggleAboutModal} active={showAboutModal} />

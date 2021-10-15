@@ -2,7 +2,9 @@ import EchoLogo from '../assets/images/logo-white.svg';
 import SVG from '../components/svg';
 
 // eslint-disable-next-line react/prop-types
-const Layout = ({ children, toggleEchoIndexModal, toggleAboutModal }) => (
+const Layout = ({
+  children, toggleEchoIndexModal, toggleAboutModal, showAboutModal, // showEchoIndexModal,
+}) => (
   <>
     <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -33,11 +35,11 @@ const Layout = ({ children, toggleEchoIndexModal, toggleAboutModal }) => (
           <button style={{ background: 'none', border: 'none' }} type="button" className="opacity-0 fade-in-delay-1 navbar-item" onClick={toggleEchoIndexModal}>
             ECHO INDEX
           </button>
-
         </div>
 
         <div className="navbar-end">
           <button style={{ background: 'none' }} type="button" className="opacity-0 fade-in-delay-1 navbar-item padded-about boxy-outline" onClick={toggleAboutModal}>
+            <div className={`expand-button ${showAboutModal ? 'expanded-button' : ''}`} />
             ABOUT
           </button>
         </div>

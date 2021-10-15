@@ -1,4 +1,5 @@
 import ScrollAnimation from 'react-animate-on-scroll';
+import { useEffect, useState } from 'react';
 import externalModuleSmallImg from '../assets/images/modulo-externo-small-about-modal.png';
 import externalModuleSmallP2Img from '../assets/images/modulo-externo-small-p2-about-modal.png';
 import devicePieces from '../assets/images/dispositivo-dislocado-text.png';
@@ -12,8 +13,20 @@ import EchoLogo from '../assets/images/logo-black.svg';
 export default function AboutModal(props) {
   const { active, toggle } = props;
 
+  const [activeModal, setActiveModal] = useState(false);
+  useEffect(() => {
+    if (active) {
+      const timer = setTimeout(() => {
+        setActiveModal(true);
+      }, 200);
+      return () => clearTimeout(timer);
+    }
+    setActiveModal(false);
+    return false;
+  }, [active]);
+
   return (
-    <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeInScale ${active ? 'is-active' : ''}`}>
+    <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeInScale ${activeModal ? 'is-active' : ''}`}>
       <div id="about-modal" className="modal-content modal-card">
         <div className="columns mt-6">
           <div className="modal-nav is-hidden-tablet">
