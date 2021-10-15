@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import Lottie from 'react-lottie';
 import * as Routes from '../constants/routes';
 import { ReactComponent as EchoLogo } from '../assets/images/logo-white.svg';
 import GlobeVid from '../assets/video/globe.webm';
+
+import echoAnimation from '../assets/lotties/echo.json';
 
 export default function IntroPage() {
   const history = useHistory();
@@ -38,11 +41,33 @@ export default function IntroPage() {
     }, 500);
   };
 
+  const echoLottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: echoAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
+
   return (
     <>
       <div className={`default-background loading-screen opacity-0 ${isPageChange ? 'fade-in-fast' : 'is-hidden'}`} />
-      <div className={`default-background loading-screen  ${loadedFadeOut ? 'loaded-fade-out' : ''} ${isLoaded ? 'is-hidden' : ''}`}>
-        <div className={`loading-logo ${fillBar ? 'fully-loaded' : ''}`} />
+      <div
+        style={{
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+        }}
+        className={`default-background loading-screen  ${loadedFadeOut ? 'loaded-fade-out' : ''} ${isLoaded ? 'is-hidden' : ''}`}
+      >
+        <Lottie
+          style={{}}
+          options={echoLottieOptions}
+          height={50}
+          width={200}
+        />
+        <div className={`is-hidden loading-logo ${fillBar ? 'fully-loaded' : ''}`} />
       </div>
       <div className="show-loaded">
         <video autoPlay loop muted id="globe-video" onLoadedData={onLoadedVideo} className={`${isLoaded ? 'animate-up' : ''}`}>
