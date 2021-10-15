@@ -3,7 +3,7 @@ import SVG from '../components/svg';
 
 // eslint-disable-next-line react/prop-types
 const Layout = ({
-  children, toggleEchoIndexModal, toggleAboutModal, showAboutModal, // showEchoIndexModal,
+  children, toggleEchoIndexModal, toggleAboutModal, showAboutModal, showEchoIndexModal,
 }) => (
   <>
     <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
@@ -33,6 +33,7 @@ const Layout = ({
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start navbar-center">
           <button style={{ background: 'none', border: 'none' }} type="button" className="opacity-0 fade-in-delay-1 navbar-item" onClick={toggleEchoIndexModal}>
+            <div className={`expand-button ${showEchoIndexModal ? 'center-expanded-button' : ''}`} />
             ECHO INDEX
           </button>
         </div>

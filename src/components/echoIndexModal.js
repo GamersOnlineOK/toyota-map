@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types,max-len */
 
 import ScrollAnimation from 'react-animate-on-scroll';
+import { useEffect, useState } from 'react';
 import ToyotaYaris from '../assets/images/toyota-yaris.png';
 import SVG from './svg';
 import EchoLogo from '../assets/images/logo-black.svg';
@@ -35,8 +36,20 @@ const chartItems = [
 export default function EchoIndexModal(props) {
   const { active, toggle } = props;
 
+  const [activeModal, setActiveModal] = useState(false);
+  useEffect(() => {
+    if (active) {
+      const timer = setTimeout(() => {
+        setActiveModal(true);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+    setActiveModal(false);
+    return false;
+  }, [active]);
+
   return (
-    <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeInScale ${active ? 'is-active' : ''}`}>
+    <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeInScale ${activeModal ? 'is-active' : ''}`}>
       <div id="index-modal" className="modal-content modal-card modal-index">
         <div style={{ marginTop: '40px' }} className="modal-nav is-hidden-tablet">
           <SVG svgImage={EchoLogo} className="nav-logo" />

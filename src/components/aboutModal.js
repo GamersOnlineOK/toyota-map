@@ -18,7 +18,7 @@ export default function AboutModal(props) {
     if (active) {
       const timer = setTimeout(() => {
         setActiveModal(true);
-      }, 200);
+      }, 300);
       return () => clearTimeout(timer);
     }
     setActiveModal(false);
