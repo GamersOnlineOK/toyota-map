@@ -39,7 +39,6 @@ export default function AboutModal(props) {
         </div>
         <div className="columns modal-container">
           <div className="column is-two-fifths pr-6">
-            {/* eslint-disable-next-line max-len */}
             <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
               <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeIn' : ''}`}>
                 El Proyecto Echo Index es un sistema de recolección de
@@ -64,20 +63,17 @@ export default function AboutModal(props) {
             </ScrollAnimation>
           </div>
           <div className="column is-two-fifths pr-6">
-            {/* eslint-disable-next-line max-len */}
-            {/* <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal"> */}
-            <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeIn' : ''}`}>
-              Estos datos se envían de forma anónima y geolocalizada a la nube, conformando
-              la arquitectura del sistema completo compuesto por varios sensores Echo en
-              movimiento constante. Este movimiento permite generar un
-              mapa dinámico de la calidad ambiental, de cada zona del país.
-            </p>
-            {/* </ScrollAnimation> */}
+            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
+              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeIn' : ''}`}>
+                Estos datos se envían de forma anónima y geolocalizada a la nube, conformando
+                la arquitectura del sistema completo compuesto por varios sensores Echo en
+                movimiento constante. Este movimiento permite generar un
+                mapa dinámico de la calidad ambiental, de cada zona del país.
+              </p>
+            </ScrollAnimation>
           </div>
           <div className="column is-one-fifth">
             <p><b>Modulo externo</b></p>
-            {/* <p>Dispositivo integrado</p> */}
-            {/* eslint-disable-next-line max-len */}
             <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#about-modal">
               <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeIn' : ''}`}>
                 <img style={{ width: '237px', margin: '10px 0px' }} src={externalModuleSmallImg} alt="external module" />

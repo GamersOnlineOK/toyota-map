@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types,max-len */
 
+import ScrollAnimation from 'react-animate-on-scroll';
 import ToyotaYaris from '../assets/images/toyota-yaris.png';
 import SVG from './svg';
 import EchoLogo from '../assets/images/logo-black.svg';
@@ -36,7 +37,7 @@ export default function EchoIndexModal(props) {
 
   return (
     <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeInScale ${active ? 'is-active' : ''}`}>
-      <div className="modal-content modal-card modal-index">
+      <div id="index-modal" className="modal-content modal-card modal-index">
         <div style={{ marginTop: '40px' }} className="modal-nav is-hidden-tablet">
           <SVG svgImage={EchoLogo} className="nav-logo" />
           <button
@@ -50,49 +51,57 @@ export default function EchoIndexModal(props) {
             x
           </button>
         </div>
-        <h2 className="modal-index-title">What means</h2>
+        <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#index-modal">
+          <h2 style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`modal-index-title ${active ? 'animated animate__fadeIn' : ''}`}>What means</h2>
+        </ScrollAnimation>
         <div className="columns mt-0">
-          <div className="column is-one-third">
-            <h2 className="modal-index-subtitle">ECHO INDEX?</h2>
-            <div className="pt-6">
-              <b>Adipiscing</b>
-              <div className="columns">
-                <div className="column is-half">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Cras non semper diam.
-                </div>
-                <div className="column is-half">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Cras non semper diam.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="column is-one-third pt-6">
-            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies elit ut scelerisque fringilla</b>
-            <br />
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies
-              elit ut scelerisque fringilla. Cras convallis pulvinar ante nec auctor. Nulla aliquam eu tellus a accumsan.
-              Mauris dapibus, risus id auctor pellentesque, turpis mauris pretium sem, eget pulvinar tellus mauris ut tortor
-            </p>
-            <br />
-            <br />
-            <div className="scale-container">
-              <p style={{ letterSpacing: '3px', fontWeight: 'bold', fontSize: '0.5rem' }}>ESCALA TITLE</p>
-              <div style={{ display: 'flex', marginTop: '10px' }}>
-                {chartItems.map((item) => (
-                  <div key={item.value} style={{ flexGrow: 1 }}>
-                    <div style={{ borderBottom: `solid 2px ${item.color}` }} />
-                    <div style={{ textAlign: 'right', fontSize: '0.7rem' }}>{item.value}</div>
+          <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeIn' : ''}`}>
+            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#index-modal">
+              <h2 className="modal-index-subtitle">ECHO INDEX?</h2>
+              <div className="pt-6">
+                <b>Adipiscing</b>
+                <div className="columns">
+                  <div className="column is-half">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Cras non semper diam.
                   </div>
-                ))}
+                  <div className="column is-half">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Cras non semper diam.
+                  </div>
+                </div>
               </div>
-            </div>
+            </ScrollAnimation>
           </div>
-          <div className="column is-one-third">
-            <img src={ToyotaYaris} alt="toyota yaris" />
+          <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third pt-6 ${active ? 'animated animate__fadeIn' : ''}`}>
+            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#index-modal">
+              <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies elit ut scelerisque fringilla</b>
+              <br />
+              <br />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies
+                elit ut scelerisque fringilla. Cras convallis pulvinar ante nec auctor. Nulla aliquam eu tellus a accumsan.
+                Mauris dapibus, risus id auctor pellentesque, turpis mauris pretium sem, eget pulvinar tellus mauris ut tortor
+              </p>
+              <br />
+              <br />
+              <div className="scale-container">
+                <p style={{ letterSpacing: '3px', fontWeight: 'bold', fontSize: '0.5rem' }}>ESCALA TITLE</p>
+                <div style={{ display: 'flex', marginTop: '10px' }}>
+                  {chartItems.map((item) => (
+                    <div key={item.value} style={{ flexGrow: 1 }}>
+                      <div style={{ borderBottom: `solid 2px ${item.color}` }} />
+                      <div style={{ textAlign: 'right', fontSize: '0.7rem' }}>{item.value}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+          <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeIn' : ''}`}>
+            <ScrollAnimation animateIn="animate__fadeIn" scrollableParentSelector="#index-modal">
+              <img src={ToyotaYaris} alt="toyota yaris" />
+            </ScrollAnimation>
           </div>
           <button type="button" className="padded-close-button boxy-outline is-hidden-mobile" aria-label="close" onClick={toggle}>
             CLOSE
