@@ -8,6 +8,14 @@ import * as Routes from '../constants/routes';
 export default function MapPreview() {
   const history = useHistory();
 
+  const [isLoaded, setLoaded] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const [isPageChange, setPageChange] = useState(false);
   useEffect(() => {
     setPageChange(false);
@@ -32,21 +40,41 @@ export default function MapPreview() {
       <div className={`default-background loading-screen fade-out-fast ${isPageChange ? 'is-hidden' : ''}`} />
       <div style={{ height: '110vh', background: 'rgba(0,0,0,0.5)' }} className="has-text-centered columns is-vcentered">
         <div className="column is-centered has-text-centered is-halfheight intro-container pl-6 pr-6">
-          <h1 style={{ fontSize: '1.5rem' }}>ECHO Index</h1>
+
+          {/* eslint-disable-next-line max-len */}
+          {/* <p style={{ padding: '60px' }} className={`intro-p has-text-centered is-2 opacity-0 ${isLoaded ? 'fade-in' : ''}`}> */}
+          {/*  UN Environment Assembly concludes with an urgent call for action */}
+          {/*  to solve planetary emergencies” */}
+          {/*  {' '} */}
+          {/*  <br /> */}
+          {/*  <br /> */}
+          {/*  Introducing Echo Index, un proyecto para medir el estado de salud */}
+          {/*  de los lugares y el efecto en la vida humana, en tiempo real. */}
+          {/* </p> */}
+          {/* eslint-disable-next-line max-len */}
+          {/* <button className={`opacity-0 intro-button ${isLoaded ? 'fade-in-delay-1' : ''}`} type="button" onClick={clickEnter}>ENTER</button> */}
+
+          <div className="mask" style={{ height: '37px' }}>
+            <h1 className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ fontSize: '1.5rem' }}>ECHO Index</h1>
+          </div>
+
           <br />
           <p style={{ color: 'white' }} className="intro-p">
-            Mide algunos de los factores más importantes
-            {' '}
+            <div className={`opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
+              Mide algunos de los factores más importantes
+              {' '}
+              <br />
+              {' '}
+              relacionados con la salud de los lugares.
+            </div>
             <br />
-            {' '}
-            relacionados con la salud de los lugares.
-            <br />
-            <br />
-            Marcá con el cursor cuál deseas conocer y
-            {' '}
-            <br />
-            {' '}
-            desplazate por el mapa
+            <div className={`opacity-0 ${isLoaded ? 'fade-in-delay-1' : ''}`}>
+              Marcá con el cursor cuál deseas conocer y
+              {' '}
+              <br />
+              {' '}
+              desplazate por el mapa
+            </div>
           </p>
           <br />
           <div className="preview-line" />
