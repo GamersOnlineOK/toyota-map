@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Lottie from 'react-lottie';
 import * as Routes from '../constants/routes';
@@ -11,26 +11,58 @@ export default function IntroPage() {
   const history = useHistory();
 
   const [isLoaded, setLoaded] = useState(false);
-  const [fillBar, setFillBar] = useState(false);
+  const [isVideoLoaded, setVideoLoaded] = useState(false);
+  const [loaderFinished, setLoaderFinished] = useState(false);
   const [loadedFadeOut, setLoadedFadeOut] = useState(false);
+  const [isPaused, setPaused] = useState(false);
+
   const onLoadedVideo = () => {
-    const timer = setTimeout(() => {
-      setFillBar(true);
-      const timer2 = setTimeout(() => {
-        setFillBar(false);
-        const timer3 = setTimeout(() => {
+    setVideoLoaded(true);
+  };
+
+  useEffect(() => {
+    console.log('video loaded', isVideoLoaded);
+    if (isVideoLoaded && loaderFinished) {
+      // unpause animation and fade out
+      const timer = setTimeout(() => {
+        setPaused(false);
+        const timer2 = setTimeout(() => {
           setLoadedFadeOut(true);
-          const timer4 = setTimeout(() => {
+          const timer3 = setTimeout(() => {
             setLoaded(true);
           }, 1000);
-          return () => clearTimeout(timer4);
-        }, 3000);
-        return () => clearTimeout(timer3);
+          return () => clearTimeout(timer3);
+        }, 2000);
+        return () => clearTimeout(timer2);
       }, 1000);
-      return () => clearTimeout(timer2);
-    }, 2000);
+      return () => clearTimeout(timer);
+    }
+
+    return false;
+  }, [isVideoLoaded, loaderFinished]);
+
+  const pauseTimeout = (pause, time, cb) => {
+    setPaused(pause);
+    const timer = setTimeout(() => {
+      cb();
+    }, time);
     return () => clearTimeout(timer);
   };
+
+  useEffect(() => {
+    pauseTimeout(false, 700, () => {
+      pauseTimeout(true, 1300, () => {
+        pauseTimeout(false, 1500, () => {
+          pauseTimeout(true, 1100, () => {
+            pauseTimeout(false, 800, () => {
+              setPaused(true);
+              setLoaderFinished(true);
+            });
+          });
+        });
+      });
+    });
+  }, []);
 
   const [isPageChange, setPageChange] = useState(false);
   const clickEnter = () => {
@@ -42,7 +74,7 @@ export default function IntroPage() {
   };
 
   const echoLottieOptions = {
-    loop: true,
+    loop: false,
     autoplay: true,
     animationData: echoAnimation,
     rendererSettings: {
@@ -62,12 +94,11 @@ export default function IntroPage() {
         className={`default-background loading-screen  ${loadedFadeOut ? 'loaded-fade-out' : ''} ${isLoaded ? 'is-hidden' : ''}`}
       >
         <Lottie
-          style={{}}
           options={echoLottieOptions}
           height={50}
           width={200}
+          isPaused={isPaused}
         />
-        <div className={`is-hidden loading-logo ${fillBar ? 'fully-loaded' : ''}`} />
       </div>
       <div className="show-loaded">
         <video autoPlay loop muted id="globe-video" onLoadedData={onLoadedVideo} className={`${isLoaded ? 'animate-up' : ''}`}>
