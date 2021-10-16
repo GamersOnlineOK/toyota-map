@@ -1,12 +1,26 @@
+import { useEffect, useState } from 'react';
+
 export default function ValueDescription(props) {
   const { showValueDescription, setShowValueDescription } = props;
 
+  const [showDesc, setShowDesc] = useState(false);
+
   const closeSelectedValue = () => {
-    setShowValueDescription(null);
+    setShowDesc(false);
+    const timer = setTimeout(() => {
+      setShowValueDescription(null);
+    }, 1000);
+    return () => clearTimeout(timer);
   };
 
+  useEffect(() => {
+    if (showValueDescription) {
+      setShowDesc(!!showValueDescription);
+    }
+  }, [showValueDescription]);
+
   return (
-    <div className={`map-value-desc-container ${showValueDescription ? '' : 'map-value-desc-container-hide'}`}>
+    <div className={`map-value-desc-container ${showDesc ? 'map-value-desc-container-show' : ''} ${showValueDescription ? '' : 'map-value-desc-container-hide'}`}>
       <div style={{ background: 'none', paddingRight: '0' }} className="notification">
         <button type="button" onClick={closeSelectedValue} className="close-button-wrapper">
           x
