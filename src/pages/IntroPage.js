@@ -32,7 +32,7 @@ export default function IntroPage() {
             setLoaded(true);
           }, 1000);
           return () => clearTimeout(timer3);
-        }, 2000);
+        }, 800);
         return () => clearTimeout(timer2);
       }, 1000);
       return () => clearTimeout(timer);
@@ -50,9 +50,9 @@ export default function IntroPage() {
   };
 
   useEffect(() => {
-    pauseTimeout(false, 700, () => {
+    pauseTimeout(false, 1500, () => {
       pauseTimeout(true, 1300, () => {
-        pauseTimeout(false, 1500, () => {
+        pauseTimeout(false, 1000, () => {
           pauseTimeout(true, 1100, () => {
             pauseTimeout(false, 800, () => {
               setPaused(true);
