@@ -719,7 +719,7 @@ h3 {
     background: rgba(0,0,0,0.93);
     z-index: 1000;
     overflow: scroll;
-    padding: 100px 50px 100px 30px;
+    padding: 200px 50px 100px 30px;
   }
 
   .map-value-desc-container-hide {
