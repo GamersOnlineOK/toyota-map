@@ -87,40 +87,60 @@ export default function EchoIndexModal(props) {
             </ScrollAnimation>
           </div>
           <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third pt-6 pr-0 ${active ? 'animated animate__fadeInUp' : ''}`}>
-            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
-              <div className="pr-4">
-                <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies elit ut scelerisque fringilla</b>
-                <br />
-                <br />
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies
-                  elit ut scelerisque fringilla. Cras convallis pulvinar ante nec auctor. Nulla aliquam eu tellus a accumsan.
-                  Mauris dapibus, risus id auctor pellentesque, turpis mauris pretium sem, eget pulvinar tellus mauris ut tortor
-                </p>
-                <br />
-                <br />
-              </div>
-              <div className="scale-container">
-                <p style={{ letterSpacing: '3px', fontWeight: 'bold', fontSize: '0.5rem' }}>ESCALA TITLE</p>
-                <div style={{ display: 'flex', marginTop: '10px' }}>
-                  {chartItems.map((item) => (
-                    <div key={item.value} style={{ flexGrow: 1 }}>
-                      <div style={{ borderBottom: `solid 2px ${item.color}` }} />
-                      <div style={{
-                        textAlign: 'right', fontSize: '0.7rem', paddingTop: '10px', fontWeight: 'bold',
-                      }}
-                      >
-                        {item.value}
-                      </div>
-                    </div>
-                  ))}
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+              }}
+            >
+              <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
+                <div className="pr-4">
+                  <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies elit ut scelerisque fringilla</b>
+                  <br />
+                  <br />
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies
+                    elit ut scelerisque fringilla. Cras convallis pulvinar ante nec auctor. Nulla aliquam eu tellus a accumsan.
+                    Mauris dapibus, risus id auctor pellentesque, turpis mauris pretium sem, eget pulvinar tellus mauris ut tortor
+                  </p>
+                  <br />
+                  <br />
                 </div>
-              </div>
-            </ScrollAnimation>
+                <div className="scale-container" style={{ marginTop: '100px' }}>
+                  <p style={{ letterSpacing: '3px', fontWeight: 'bold', fontSize: '0.5rem' }}>ESCALA TITLE</p>
+                  <div style={{ display: 'flex', marginTop: '10px' }}>
+                    <div style={{
+                      textAlign: 'right', fontSize: '0.7rem', paddingTop: '11px', fontWeight: 'bold',
+                    }}
+                    >
+                      0
+                    </div>
+                    {chartItems.map((item) => (
+                      <div key={item.value} style={{ flexGrow: 1 }}>
+                        <div style={{ borderBottom: `solid 2px ${item.color}` }} />
+                        <div style={{
+                          textAlign: 'right', fontSize: '0.7rem', paddingTop: '10px', fontWeight: 'bold',
+                        }}
+                        >
+                          {item.value}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </ScrollAnimation>
+            </div>
           </div>
           <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third pl-0 ${active ? 'animated animate__fadeInUp' : ''}`}>
-            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
-              <img src={ToyotaYaris} alt="toyota yaris" />
+            <ScrollAnimation style={{ height: '100%', width: '100%' }} animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
+              <div
+                className="toyota-yaris-background"
+                style={{
+                  backgroundImage: `url(${ToyotaYaris}`,
+                }}
+              >
+                <img className="is-hidden-tablet" src={ToyotaYaris} alt="toyota yaris" />
+              </div>
             </ScrollAnimation>
           </div>
           <button type="button" className="padded-close-button boxy-outline is-hidden-mobile" aria-label="close" onClick={toggle}>

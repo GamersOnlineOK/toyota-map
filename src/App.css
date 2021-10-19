@@ -647,16 +647,12 @@ h3 {
   position: relative;
 }
 
-.toyota-yaris-img {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem;
-  padding-left: 0;
-  justify-content: center;
+.toyota-yaris-background {
+  width: 100%;
+  height: 100%;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
 }
 
 .map-value-desc-text {
@@ -720,6 +716,13 @@ h3 {
   padding: 30px
 }
 
+
+@media screen and (min-width: 1080px) and (max-width: 1400px) {
+  .toyota-yaris-background {
+    background-position: center;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1080px) {
   .mobile-echo-button {
     position: relative;
@@ -741,6 +744,10 @@ h3 {
 
   .modal-index-subtitle {
     font-size: 4rem !important;
+  }
+
+  .toyota-yaris-background {
+    background-position: center;
   }
 }
 

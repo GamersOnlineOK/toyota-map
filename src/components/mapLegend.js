@@ -33,6 +33,12 @@ export default function MapLegend(props) {
     <div className="value-legend">
       <p style={{ letterSpacing: '3px' }}>Categorias del ICAire</p>
       <div style={{ display: 'flex', marginTop: '10px' }}>
+        <div style={{
+          textAlign: 'right', fontSize: '0.8em', paddingTop: '11px', fontWeight: 'bold',
+        }}
+        >
+          0
+        </div>
         {chartItems.map((item) => (
           <div key={item.value} style={{ flexGrow: 1 }}>
             <div style={{ borderBottom: `solid 1px ${item.color}` }} />
