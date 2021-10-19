@@ -21,9 +21,9 @@ html {
   overflow: hidden !important;
 }
 
-/*body {*/
-/*  font-size: 0.85em !important;*/
-/*}*/
+body {
+  font-size: 0.9em !important;
+}
 
 * {
   font-family: "Sahar", "Arial", SansSerif !important;
@@ -226,7 +226,7 @@ h3 {
   font-size: 0.8rem;
   display: inline-block;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 1px !important;
 }
 
 .navbar {
@@ -509,7 +509,7 @@ h3 {
   font-size: 0.8rem;
   text-align: right;
   position: absolute;
-  width: 25%;
+  width: 20%;
   bottom: 30px;
   right: 50px;
   /*background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.45), rgba(0, 0, 0, 0.4) 100%);*/

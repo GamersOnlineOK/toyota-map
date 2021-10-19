@@ -106,7 +106,12 @@ export default function EchoIndexModal(props) {
                   {chartItems.map((item) => (
                     <div key={item.value} style={{ flexGrow: 1 }}>
                       <div style={{ borderBottom: `solid 2px ${item.color}` }} />
-                      <div style={{ textAlign: 'right', fontSize: '0.7rem' }}>{item.value}</div>
+                      <div style={{
+                        textAlign: 'right', fontSize: '0.7rem', paddingTop: '10px', fontWeight: 'bold',
+                      }}
+                      >
+                        {item.value}
+                      </div>
                     </div>
                   ))}
                 </div>
