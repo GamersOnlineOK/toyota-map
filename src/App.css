@@ -365,7 +365,7 @@ h3 {
 }
 
 .dropdown-control {
-  background: none !important;
+  background: #0c121c !important;
   color: white !important;
   font-size: 0.9rem !important;
   border-radius: 0 !important;
@@ -377,7 +377,7 @@ h3 {
 }
 
 .dropdown-control:hover {
-  background: none !important;
+  /*background: none !important;*/
   border-color: #00ff9d !important;
   border-radius: 0 !important;
 }
