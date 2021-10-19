@@ -119,8 +119,8 @@ export default function EchoIndexModal(props) {
             </ScrollAnimation>
           </div>
           <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-one-third pl-0 ${active ? 'animated animate__fadeInUp' : ''}`}>
-            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal" className="p-relative">
-              <img className="toyota-yaris-img" src={ToyotaYaris} alt="toyota yaris" />
+            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
+              <img src={ToyotaYaris} alt="toyota yaris" />
             </ScrollAnimation>
           </div>
           <button type="button" className="padded-close-button boxy-outline is-hidden-mobile" aria-label="close" onClick={toggle}>
