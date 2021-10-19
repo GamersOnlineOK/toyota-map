@@ -706,8 +706,9 @@ h3 {
 
 .collapsable-content.expanded {
   transition: max-height 0.25s ease-in;
-  max-height: 300px;
-  overflow: auto;
+  max-height: 1000px;
+  padding: 20px 0px;
+  /*overflow: auto;*/
 }
 
 .profile-picture {

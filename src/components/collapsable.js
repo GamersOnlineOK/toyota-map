@@ -7,7 +7,7 @@ const items = [
     title: 'Toyota Hybrid Synergy Drive.',
     subtitle: 'Introducción y liderazgo en tecnologías híbridas',
     active: true,
-    content: 'A completar',
+    content: '<div style="padding: 0px 20px;"><iframe width="560" height="315" src="https://www.youtube.com/embed/bzCuN5SVMQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div>',
   },
   {
     id: 2,
@@ -59,8 +59,8 @@ export default function Collapsable() {
             </button>
             <h4 style={{ fontSize: '2rem', color: 'black' }}>{item.title}</h4>
             <h5 style={{ color: 'black' }}>{item.subtitle}</h5>
-            <div className={`collapsable-content ${item.active ? 'expanded' : ''}`}>
-              {item.content}
+            <div className={`collapsable-content ${item.active ? 'expanded' : ''}`} dangerouslySetInnerHTML={{ __html: item.content }}>
+              {/* {item.content} */}
             </div>
           </div>
         ))}
