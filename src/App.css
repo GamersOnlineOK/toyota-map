@@ -466,7 +466,7 @@ h3 {
   padding-right: 40px;
   color: black;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .property-selector button::before {
@@ -641,6 +641,22 @@ h3 {
   top: 80px;
   left: -95px;
   border-bottom: 1px solid #00ff9d;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.toyota-yaris-img {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem;
+  padding-left: 0;
+  justify-content: center;
 }
 
 .map-value-desc-text {
