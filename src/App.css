@@ -25,6 +25,13 @@ body {
   font-size: 0.9em !important;
 }
 
+.main-wrapper {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
 * {
   font-family: "Sahar", "Arial", SansSerif !important;
 }
@@ -58,13 +65,6 @@ h3 {
 .nav-logo {
   height: 37px;
   max-height: 1000px !important;
-}
-
-.loading-logo {
-  height: 30px;
-  background: red;
-  animation: fillBar 5s ease-in-out 0s normal 1 forwards;
-  transition: width 1s;
 }
 
 .fully-loaded {
@@ -365,7 +365,7 @@ h3 {
 }
 
 .dropdown-control {
-  background: #0c121c !important;
+  background: rgba(0, 0, 0, 0.3) !important;
   color: white !important;
   font-size: 0.9rem !important;
   border-radius: 0 !important;
@@ -704,7 +704,6 @@ h3 {
   transition: max-height 0.25s ease-in;
   max-height: 1000px;
   padding: 20px 0px;
-  /*overflow: auto;*/
 }
 
 .profile-picture {
@@ -715,7 +714,6 @@ h3 {
   border: solid rgba(0,0,0,0.2) 2px;
   padding: 30px
 }
-
 
 @media screen and (min-width: 1080px) and (max-width: 1400px) {
   .toyota-yaris-background {

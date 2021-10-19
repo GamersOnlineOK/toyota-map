@@ -5,14 +5,14 @@ import SVG from '../components/svg';
 const Layout = ({
   children, toggleEchoIndexModal, toggleAboutModal, showAboutModal, showEchoIndexModal,
 }) => (
-  <>
+  <div className="main-wrapper">
     <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item opacity-0 fade-in-delay-1" href="/">
           <SVG svgImage={EchoLogo} className="nav-logo" />
         </a>
 
-        <button style={{ background: 'none', border: 'none', letterSpacing: '4px' }} type="button" className="opacity-0 fade-in-delay-1 navbar-item mobile-echo-button" onClick={toggleEchoIndexModal}>
+        <button style={{ background: 'none', border: 'none', letterSpacing: '4px' }} type="button" className="is-hidden-tablet opacity-0 fade-in-delay-1 navbar-item mobile-echo-button" onClick={toggleEchoIndexModal}>
           ECHO INDEX
           <span className="echo-index-12">12</span>
         </button>
@@ -49,7 +49,7 @@ const Layout = ({
       </div>
     </nav>
     <main>{children}</main>
-  </>
+  </div>
 );
 
 export default Layout;
