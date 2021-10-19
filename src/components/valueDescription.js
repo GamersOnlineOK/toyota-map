@@ -28,7 +28,9 @@ export default function ValueDescription(props) {
         <h5 className="map-value-desc-title">
           {showValueDescription && showValueDescription.title}
         </h5>
-        <p style={{ color: 'white', marginTop: '-20px' }}>{showValueDescription && showValueDescription.description}</p>
+        <p className="map-value-desc-text">
+          {showValueDescription && showValueDescription.description}
+        </p>
       </div>
     </div>
   );

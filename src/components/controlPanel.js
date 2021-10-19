@@ -26,15 +26,15 @@ function ControlPanel(props) {
     <div className="control-panel">
       <div className={isActive ? 'dropdown is-active' : 'dropdown'}>
         <div className="dropdown-trigger">
-          <button type="button" className="button dropdown-control" aria-haspopup="true" aria-controls="dropdown-menu" onClick={toggleDropdown}>
+          <button type="button" className={`button dropdown-control ${isActive ? 'green-border' : ''}`} aria-haspopup="true" aria-controls="dropdown-menu" onClick={toggleDropdown}>
             <span>{selectedWeek.text}</span>
-            <span className="icon is-small">
-              <i className="fas fa-angle-down" aria-hidden="true" />
+            <span className={`icon is-small dropdown-arrow ${isActive ? 'green-border' : ''}`}>
+              {/* <i className="fas fa-angle-down" aria-hidden="true" /> */}
             </span>
           </button>
         </div>
         <div className="dropdown-menu" id="dropdown-menu" role="menu">
-          <div className="dropdown-content">
+          <div className={`dropdown-content ${isActive ? 'green-border' : ''}`} style={{ border: '1px solid #00ff9d', marginTop: '-2px' }}>
             {dropdownOptions.map((object) => (
               <button
                 type="button"
@@ -56,7 +56,7 @@ function ControlPanel(props) {
           {valueOptions.map((object) => {
             const className = activeValueId === object.id ? 'is-active' : '';
             return (
-              <div key={object.id} className="column is-full pb-2 pt-2">
+              <div key={object.id} className="column is-full pb-1 pt-1">
                 <button
                   type="button"
                   className={className}

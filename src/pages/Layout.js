@@ -12,8 +12,9 @@ const Layout = ({
           <SVG svgImage={EchoLogo} className="nav-logo" />
         </a>
 
-        <button style={{ background: 'none', border: 'none' }} type="button" className="opacity-0 fade-in-delay-1 navbar-item mobile-echo-button" onClick={toggleEchoIndexModal}>
+        <button style={{ background: 'none', border: 'none', letterSpacing: '4px' }} type="button" className="opacity-0 fade-in-delay-1 navbar-item mobile-echo-button" onClick={toggleEchoIndexModal}>
           ECHO INDEX
+          <span className="echo-index-12">12</span>
         </button>
 
         <button
@@ -35,6 +36,7 @@ const Layout = ({
           <button style={{ background: 'none', border: 'none' }} type="button" className="opacity-0 fade-in-delay-1 navbar-item" onClick={toggleEchoIndexModal}>
             <div className={`expand-button ${showEchoIndexModal ? 'center-expanded-button' : ''}`} />
             ECHO INDEX
+            <span className="echo-index-12">12</span>
           </button>
         </div>
 

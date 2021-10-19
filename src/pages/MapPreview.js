@@ -40,20 +40,6 @@ export default function MapPreview() {
       <div className={`default-background loading-screen fade-out-fast ${isPageChange ? 'is-hidden' : ''}`} />
       <div style={{ height: '110vh', background: 'rgba(0,0,0,0.5)' }} className="has-text-centered columns is-vcentered">
         <div className="column is-centered has-text-centered is-halfheight intro-container pl-6 pr-6">
-
-          {/* eslint-disable-next-line max-len */}
-          {/* <p style={{ padding: '60px' }} className={`intro-p has-text-centered is-2 opacity-0 ${isLoaded ? 'fade-in' : ''}`}> */}
-          {/*  UN Environment Assembly concludes with an urgent call for action */}
-          {/*  to solve planetary emergencies” */}
-          {/*  {' '} */}
-          {/*  <br /> */}
-          {/*  <br /> */}
-          {/*  Introducing Echo Index, un proyecto para medir el estado de salud */}
-          {/*  de los lugares y el efecto en la vida humana, en tiempo real. */}
-          {/* </p> */}
-          {/* eslint-disable-next-line max-len */}
-          {/* <button className={`opacity-0 intro-button ${isLoaded ? 'fade-in-delay-1' : ''}`} type="button" onClick={clickEnter}>ENTER</button> */}
-
           <div className="mask" style={{ height: '37px' }}>
             <h1 className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ fontSize: '1.5rem' }}>ECHO Index</h1>
           </div>

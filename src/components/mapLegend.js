@@ -36,7 +36,12 @@ export default function MapLegend(props) {
         {chartItems.map((item) => (
           <div key={item.value} style={{ flexGrow: 1 }}>
             <div style={{ borderBottom: `solid 1px ${item.color}` }} />
-            <div style={{ textAlign: 'right' }}>{item.value}</div>
+            <div style={{
+              textAlign: 'right', paddingTop: '10px', fontSize: '0.8em', fontWeight: 'bold',
+            }}
+            >
+              {item.value}
+            </div>
           </div>
         ))}
       </div>
@@ -45,7 +50,7 @@ export default function MapLegend(props) {
         type="button"
         onClick={toggleValueDescription}
       >
-        <span style={{ marginRight: '4px' }} className="map-legend-exclamation">!</span>
+        <span style={{ marginRight: '7px' }} className="map-legend-exclamation">!</span>
         What is this?
       </button>
     </div>
