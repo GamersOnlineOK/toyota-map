@@ -221,8 +221,8 @@ h3 {
   margin-left: 10px;
   border: 1px solid white;
   border-radius: 40%;
-  padding: 8px 12px;
-  padding-top: 12px;
+  padding: 9px 13px;
+  padding-top: 13px;
   font-size: 0.8rem;
   display: inline-block;
   font-weight: bold;
@@ -285,7 +285,7 @@ h3 {
 }
 
 .padded-about {
-  padding: 40px 35px !important;
+  padding: 40px 32px !important;
   font-size: x-small;
   font-weight: bold;
   margin-top: 20px;
@@ -521,7 +521,7 @@ h3 {
   position: absolute;
   top: 40px;
   right: 40px;
-  padding: 40px 35px !important;
+  padding: 40px 32px !important;
   font-size: x-small;
   background: none;
   cursor: pointer;
@@ -599,7 +599,7 @@ h3 {
 
 .map-value-desc-container {
   position: absolute;
-  bottom: 15vw;
+  bottom: 20vh;
   right: 0;
   padding-right: 50px;
   padding-left: 150px;
