@@ -43,7 +43,7 @@ export default function AboutModal(props) {
             </button>
           </div>
           {/* eslint-disable-next-line max-len */}
-          <h2 id="about-title" style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`column is-four-fifths ${active ? 'animated animate__fadeInUp' : ''}`}>ABOUT THE PROJECT</h2>
+          <h2 id="about-title" style={active ? { animationDuration: '2s', opacity: '1' } : {}} className={`column is-four-fifths ${active ? 'animated animate__fadeInUp' : ''}`}>ABOUT THE PROJECT</h2>
           <div className="column is-one-fifths is-hidden-mobile">
             <button type="button" className="padded-close-button boxy-outline" aria-label="close" onClick={toggle}>
               CLOSE
@@ -53,21 +53,21 @@ export default function AboutModal(props) {
         <div className="columns modal-container">
           <div className="column is-two-fifths pr-6">
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
-              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
+              <p style={active ? { animationDuration: '4s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 El Proyecto Echo Index es un sistema de recolección de
                 datos sobre diferentes aspectos
                 relativos a la salud de los espacios y el impacto que
                 puede tener en la vida de los seres vivos.
               </p>
               <br />
-              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
+              <p style={active ? { animationDuration: '4.2s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 Las diferentes magnitudes relevadas son comunicadas a un servicio en la nube a
                 través del smartphone de los colaboradores,
                 donde son almacenados y preparados para el
                 cálculo del índice Echo de calidad ambiental.
               </p>
               <br />
-              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
+              <p style={active ? { animationDuration: '4.4s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 Dicho índice comprende desde magnitudes simples y perceptibles por una persona,
                 como la temperatura ambiente e intensidad sonora, hasta parámetros más sutiles y
                 solo perceptibles a través de instrumentos especiales, como el nivel CO2 junto
@@ -77,7 +77,7 @@ export default function AboutModal(props) {
           </div>
           <div className="column is-two-fifths pr-6">
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
-              <p style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
+              <p style={active ? { animationDuration: '4.6s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 Estos datos se envían de forma anónima y geolocalizada a la nube, conformando
                 la arquitectura del sistema completo compuesto por varios sensores Echo en
                 movimiento constante. Este movimiento permite generar un
@@ -88,7 +88,7 @@ export default function AboutModal(props) {
           <div className="column is-one-fifth">
             <p><b>Modulo externo</b></p>
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
-              <div style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
+              <div style={active ? { animationDuration: '4.2s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 <img style={{ width: '237px', margin: '10px 0px' }} src={externalModuleSmallImg} alt="external module" />
                 <img style={{ width: '237px' }} src={externalModuleSmallP2Img} alt="external module part 2" />
                 <small style={{ display: 'block' }}>

@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 function ControlPanel(props) {
   const {
-    dropdownOptions, selectedWeek, selectWeek, valueOptions, selectedValue, selectValue,
+    dropdownOptions, selectedWeek, selectWeek, valueOptions, selectValue,
   } = props;
 
   const [isActive, setActive] = useState(false);
@@ -16,7 +16,7 @@ function ControlPanel(props) {
     selectWeek(id);
   };
 
-  const [activeValueId, setActiveValue] = useState(selectedValue.id);
+  const [activeValueId, setActiveValue] = useState();
   const proxySelectValue = (id) => {
     setActiveValue(id);
     selectValue(id);

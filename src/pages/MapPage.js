@@ -66,7 +66,7 @@ const valueOptions = [
 export default function MapPage() {
   const [isPageChange, setPageChange] = useState(false);
   useEffect(() => {
-    const timer = setTimeout(() => setPageChange(true), 1300);
+    const timer = setTimeout(() => setPageChange(true), 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -79,7 +79,7 @@ export default function MapPage() {
 
   const [showValueDescription, setShowValueDescription] = useState(null);
 
-  const [selectedValue, setValue] = useState(valueOptions[0]);
+  const [selectedValue, setValue] = useState('');
   const selectValue = (id) => {
     // Load value data to map for selected week
     const val = valueOptions.find((v) => v.id === id);
