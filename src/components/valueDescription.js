@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import closeIcon from '../assets/images/Close-icon.svg';
 
 export default function ValueDescription(props) {
   const { showValueDescription, setShowValueDescription } = props;
@@ -23,7 +24,7 @@ export default function ValueDescription(props) {
     <div className={`map-value-desc-container ${showDesc ? 'map-value-desc-container-show' : ''} ${showValueDescription ? '' : 'map-value-desc-container-hide'}`}>
       <div style={{ background: 'none', paddingRight: '0' }} className="notification">
         <button type="button" onClick={closeSelectedValue} className="close-button-wrapper">
-          x
+          <img src={closeIcon} alt="Close" />
         </button>
         <h5 className="map-value-desc-title">
           {showValueDescription && showValueDescription.title}

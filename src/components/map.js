@@ -48,12 +48,12 @@ export default function Map(props) {
       'fill-extrusion-color': {
         property: selectedValue.id,
         stops: [
-          [0, '#3288bd'],
-          [100, '#66c2a5'],
-          [200, '#abdda4'],
-          [300, '#e6f598'],
-          [400, '#ffffbf'],
-          [500, '#fee08b'],
+          [0, '#00ff02'],
+          [100, '#93bd5b'],
+          [200, '#017f01'],
+          [300, '#fefe01'],
+          [400, '#ff9966'],
+          [500, '#fe0000'],
         ],
       },
       'fill-extrusion-height': [
