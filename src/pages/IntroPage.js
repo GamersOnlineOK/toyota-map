@@ -113,7 +113,7 @@ export default function IntroPage() {
                 </div>
                 <p style={{ padding: '40px' }} className={`intro-p has-text-centered is-2 opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
                   UN Environment Assembly concludes with an urgent call for action
-                  to solve planetary emergencies”
+                  to solve planetary emergencies
                   {' '}
                   <br />
                   <br />
