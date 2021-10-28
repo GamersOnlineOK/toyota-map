@@ -8,27 +8,27 @@ import EchoLogo from '../assets/images/logo-black.svg';
 
 const chartItems = [
   {
-    color: '#fff',
+    color: '#00ff02',
     value: 25,
   },
   {
-    color: '#c4ffa3',
+    color: '#93bd5b',
     value: 50,
   },
   {
-    color: '#6fc73f',
+    color: '#017f01',
     value: 100,
   },
   {
-    color: '#ffd300',
+    color: '#fefe01',
     value: 200,
   },
   {
-    color: '#ff7800',
+    color: '#ff9966',
     value: 300,
   },
   {
-    color: '#f00',
+    color: '#fe0000',
     value: 400,
   },
 ];
@@ -41,7 +41,7 @@ export default function EchoIndexModal(props) {
     if (active) {
       const timer = setTimeout(() => {
         setActiveModal(true);
-      }, 300);
+      }, 550);
       return () => clearTimeout(timer);
     }
     setActiveModal(false);
@@ -68,7 +68,7 @@ export default function EchoIndexModal(props) {
           <h2 style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`modal-index-title ${active ? 'animated animate__fadeInUp' : ''}`}>What means</h2>
         </ScrollAnimation>
         <div className="columns mt-0">
-          <div style={active ? { animationDuration: '2s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeInUp' : ''}`}>
+          <div style={active ? { animationDuration: '2s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`}>
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
               <h2 className="modal-index-subtitle">ECHO INDEX?</h2>
               <div className="pt-6">
@@ -86,7 +86,7 @@ export default function EchoIndexModal(props) {
               </div>
             </ScrollAnimation>
           </div>
-          <div style={active ? { animationDuration: '2s', opacity: '1' } : {}} className={`column is-one-third pt-6 pr-0 ${active ? 'animated animate__fadeInUp' : ''}`}>
+          <div style={active ? { animationDuration: '2s' } : {}} className={`column opacity-0 is-one-third pl-0 ${active ? 'fade-in-delay-1 animate__fadeInUp' : ''}`}>
             <div
               style={{
                 display: 'flex',
@@ -131,17 +131,15 @@ export default function EchoIndexModal(props) {
               </ScrollAnimation>
             </div>
           </div>
-          <div style={active ? { animationDuration: '4s', opacity: '1' } : {}} className={`column is-one-third pl-0 ${active ? 'animated animate__fadeInUp' : ''}`}>
-            <ScrollAnimation style={{ height: '100%', width: '100%' }} animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
-              <div
-                className="toyota-yaris-background"
-                style={{
-                  backgroundImage: `url(${ToyotaYaris}`,
-                }}
-              >
-                <img className="is-hidden-tablet" src={ToyotaYaris} alt="toyota yaris" />
-              </div>
-            </ScrollAnimation>
+          <div style={active ? { animationDuration: '4s' } : {}} className={`column opacity-0 is-one-third pl-0 ${active ? 'fade-in-delay-3' : ''}`}>
+            <div
+              className="toyota-yaris-background"
+              style={{
+                backgroundImage: `url(${ToyotaYaris}`,
+              }}
+            >
+              <img className="is-hidden-tablet" src={ToyotaYaris} alt="toyota yaris" />
+            </div>
           </div>
           <button type="button" className="padded-close-button boxy-outline is-hidden-mobile" aria-label="close" onClick={toggle}>
             CLOSE

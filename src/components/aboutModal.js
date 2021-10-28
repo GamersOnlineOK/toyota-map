@@ -18,7 +18,7 @@ export default function AboutModal(props) {
     if (active) {
       const timer = setTimeout(() => {
         setActiveModal(true);
-      }, 300);
+      }, 380);
       return () => clearTimeout(timer);
     }
     setActiveModal(false);
@@ -87,29 +87,27 @@ export default function AboutModal(props) {
           </div>
           <div className="column is-one-fifth">
             <p><b>Modulo externo</b></p>
-            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
-              <div style={active ? { animationDuration: '4.2s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
-                <img style={{ width: '237px', margin: '10px 0px' }} src={externalModuleSmallImg} alt="external module" />
-                <img style={{ width: '237px' }} src={externalModuleSmallP2Img} alt="external module part 2" />
-                <small style={{ display: 'block' }}>
-                  <small>
-                    Previsualizacion del dispositivo
-                    <br />
-                    {' '}
-                    integrado en el auto
-                  </small>
+            <div style={active ? { animationDuration: '3s' } : {}} className={`opacity-0 ${active ? 'fade-in-delay-3' : ''}`}>
+              <img style={{ width: '237px', margin: '10px 0px' }} src={externalModuleSmallImg} alt="external module" />
+              <img style={{ width: '237px' }} src={externalModuleSmallP2Img} alt="external module part 2" />
+              <small style={{ display: 'block' }}>
+                <small>
+                  Previsualizacion del dispositivo
+                  <br />
+                  {' '}
+                  integrado en el auto
                 </small>
-              </div>
-            </ScrollAnimation>
+              </small>
+            </div>
           </div>
         </div>
         <div style={{ marginBottom: '70px' }} className="columns is-full">
-          <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
+          <ScrollAnimation animateIn="animate__fadeInUp" animationDuration="3s" animateOnce="true" scrollableParentSelector="#about-modal">
             <img src={devicePieces} alt="device pieces" className="is-hidden-mobile" />
             <img src={devicePiecesMobile} alt="device pieces" className="is-hidden-tablet" />
           </ScrollAnimation>
         </div>
-        <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
+        <ScrollAnimation animateIn="animate__fadeInUp" animationDuration="6s" animateOnce="true" scrollableParentSelector="#about-modal">
           <img style={{ minWidth: 'calc(100% + 300px)', marginLeft: '-150px' }} src={carImage} alt="car" />
         </ScrollAnimation>
         <div className="section mobile-section" />

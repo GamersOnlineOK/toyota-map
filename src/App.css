@@ -309,14 +309,32 @@ h3 {
   border-radius: 999px;
   transition: all 0.45s ease-in;
 }
+.close-button {
+  background: white;
+  left: 20vw;
+  top: -10vh;
+  width: 0vw;
+  height: 0vw;
+  border-radius: 999px;
+  transition: all 0.45s ease-in;
+}
 
 .center-expanded-button {
   background: white;
-  left: -55vw;
+  left: -70vw;
   top: -1100px;
-  width: 120vw;
-  height: 120vw;
-  transition: all 0.57s ease-in;
+  width: 150vw;
+  height: 150vw;
+  transition: all 0.70s ease-in;
+}
+.center-close-button {
+  background: white;
+  left: 10vw;
+  top: -10vh;
+  width: 0vw;
+  height: 0vw;
+  border-radius: 999px;
+  transition: all 0.45s ease-in;
 }
 
 .controls-container {
@@ -697,11 +715,11 @@ h3 {
 .collapsable-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.15s ease-out;
+  transition: all 1.55s ease-out;
 }
 
 .collapsable-content.expanded {
-  transition: max-height 0.25s ease-in;
+  transition: all 1.55s ease-in;
   max-height: 1000px;
   padding: 20px 0px;
 }
