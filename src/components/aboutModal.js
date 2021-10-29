@@ -26,7 +26,7 @@ export default function AboutModal(props) {
   }, [active]);
 
   return (
-    <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-normal ${activeModal ? 'is-active' : ''}`}>
+    <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeIn ${activeModal ? 'is-active' : ''}`}>
       <div id="about-modal" className="modal-content modal-card">
         <div className="columns mt-6">
           <div className="modal-nav is-hidden-tablet">
@@ -53,14 +53,14 @@ export default function AboutModal(props) {
         <div className="columns modal-container">
           <div className="column is-two-fifths pr-6">
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
-              <p style={active ? { animationDuration: '6s', fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
-                El Proyecto Echo Index es un sistema de recolección de
+              <p style={active ? { animationDuration: '4s', fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
+                Project Echo Index es un sistema de recolección de
                 datos sobre diferentes aspectos
                 relativos a la salud de los espacios y el impacto que
                 puede tener en la vida de los seres vivos.
               </p>
               <br />
-              <p style={active ? { animationDuration: '6.2s', fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
+              <p style={active ? { animationDuration: '4.2s', fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 Las diferentes magnitudes relevadas son comunicadas a un servicio en la nube a
                 través del smartphone de los colaboradores,
                 donde son almacenados y preparados para el
