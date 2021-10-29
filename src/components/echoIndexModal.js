@@ -64,7 +64,7 @@ export default function EchoIndexModal(props) {
             x
           </button>
         </div>
-        <div className="columns mt-6">
+        <div className="columns mt-6 echo-container">
           <div style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`}>
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
               <h2 className="modal-index-subtitlew">What means</h2>

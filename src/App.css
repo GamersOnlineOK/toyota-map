@@ -583,7 +583,7 @@ h3 {
 }
 .modal-index-subtitlew {
   text-align: left;
-  font-size: 6rem!important;
+  font-size: 6.5rem!important;
   line-height: 1;
 }
 
@@ -592,6 +592,10 @@ h3 {
 }
 .pr-4 {
   font-size: 1.1rem;
+  margin-top: 150px;
+}
+.echo-container {
+  padding-top: 100px;
 }
 
 .device-indicators {
@@ -768,6 +772,17 @@ h3 {
   #about-title {
     font-size: 5.4rem!important;
     
+  }
+  .scale-container {
+    
+    margin-top: -40px!important;
+  }
+  .pr-4 {
+    font-size: 1.1rem;
+    margin-top:  60px;
+  }
+  .echo-container {
+    padding-top: 80px;
   }
 
   .modal-index-subtitle {
