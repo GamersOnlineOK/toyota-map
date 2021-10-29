@@ -293,9 +293,6 @@ h3 {
 
 .expand-button {
   position: absolute;
- 
-  margin-left: -320px;
-  margin-top: 100px;
   width: 100%;
   height: 100%;
   border-radius: 999px;
@@ -313,8 +310,6 @@ h3 {
 
 .expanded-button {
   background: white;
-  left: -120vw;
-  top: -80vh;
   width: 200vw;
   height: 200vw;
   border-radius: 999px;
@@ -322,8 +317,8 @@ h3 {
 }
 .close-button {
   background: white;
-  left: 20vw;
-  top: -10vh;
+  top:40%;
+  left:40%;
   width: 0vw;
   height: 0vw;
   border-radius: 999px;
