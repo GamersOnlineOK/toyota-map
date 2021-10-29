@@ -53,21 +53,21 @@ export default function AboutModal(props) {
         <div className="columns modal-container">
           <div className="column is-two-fifths pr-6">
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
-              <p style={active ? { animationDuration: '6s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
+              <p style={active ? { animationDuration: '6s', fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 El Proyecto Echo Index es un sistema de recolección de
                 datos sobre diferentes aspectos
                 relativos a la salud de los espacios y el impacto que
                 puede tener en la vida de los seres vivos.
               </p>
               <br />
-              <p style={active ? { animationDuration: '6.2s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
+              <p style={active ? { animationDuration: '6.2s', fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 Las diferentes magnitudes relevadas son comunicadas a un servicio en la nube a
                 través del smartphone de los colaboradores,
                 donde son almacenados y preparados para el
                 cálculo del índice Echo de calidad ambiental.
               </p>
               <br />
-              <p style={active ? { animationDuration: '6.6s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
+              <p style={active ? { animationDuration: '6.6s', fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 Dicho índice comprende desde magnitudes simples y perceptibles por una persona,
                 como la temperatura ambiente e intensidad sonora, hasta parámetros más sutiles y
                 solo perceptibles a través de instrumentos especiales, como el nivel CO2 junto
@@ -77,7 +77,7 @@ export default function AboutModal(props) {
           </div>
           <div className="column is-two-fifths pr-6">
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
-              <p style={active ? { animationDuration: '6.6s', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
+              <p style={active ? { animationDuration: '6.6s', fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 Estos datos se envían de forma anónima y geolocalizada a la nube, conformando
                 la arquitectura del sistema completo compuesto por varios sensores Echo en
                 movimiento constante. Este movimiento permite generar un
@@ -120,8 +120,8 @@ export default function AboutModal(props) {
         </ScrollAnimation>
         <div style={{ marginTop: '20px' }} className="columns">
           <div className="column is-three-fifths pr-6">
-            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
-              <p className="pr-6">
+            <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#about-modal">
+              <p style={active ? { animationDuration: '3.6s', fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
                 Echo Index es un proyecto impulsado por Curcio Capitals, apoyado sobre sus valores,
                 principios y creencias. Bajo los paraguas de “mejora contínua”, “respeto hacia
                 las personas” y “crecimiento sustentable”, la compañía persigue el ideal

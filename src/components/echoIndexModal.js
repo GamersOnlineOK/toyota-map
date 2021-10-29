@@ -106,7 +106,7 @@ export default function EchoIndexModal(props) {
                   <br />
                   <br />
                 </div>
-                <div className="scale-container" style={{ marginTop: '100px' }}>
+                <div className="scale-container" style={{ marginTop: '40px' }}>
                   <p style={{ letterSpacing: '3px', fontWeight: 'bold', fontSize: '0.5rem' }}>ESCALA TITLE</p>
                   <div style={{ display: 'flex', marginTop: '10px' }}>
                     <div style={{
