@@ -43,7 +43,7 @@ export default function AboutModal(props) {
             </button>
           </div>
           {/* eslint-disable-next-line max-len */}
-          <h2 id="about-title" style={active ? { animationDuration: '2s', opacity: '1' } : {}} className={`column is-four-fifths ${active ? 'animated animate__fadeInUp' : ''}`}>ABOUT THE PROJECT</h2>
+          <h2 id="about-title" style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={`column is-four-fifths ${active ? 'animated animate__fadeInUp' : ''}`}>ABOUT THE PROJECT</h2>
           <div className="column is-one-fifths is-hidden-mobile">
             <button type="button" className="padded-close-button boxy-outline" aria-label="close" onClick={toggle}>
               CLOSE

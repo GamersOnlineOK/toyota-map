@@ -41,7 +41,7 @@ export default function EchoIndexModal(props) {
     if (active) {
       const timer = setTimeout(() => {
         setActiveModal(true);
-      }, 550);
+      }, 650);
       return () => clearTimeout(timer);
     }
     setActiveModal(false);
@@ -49,7 +49,7 @@ export default function EchoIndexModal(props) {
   }, [active]);
 
   return (
-    <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeInScale ${activeModal ? 'is-active' : ''}`}>
+    <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeIn ${activeModal ? 'is-active' : ''}`}>
       <div id="index-modal" className="modal-content modal-card modal-index">
         <div style={{ marginTop: '40px' }} className="modal-nav is-hidden-tablet">
           <SVG svgImage={EchoLogo} className="nav-logo" />
@@ -64,12 +64,10 @@ export default function EchoIndexModal(props) {
             x
           </button>
         </div>
-        <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
-          <h2 style={active ? { animationDuration: '1s', opacity: '1' } : {}} className={`modal-index-title ${active ? 'animated animate__fadeInUp' : ''}`}>What means</h2>
-        </ScrollAnimation>
-        <div className="columns mt-0">
-          <div style={active ? { animationDuration: '2s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`}>
+        <div className="columns mt-6">
+          <div style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`}>
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
+              <h2 className="modal-index-subtitlew">What means</h2>
               <h2 className="modal-index-subtitle">ECHO INDEX?</h2>
               <div className="pt-6">
                 <b>Adipiscing</b>

@@ -578,6 +578,11 @@ h3 {
 
 .modal-index-subtitle {
   text-align: left;
+  font-size: 10rem!important;
+  line-height: 1;
+}
+.modal-index-subtitlew {
+  text-align: left;
   font-size: 6rem!important;
   line-height: 1;
 }
@@ -738,7 +743,7 @@ h3 {
 }
 
 #about-title {
-  font-size: 5rem!important;
+  font-size: 8rem!important;
 }
 
 .collapsable-content.expanded {
@@ -760,6 +765,18 @@ h3 {
   .toyota-yaris-background {
     background-position: center;
   }
+  #about-title {
+    font-size: 5.4rem!important;
+    
+  }
+
+  .modal-index-subtitle {
+    font-size: 7rem !important;
+  }
+  .modal-index-subtitlew {
+    font-size: 4rem !important;
+  }
+  
   h2 {
    
     font-size: 3rem !important;
