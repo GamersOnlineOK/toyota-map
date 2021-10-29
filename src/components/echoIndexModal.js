@@ -49,7 +49,7 @@ export default function EchoIndexModal(props) {
   }, [active]);
 
   return (
-    <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeInScale ${activeModal ? 'is-active' : ''}`}>
+    <div id="modal-fadeInScale-fs" className={`modal modal-full-screen modal-fx-fadeIn ${activeModal ? 'is-active' : ''}`}>
       <div id="index-modal" className="modal-content modal-card modal-index">
         <div style={{ marginTop: '40px' }} className="modal-nav is-hidden-tablet">
           <SVG svgImage={EchoLogo} className="nav-logo" />
