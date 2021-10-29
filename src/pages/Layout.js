@@ -34,7 +34,7 @@ const Layout = ({
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start navbar-center">
           <button style={{ background: 'none', border: 'none', letterSpacing: '4px' }} type="button" className="opacity-0 fade-in-delay-1 navbar-item" onClick={toggleEchoIndexModal}>
-            <div className={`expand-button ${showEchoIndexModal ? 'center-expanded-button' : 'center-close-button'}`} />
+            <div className={`center-expand-button ${showEchoIndexModal ? 'center-expanded-button' : 'center-close-button'}`} />
             ECHO INDEX
             <span className="echo-index-12">12</span>
           </button>
