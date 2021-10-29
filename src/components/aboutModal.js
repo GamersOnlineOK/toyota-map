@@ -26,7 +26,7 @@ export default function AboutModal(props) {
   }, [active]);
 
   return (
-    <div id="modal-fadeInScale-fs" className={`modal modal-full-screen fadeIn ${activeModal ? 'is-active' : ''}`}>
+    <div id="modal-fadeIn-fs" className={`modal modal-full-screen fadeIn ${activeModal ? 'is-active' : ''}`}>
       <div id="about-modal" className="modal-content modal-card">
         <div className="columns mt-6">
           <div className="modal-nav is-hidden-tablet">
