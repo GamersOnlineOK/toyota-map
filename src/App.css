@@ -583,8 +583,10 @@ h3 {
 }
 .modal-index-subtitlew {
   text-align: left;
-  font-size: 6.5rem!important;
+  font-size: 9rem!important;
   line-height: 1;
+  padding-top: 100px;
+  margin-bottom: -120px;
 }
 
 .is-half {
@@ -592,7 +594,7 @@ h3 {
 }
 .pr-4 {
   font-size: 1.1rem;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .echo-container {
   padding-top: 100px;
@@ -779,7 +781,7 @@ h3 {
   }
   .pr-4 {
     font-size: 1.1rem;
-    margin-top:  60px;
+    margin-top:  0px;
   }
   .echo-container {
     padding-top: 80px;
@@ -788,8 +790,11 @@ h3 {
   .modal-index-subtitle {
     font-size: 7rem !important;
   }
+  .modal-card {
+    padding: 0 0px 0 70px;
+  }
   .modal-index-subtitlew {
-    font-size: 4rem !important;
+    font-size: 7rem !important;
   }
   
   h2 {
@@ -866,6 +871,22 @@ h3 {
 
   .nav-logo {
     height: 20px;
+  }
+
+  #about-title{
+    font-size: 4rem!important;
+  }
+
+  .echo-container {
+    padding-top: 20px;
+  }
+
+  .modal-index-subtitle {
+    font-size: 5rem !important;
+  }
+  .modal-index-subtitlew {
+    font-size: 4rem !important;
+    margin-bottom: -60px;
   }
 
   .mobile-echo-button {
