@@ -578,7 +578,7 @@ h3 {
 
 .modal-index-subtitle {
   text-align: left;
-  font-size: 10rem!important;
+  font-size: 6rem;
   line-height: 1;
 }
 .modal-index-subtitlew {
@@ -827,12 +827,27 @@ h3 {
   }
 }
 
+.modal.modal-fx-fadeIn .modal-content {
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; 
+}
+.modal.modal-fx-fadeIn.is-active .modal-content {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1080px) {
   .mobile-echo-button {
     position: relative;
     display: inline !important;
     margin-left: auto;
     margin-right: 20px;
+  }
+
+  .echo-container {
+    padding-top: 0;
   }
 
   h2 {
