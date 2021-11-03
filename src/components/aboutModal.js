@@ -2,14 +2,41 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { useEffect, useState } from 'react';
 import externalModuleSmallImg from '../assets/images/modulo-externo-small-about-modal.png';
 import externalModuleSmallP2Img from '../assets/images/modulo-externo-small-p2-about-modal.png';
-import devicePieces from '../assets/images/dispositivo-dislocado-text.png';
 import devicePiecesMobile from '../assets/images/dispositivo-dislocado-mobile.png';
 import carImage from '../assets/images/cuanto-tiempo-circula-hibrido-modo-electrico.png';
 import profilePicture from '../assets/images/profile-picture.png';
 import Collapsable from './collapsable';
 import SVG from './svg';
 import EchoLogo from '../assets/images/logo-black.svg';
-import PIecesVideo from '../assets/video/pieces.webm';
+import PiecesVideo from '../assets/video/pieces.webm';
+
+const [isLoaded, setLoaded] = useState(false);
+const [isVideoLoaded, setVideoLoaded] = useState(false);
+
+const onLoadedVideo = () => {
+  setVideoLoaded(true);
+};
+
+useEffect(() => {
+  console.log('video loaded', isVideoLoaded);
+  if (isVideoLoaded && loaderFinished) {
+    // unpause animation and fade out
+    const timer = setTimeout(() => {
+      setPaused(false);
+      const timer2 = setTimeout(() => {
+        setLoadedFadeOut(true);
+        const timer3 = setTimeout(() => {
+          setLoaded(true);
+        }, 1000);
+        return () => clearTimeout(timer3);
+      }, 800);
+      return () => clearTimeout(timer2);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }
+
+  return false;
+}, [isVideoLoaded, loaderFinished]);
 
 export default function AboutModal(props) {
   const { active, toggle } = props;
