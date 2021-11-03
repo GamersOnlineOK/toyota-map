@@ -17,7 +17,7 @@
 }
 
 html {
-  background-color: #09101d !important;
+  background-color: #040b10 !important;
   overflow: hidden !important;
 }
 
@@ -59,7 +59,7 @@ h3 {
 }
 
 .default-background {
-  background-color: #09101d;
+  background-color: #040b10;
 }
 
 .nav-logo {
@@ -134,7 +134,7 @@ h3 {
   position: fixed;
   width: 300%;
   max-width: 300% !important;
-  height: 125vh !important;
+  height: 160vh !important;
   z-index: 100;
   top: 50%;
   right: -140%;
@@ -754,7 +754,7 @@ h3 {
 }
 
 #about-title {
-  font-size: 10rem!important;
+  font-size: 6rem!important;
   text-align: left;
 }
 
