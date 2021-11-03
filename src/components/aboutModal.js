@@ -103,8 +103,9 @@ export default function AboutModal(props) {
         </div>
         <div style={active ? { animationDuration: '3s' } : {}} className={`opacity-0 ${active ? 'fade-in-delay-3' : ''}`}>
           <ScrollAnimation animateIn="fadeIn" animationDuration="3s" animateOnce="true" scrollableParentSelector="#about-modal">
-          <video autoPlay loop muted id="pieces-video" className="animate-up">
-           <source src={PiecesVideo} type="video/webm" /></video>
+           <video autoPlay loop muted id="pieces-video" className="animate-up">
+            <source src={PiecesVideo} type="video/webm" />
+           </video>
           </ScrollAnimation>
         </div>
         <div style={active ? { animationDuration: '10s' } : {}} className={`opacity-0 ${active ? 'fade-in-delay-3' : ''}`}>
