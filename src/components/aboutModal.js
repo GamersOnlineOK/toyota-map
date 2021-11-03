@@ -10,83 +10,10 @@ import SVG from './svg';
 import EchoLogo from '../assets/images/logo-black.svg';
 import PiecesVideo from '../assets/video/pieces.webm';
 
+
 export default function AboutModal(props) {
   const { active, toggle } = props;
 
-    const history = useHistory();
-  
-    const [isLoaded, setLoaded] = useState(false);
-    const [isVideoLoaded, setVideoLoaded] = useState(false);
-    const [loaderFinished, setLoaderFinished] = useState(false);
-    const [setLoadedFadeOut] = useState(false);
-    const [setPaused] = useState(false);
-  
-    const onLoadedVideo = () => {
-      setVideoLoaded(true);
-    };
-  
-    useEffect(() => {
-      console.log('video loaded', isVideoLoaded);
-      if (isVideoLoaded && loaderFinished) {
-        // unpause animation and fade out
-        const timer = setTimeout(() => {
-          setPaused(false);
-          const timer2 = setTimeout(() => {
-            setLoadedFadeOut(true);
-            const timer3 = setTimeout(() => {
-              setLoaded(true);
-            }, 1000);
-            return () => clearTimeout(timer3);
-          }, 800);
-          return () => clearTimeout(timer2);
-        }, 1000);
-        return () => clearTimeout(timer);
-      }
-  
-      return false;
-    }, [isVideoLoaded, loaderFinished]);
-  
-    const pauseTimeout = (pause, time, cb) => {
-      setPaused(pause);
-      const timer = setTimeout(() => {
-        cb();
-      }, time);
-      return () => clearTimeout(timer);
-    };
-  
-    useEffect(() => {
-      pauseTimeout(false, 1500, () => {
-        pauseTimeout(true, 1300, () => {
-          pauseTimeout(false, 1000, () => {
-            pauseTimeout(true, 1100, () => {
-              pauseTimeout(false, 800, () => {
-                setPaused(true);
-                setLoaderFinished(true);
-              });
-            });
-          });
-        });
-      });
-    }, []);
-  
-    const [isPageChange, setPageChange] = useState(false);
-    const clickEnter = () => {
-      setPageChange(true);
-      const timer = setTimeout(() => {
-        history.push(Routes.MAP_PREVIEW);
-        return () => clearTimeout(timer);
-      }, 500);
-    };
-  
-    const echoLottieOptions = {
-      loop: false,
-      autoplay: true,
-      animationData: echoAnimation,
-      rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice',
-      },
-    };
-    
   const [activeModal, setActiveModal] = useState(false);
   useEffect(() => {
     if (active) {
@@ -177,7 +104,7 @@ export default function AboutModal(props) {
         </div>
         <div style={active ? { animationDuration: '3s' } : {}} className={`opacity-0 ${active ? 'fade-in-delay-3' : ''}`}>
           <ScrollAnimation animateIn="fadeIn" animationDuration="3s" animateOnce="true" scrollableParentSelector="#about-modal">
-          <video autoPlay loop muted id="globe-video" onLoadedData={onLoadedVideo} className={`${isLoaded ? 'animate-up' : ''}`}>
+          <video autoPlay loop muted id="pieces-video" className="animate-up">
           <source src={PiecesVideo} type="video/webm" />
         </video>
           </ScrollAnimation>
