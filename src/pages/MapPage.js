@@ -110,7 +110,7 @@ export default function MapPage() {
       <div className={`default-background loading-screen fade-out-fast ${isPageChange ? 'is-hidden' : ''}`} />
       <EchoIndexModal toggle={toggleEchoIndexModal} active={showEchoIndexModal} />
       <AboutModal toggle={toggleAboutModal} active={showAboutModal} />
-      <div className="controls-container opacity-0 fade-in-delay-2">
+      <div id="main-info-container" className="controls-container opacity-0 fade-in-delay-2">
         <h1>MONTEVIDEO</h1>
         <ControlPanel
           dropdownOptions={dropdownOptions}

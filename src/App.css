@@ -164,6 +164,34 @@ h3 {
   transform:rotateY(180deg) translateY(-50%)
 }
 
+#main-info-container{
+pointer-events:none;
+}
+
+button{
+  pointer-events:all;
+}
+
+.control-panel {
+  pointer-events: none;
+}
+
+.dropdown{
+  pointer-events:all
+}
+
+.property-selector {
+  pointer-events: none;
+}
+
+.columns.is-multiline.is-mobile {
+  pointer-events: none;
+}
+
+.column.is-full.pb-1.pt-1 {
+  pointer-events: none;
+}
+
 .intro-button {
   width: 170px;
   height: 40px;
