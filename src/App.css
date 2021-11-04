@@ -129,17 +129,6 @@ h3 {
   opacity: 0;
 }
 
-#globe-video {
-  transform: rotateY(180deg) translateY(-50%);
-  position: fixed;
-  width: 300%;
-  max-width: 300% !important;
-  height: 160vh !important;
-  z-index: 100;
-  top: 50%;
-  right: -140%;
-}
-
 .preview-line {
   margin: auto;
   display: flex;
@@ -925,14 +914,6 @@ h3 {
     display: inline !important;
     margin-left: auto;
     margin-right: 20px;
-  }
-
-  #globe-video {
-    width: 100%;
-    right: 0;
-    left:0;
-    top: -4%;
-    height: auto !important;
   }
 
   .intro-container {
