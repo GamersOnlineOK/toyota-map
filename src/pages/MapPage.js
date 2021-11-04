@@ -78,7 +78,7 @@ export default function MapPage() {
   };
 
   const [showValueDescription, setShowValueDescription] = useState(null);
-
+  // const [showBtnWhatIsThis, setshowBtnWhatIsThis] = useState(false);
   const [selectedValue, setValue] = useState('');
   const selectValue = (id) => {
     // Load value data to map for selected week
@@ -86,6 +86,7 @@ export default function MapPage() {
     setValue(val);
     if (showValueDescription) {
       setShowValueDescription(val);
+      // setshowBtnWhatIsThis(true);
     }
   };
 
@@ -133,9 +134,7 @@ export default function MapPage() {
           <CurcioLogo className="is-hidden-mobile" />
           <img src={CurcioLogoChico} className="is-hidden-tablet" alt="curcio" />
         </div>
-        <div className="column">
-          <MapLegend toggleValueDescription={toggleValueDescription} />
-        </div>
+        <div className="column"><MapLegend toggleValueDescription={toggleValueDescription} selectedValue={selectedValue} /></div>
       </div>
       <ValueDescription
         showValueDescription={showValueDescription}

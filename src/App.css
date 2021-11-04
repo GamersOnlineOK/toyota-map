@@ -622,6 +622,8 @@ h3 {
 }
 
 .map-legend-button {
+  animation-name: map-legend-button;
+  animation-duration: 3s;
   width: 140px;
   margin-top: 10px;
   border: none;
@@ -629,6 +631,11 @@ h3 {
   color: white;
   text-align: right;
   cursor: pointer;
+  
+}
+@keyframes map-legend-button {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 .map-legend-button:hover {

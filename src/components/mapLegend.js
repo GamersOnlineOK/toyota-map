@@ -27,7 +27,7 @@ const chartItems = [
 ];
 
 export default function MapLegend(props) {
-  const { toggleValueDescription } = props;
+  const { toggleValueDescription, selectedValue } = props;
 
   return (
     <div className="value-legend">
@@ -52,12 +52,12 @@ export default function MapLegend(props) {
         ))}
       </div>
       <button
-        className="map-legend-button"
+        className={selectedValue !== '' ? 'map-legend-button' : 'opacity-0'}
         type="button"
         onClick={toggleValueDescription}
       >
         <span style={{ marginRight: '7px' }} className="map-legend-exclamation">!</span>
-        What is this?
+        What is this
       </button>
     </div>
   );
