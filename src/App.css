@@ -155,11 +155,11 @@ h3 {
 
 .intro-p {
   font-family: "Sahar", "Arial", sans-serif;
-  font-size: 20px;
-  font-weight: normal;
+  font-size: 17px;
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.4;
+  line-height: 2;
   letter-spacing: normal;
   text-align: center;
   color: #fff;
@@ -562,7 +562,7 @@ h3 {
 .modal-card {
   padding: 0 150px;
   overflow-y: scroll !important;
-  background: #f9f9f9 !important;
+  background: #fff;
 }
 
 .modal-index {
@@ -869,10 +869,13 @@ h3 {
   }
 
   #globe-video {
-    width: 300%;
-    height: 125vh !important;
+    position:fixed;
+    width: 100%;
+    height: 160vh !important;
     top: 50%;
-    right: -160%;
+    right: -310%;
+    z-index: 100;
+    transform:rotateY(180deg) translateY(-50%)
   }
 
   .modal-index-title {
