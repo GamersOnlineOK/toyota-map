@@ -10,6 +10,7 @@ import MapLegend from '../components/mapLegend';
 import EchoIndexModal from '../components/echoIndexModal';
 import AboutModal from '../components/aboutModal';
 import ValueDescription from '../components/valueDescription';
+import DatePickers from '../components/DatePicker';
 
 const dropdownOptions = [
   {
@@ -112,6 +113,7 @@ export default function MapPage() {
       <AboutModal toggle={toggleAboutModal} active={showAboutModal} />
       <div id="main-info-container" className="controls-container opacity-0 fade-in-delay-2">
         <h1>MONTEVIDEO</h1>
+        <DatePickers />
         <ControlPanel
           dropdownOptions={dropdownOptions}
           selectedWeek={selectedWeek}
