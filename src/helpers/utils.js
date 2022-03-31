@@ -3,9 +3,7 @@ export default function updateWeek(featureCollection, weeklyValues) {
   return {
     type: 'FeatureCollection',
     features: features.map((f) => {
-      console.log(weeklyValues);
       const zoneValue = weeklyValues.find((week) => week.zoneId === f.properties.zoneId);
-      console.log(zoneValue);
       if (!zoneValue) {
         return { ...f };
       }
@@ -18,8 +16,6 @@ export default function updateWeek(featureCollection, weeklyValues) {
         ...f.properties,
         ...values,
       };
-      console.log(f);
-      console.log(properties);
       return { ...f, properties };
     }),
   };

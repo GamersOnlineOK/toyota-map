@@ -5,7 +5,7 @@ export const styleLayer = {
   type: 'fill-extrusion',
   hover: true,
   paint: {
-    // 'fill-outline-color': '#ffae00',
+    'fill-outline-color': '#ffae00',
     'fill-extrusion-color': {
       property: 'co2',
       stops: [
@@ -32,6 +32,11 @@ export const styleLayer = {
       40, 400,
       50, 500,
     ],
-    'fill-extrusion-opacity': 0.6,
+    'fill-opacity': [
+      'case',
+      ['boolean', ['feature-state', 'hover'], false],
+      1,
+      0.2,
+    ],
   },
 };

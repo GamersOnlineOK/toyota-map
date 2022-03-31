@@ -3,18 +3,59 @@
 import * as React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import ReactMapGL, { Layer, Source } from 'react-map-gl';
-// eslint-disable-next-line
-//import geoData from '../assets/data/datafeatures.json';
-// eslint-disable-next-line
-//import weeklyValues from '../assets/data/weekValues.json';
 import { styleLayer } from './mapStyle';
 import updateWeek from '../helpers/utils';
 import useWindowSize from './windowSize';
 
 export default function Map(props) {
-  const { selectedWeek, selectedValue } = props;
+  // eslint-disable-next-line
+  const { selectedValue, startDate, endDate } = props;
   const [geoData, setgeoData] = useState(null);
+  const [initDateApi, setInitDateApi] = useState('2022-03-01');
+  const [endDateApi, setEndDateApi] = useState('2022-03-01');
   const [weeklyValues, setWeeklyvalues] = useState({});
+  useEffect(() => {
+    let Day;
+    let Month;
+    const Year = startDate.getFullYear();
+    if (startDate.getDate() <= 9) {
+      // eslint-disable-next-line
+      Day = "0"+startDate.getDate();
+    } else {
+      Day = startDate.getDate();
+    }
+    if (startDate.getMonth() <= 9) {
+      // eslint-disable-next-line
+      Month = "0"+(startDate.getMonth()+1);
+    } else {
+      Month = startDate.getMonth() + 1;
+      Month += 1;
+    }
+    // eslint-disable-next-line
+    const InitDate = Year + "-" + Month + "-" + Day;
+    setInitDateApi(InitDate);
+  }, [startDate]);
+  useEffect(() => {
+    let Day;
+    let Month;
+    const Year = endDate.getFullYear();
+    if (endDate.getDate() <= 9) {
+      // eslint-disable-next-line
+      Day = "0"+endDate.getDate();
+    } else {
+      Day = endDate.getDate();
+    }
+    if (endDate.getMonth() <= 9) {
+      // eslint-disable-next-line
+      Month = "0"+(endDate.getMonth()+1);
+    } else {
+      Month = endDate.getMonth() + 1;
+      Month += 1;
+    }
+    // eslint-disable-next-line
+    const InitDate = Year + "-" + Month + "-" + Day;
+    setEndDateApi(InitDate);
+  }, [endDate]);
   useEffect(() => {
     // eslint-disable-next-line
     fetch("https://staging.boronstudio.com/focusapi/api/api.php?action=getZones")
@@ -23,7 +64,8 @@ export default function Map(props) {
   }, []);
   useEffect(() => {
     // eslint-disable-next-line
-    fetch("https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryByDateRangeByZone&from=2021-09-01&to=2021-09-02")
+    const URLAPI = "https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryByDateRangeByZone&from="+initDateApi+"&to="+endDateApi+"";
+    fetch(URLAPI)
       .then((res) => res.json())
       // eslint-disable-next-line
       .then((response) => {
@@ -44,36 +86,14 @@ export default function Map(props) {
           // eslint-disable-next-line
           response.data[i][0]['week']  ='1092021';
           // eslint-disable-next-line
-          //response.data[i][0]['pm2.5'] = response.data[i][0]['PM2.5'];
-          // eslint-disable-next-line
-          //response.data[i][0]['pm10'] =response.data[i][0].PM10;
-          // eslint-disable-next-line
-          //response.data[i][0]['db'] = response.data[i][0].DB;
-          // eslint-disable-next-line
-          //response.data[i][0]['voc'] = response.data[i][0].VOC;
-          // eslint-disable-next-line
-          //response.data[i][0]['uv'] = response.data[i][0].UV;
-          // eslint-disable-next-line
-          //delete(response.data[i][0].PM10);
-          // eslint-disable-next-line
-          //delete(response.data[i][0]['PM2.5']);
-          // eslint-disable-next-line
-          //delete(response.data[i][0]['UV']);
-          // eslint-disable-next-line
-          //delete(response.data[i][0]['VOC']);
-          // eslint-disable-next-line
-          //delete(response.data[i][0]['DB']);
-          // eslint-disable-next-line
           weekvalues.push(response.data[i][0]);
         }
         // eslint-disable-next-line
         var nuevoJSemana=JSON.parse(JSON.stringify(weekvalues));
         // eslint-disable-next-line
-        console.log(nuevoJSemana);
-        // eslint-disable-next-line
         setWeeklyvalues(nuevoJSemana);
       });
-  }, []);
+  }, [initDateApi]);
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '119vh',
@@ -134,11 +154,11 @@ export default function Map(props) {
   }, [selectedValue]);
 
   // eslint-disable-next-line max-len
-  const data = useMemo(() => geoData && updateWeek(geoData, weeklyValues, selectedWeek), [selectedWeek]);
-  console.log(data);
+  const data = useMemo(() => geoData && updateWeek(geoData, weeklyValues), [[selectedValue]]);
+
+  // eslint-disable-next-line max-len
   return (
     <ReactMapGL
-      onMouseMove={(e) => { console.log(e); }}
       mapboxApiAccessToken="pk.eyJ1IjoiZnJhbmtqcmFuZ2VsIiwiYSI6ImNrdDljMmhocDFhbWYzMnI1eDl2Y2lwYm0ifQ.Op0miDb3t-6zZG61Ai2Z2g"
       {...viewport}
       mapStyle="mapbox://styles/frankjrangel/cktylwl5e0r3a18p6ej97upu0"

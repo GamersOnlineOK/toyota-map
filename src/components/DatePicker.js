@@ -10,6 +10,7 @@ function DatePickers() {
     setStartDate(start);
     setEndDate(end);
   };
+  console.log(startDate.getFullYear());
   // eslint-disable-next-line
   return (
   // eslint-disable-next-line
