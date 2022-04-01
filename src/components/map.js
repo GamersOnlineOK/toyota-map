@@ -9,11 +9,13 @@ import useWindowSize from './windowSize';
 
 export default function Map(props) {
   // eslint-disable-next-line
-  const { selectedValue, startDate, endDate } = props;
+  const {selectedWeek, selectedValue, startDate, endDate } = props;
   const [geoData, setgeoData] = useState(null);
   const [initDateApi, setInitDateApi] = useState('2022-03-01');
   const [endDateApi, setEndDateApi] = useState('2022-03-01');
   const [weeklyValues, setWeeklyvalues] = useState({});
+  console.log(initDateApi);
+  console.log(endDateApi);
   useEffect(() => {
     let Day;
     let Month;
@@ -36,7 +38,8 @@ export default function Map(props) {
     setInitDateApi(InitDate);
   }, [startDate]);
   useEffect(() => {
-    let Day;
+    if (endDate != null) {
+      let Day;
     let Month;
     const Year = endDate.getFullYear();
     if (endDate.getDate() <= 9) {
@@ -55,6 +58,11 @@ export default function Map(props) {
     // eslint-disable-next-line
     const InitDate = Year + "-" + Month + "-" + Day;
     setEndDateApi(InitDate);
+    } else {
+      const InitDate ="2022-03-31";
+    setEndDateApi(InitDate);
+    }
+    
   }, [endDate]);
   useEffect(() => {
     // eslint-disable-next-line
@@ -64,7 +72,10 @@ export default function Map(props) {
   }, []);
   useEffect(() => {
     // eslint-disable-next-line
+    console.log(initDateApi);
+    console.log(endDateApi);
     const URLAPI = "https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryByDateRangeByZone&from="+initDateApi+"&to="+endDateApi+"";
+    console.log(URLAPI);
     fetch(URLAPI)
       .then((res) => res.json())
       // eslint-disable-next-line
@@ -93,7 +104,7 @@ export default function Map(props) {
         // eslint-disable-next-line
         setWeeklyvalues(nuevoJSemana);
       });
-  }, [initDateApi]);
+  }, [ endDateApi]);
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '119vh',
