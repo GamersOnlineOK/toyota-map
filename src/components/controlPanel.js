@@ -24,7 +24,7 @@ function ControlPanel(props) {
 
   return (
     <div className="control-panel">
-      <div className={isActive ? 'dropdown is-active' : 'dropdown'} style={{ visibility: 'hidden' }}>
+      <div className={isActive ? 'dropdown is-active' : 'dropdown'} style={{ display: 'none' }}>
         <div className="dropdown-trigger">
           <button type="button" className={`button dropdown-control ${isActive ? 'green-border' : ''}`} aria-haspopup="true" aria-controls="dropdown-menu" onClick={toggleDropdown}>
             <span>{selectedWeek.text}</span>

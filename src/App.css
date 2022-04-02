@@ -182,7 +182,8 @@ button{
 }
 
 .dropdown{
-  pointer-events:all
+  pointer-events:all;
+  margin-top: 0.9rem;
 }
 
 .property-selector {
@@ -386,7 +387,7 @@ button{
 }
 
 .control-panel {
-  margin-top: 40px;
+  margin-top: 1.8rem;
 }
 
 .map-container {
