@@ -14,8 +14,6 @@ export default function Map(props) {
   const [initDateApi, setInitDateApi] = useState('2022-03-01');
   const [endDateApi, setEndDateApi] = useState('2022-03-01');
   const [weeklyValues, setWeeklyvalues] = useState({});
-  console.log(initDateApi);
-  console.log(endDateApi);
   useEffect(() => {
     let Day;
     let Month;
@@ -26,12 +24,11 @@ export default function Map(props) {
     } else {
       Day = startDate.getDate();
     }
-    if (startDate.getMonth() <= 9) {
+    if (startDate.getMonth() <= 8) {
       // eslint-disable-next-line
       Month = "0"+(startDate.getMonth()+1);
     } else {
       Month = startDate.getMonth() + 1;
-      Month += 1;
     }
     // eslint-disable-next-line
     const InitDate = Year + "-" + Month + "-" + Day;
@@ -40,29 +37,26 @@ export default function Map(props) {
   useEffect(() => {
     if (endDate != null) {
       let Day;
-    let Month;
-    const Year = endDate.getFullYear();
-    if (endDate.getDate() <= 9) {
+      let Month;
+      const Year = endDate.getFullYear();
+      if (endDate.getDate() <= 9) {
       // eslint-disable-next-line
       Day = "0"+endDate.getDate();
-    } else {
-      Day = endDate.getDate();
-    }
-    if (endDate.getMonth() <= 9) {
+      } else {
+        Day = endDate.getDate();
+      }
+      if (endDate.getMonth() <= 8) {
       // eslint-disable-next-line
       Month = "0"+(endDate.getMonth()+1);
-    } else {
-      Month = endDate.getMonth() + 1;
-      Month += 1;
-    }
-    // eslint-disable-next-line
+      } else {
+        Month = endDate.getMonth() + 1;
+      }
+      // eslint-disable-next-line
     const InitDate = Year + "-" + Month + "-" + Day;
-    setEndDateApi(InitDate);
+      setEndDateApi(InitDate);
     } else {
-      const InitDate ="2022-03-31";
-    setEndDateApi(InitDate);
+      setEndDateApi(initDateApi);
     }
-    
   }, [endDate]);
   useEffect(() => {
     // eslint-disable-next-line
@@ -72,8 +66,6 @@ export default function Map(props) {
   }, []);
   useEffect(() => {
     // eslint-disable-next-line
-    console.log(initDateApi);
-    console.log(endDateApi);
     const URLAPI = "https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryByDateRangeByZone&from="+initDateApi+"&to="+endDateApi+"";
     console.log(URLAPI);
     fetch(URLAPI)
@@ -104,7 +96,7 @@ export default function Map(props) {
         // eslint-disable-next-line
         setWeeklyvalues(nuevoJSemana);
       });
-  }, [ endDateApi]);
+  }, [endDateApi]);
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '119vh',
