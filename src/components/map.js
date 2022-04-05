@@ -3,16 +3,78 @@
 import * as React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import ReactMapGL, { Layer, Source } from 'react-map-gl';
-
-import geoData from '../assets/data/features.json';
-import weeklyValues from '../assets/data/weekValues.json';
 import { styleLayer } from './mapStyle';
 import updateWeek from '../helpers/utils';
 import useWindowSize from './windowSize';
 
 export default function Map(props) {
-  const { selectedWeek, selectedValue } = props;
-
+  // eslint-disable-next-line
+  const { selectedValue, startDate, endDate } = props;
+  const [geoData, setgeoData] = useState(null);
+  const [initDateApi, setInitDateApi] = useState('2022-03-01');
+  const [weeklyValues, setWeeklyvalues] = useState({});
+  useEffect(() => {
+    let Day;
+    let Month;
+    const Year = startDate.getFullYear();
+    if (startDate.getDate() <= 9) {
+      // eslint-disable-next-line
+      Day = "0"+startDate.getDate();
+    } else {
+      Day = startDate.getDate();
+    }
+    if (startDate.getMonth() <= 9) {
+      // eslint-disable-next-line
+      Month = "0"+(startDate.getMonth()+1);
+    } else {
+      Month = startDate.getMonth() + 1;
+      Month += 1;
+    }
+    // eslint-disable-next-line
+    const InitDate = Year + "-" + Month + "-" + Day;
+    setInitDateApi(InitDate);
+  }, [startDate]);
+  useEffect(() => {
+    // eslint-disable-next-line
+    fetch("https://staging.boronstudio.com/focusapi/api/api.php?action=getZones")
+      .then((res) => res.json())
+      .then((res) => setgeoData(res));
+  }, []);
+  useEffect(() => {
+    // eslint-disable-next-line
+    const URLAPI = "https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryByDateRangeByZone&from="+initDateApi+"&to=2022-03-29";
+    console.log(URLAPI);
+    fetch(URLAPI)
+      .then((res) => res.json())
+      // eslint-disable-next-line
+      .then((response) => {
+        // eslint-disable-next-line
+        const weekvalues = new Array();
+        // eslint-disable-next-line
+        const cant = Object.values(response.data).length;
+        // eslint-disable-next-line
+        var objetos = 'aaa';
+        // eslint-disable-next-line
+        const values = null;
+        // eslint-disable-next-line
+        const nuevoDato = null;
+        // eslint-disable-next-line
+      for (var i=1;i<=cant; i++) {
+          // eslint-disable-next-line
+          response.data[i][0]['zoneId'] = i;
+          // eslint-disable-next-line
+          response.data[i][0]['week']  ='1092021';
+          // eslint-disable-next-line
+          weekvalues.push(response.data[i][0]);
+        }
+        // eslint-disable-next-line
+        var nuevoJSemana=JSON.parse(JSON.stringify(weekvalues));
+        // eslint-disable-next-line
+        console.log(nuevoJSemana);
+        // eslint-disable-next-line
+        setWeeklyvalues(nuevoJSemana);
+      });
+  }, [initDateApi]);
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '119vh',
@@ -73,8 +135,8 @@ export default function Map(props) {
   }, [selectedValue]);
 
   // eslint-disable-next-line max-len
-  const data = useMemo(() => geoData && updateWeek(geoData, weeklyValues, selectedWeek), [selectedWeek]);
-
+  const data = useMemo(() => geoData && updateWeek(geoData, weeklyValues), [selectedValue]);
+  console.log(data);
   return (
     <ReactMapGL
       mapboxApiAccessToken="pk.eyJ1IjoiZnJhbmtqcmFuZ2VsIiwiYSI6ImNrdDljMmhocDFhbWYzMnI1eDl2Y2lwYm0ifQ.Op0miDb3t-6zZG61Ai2Z2g"

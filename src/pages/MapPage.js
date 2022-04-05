@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import { useEffect, useState } from 'react';
 import * as React from 'react';
+import DatePicker from 'react-datepicker';
 import Map from '../components/map';
 import Layout from './Layout';
 import ControlPanel from '../components/controlPanel';
@@ -64,6 +65,13 @@ const valueOptions = [
 ];
 
 export default function MapPage() {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(null);
+  const onChange = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
   const [isPageChange, setPageChange] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => setPageChange(true), 500);
@@ -112,6 +120,16 @@ export default function MapPage() {
       <AboutModal toggle={toggleAboutModal} active={showAboutModal} />
       <div id="main-info-container" className="controls-container opacity-0 fade-in-delay-2">
         <h1>MONTEVIDEO</h1>
+        <div className="dropdown">
+          <DatePicker
+            selected={startDate}
+            onChange={onChange}
+            startDate={startDate}
+            endDate={endDate}
+            selectsRange
+            inline
+          />
+        </div>
         <ControlPanel
           dropdownOptions={dropdownOptions}
           selectedWeek={selectedWeek}
@@ -127,6 +145,8 @@ export default function MapPage() {
           width="100%"
           selectedWeek={selectedWeek}
           selectedValue={selectedValue}
+          startDate={startDate}
+          endDate={endDate}
         />
       </div>
       <div className="bottom-container columns opacity-0 fade-in-delay-3">
