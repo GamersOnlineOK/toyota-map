@@ -8,6 +8,7 @@ import updateWeek from '../helpers/utils';
 import useWindowSize from './windowSize';
 
 export default function Map(props) {
+<<<<<<< HEAD
   // eslint-disable-next-line
   const { selectedValue, startDate, endDate } = props;
   const [geoData, setgeoData] = useState(null);
@@ -35,6 +36,12 @@ export default function Map(props) {
     setInitDateApi(InitDate);
   }, [startDate]);
   useEffect(() => {
+=======
+  const { selectedWeek, selectedValue } = props;
+  const [geoData, setgeoData] = useState(null);
+  const [weeklyValues, setWeeklyvalues] = useState({});
+  useEffect(() => {
+>>>>>>> 1adec2682e2d04417fd64982dcf72f57a8334493
     // eslint-disable-next-line
     fetch("https://staging.boronstudio.com/focusapi/api/api.php?action=getZones")
       .then((res) => res.json())
@@ -42,9 +49,13 @@ export default function Map(props) {
   }, []);
   useEffect(() => {
     // eslint-disable-next-line
+<<<<<<< HEAD
     const URLAPI = "https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryByDateRangeByZone&from="+initDateApi+"&to=2022-03-29";
     console.log(URLAPI);
     fetch(URLAPI)
+=======
+    fetch("https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryByDateRangeByZone&from=2021-09-01&to=2021-09-02")
+>>>>>>> 1adec2682e2d04417fd64982dcf72f57a8334493
       .then((res) => res.json())
       // eslint-disable-next-line
       .then((response) => {
@@ -74,7 +85,11 @@ export default function Map(props) {
         // eslint-disable-next-line
         setWeeklyvalues(nuevoJSemana);
       });
+<<<<<<< HEAD
   }, [initDateApi]);
+=======
+  }, [selectedWeek]);
+>>>>>>> 1adec2682e2d04417fd64982dcf72f57a8334493
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '119vh',
@@ -135,10 +150,15 @@ export default function Map(props) {
   }, [selectedValue]);
 
   // eslint-disable-next-line max-len
+<<<<<<< HEAD
   const data = useMemo(() => geoData && updateWeek(geoData, weeklyValues), [selectedValue]);
+=======
+  const data = useMemo(() => geoData && updateWeek(geoData, weeklyValues, selectedWeek), [selectedWeek]);
+>>>>>>> 1adec2682e2d04417fd64982dcf72f57a8334493
   console.log(data);
   return (
     <ReactMapGL
+      onMouseMove={(e) => { console.log(e); }}
       mapboxApiAccessToken="pk.eyJ1IjoiZnJhbmtqcmFuZ2VsIiwiYSI6ImNrdDljMmhocDFhbWYzMnI1eDl2Y2lwYm0ifQ.Op0miDb3t-6zZG61Ai2Z2g"
       {...viewport}
       mapStyle="mapbox://styles/frankjrangel/cktylwl5e0r3a18p6ej97upu0"
