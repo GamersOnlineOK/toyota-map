@@ -4,7 +4,7 @@ import Lottie from 'react-lottie';
 import * as Routes from '../constants/routes';
 import { ReactComponent as EchoLogo } from '../assets/images/logo-white.svg';
 import GlobeVid from '../assets/video/globe.webm';
-
+import UneaLogo from '../assets/images/unea-logo-white.png';
 import echoAnimation from '../assets/lotties/echo.json';
 
 export default function IntroPage() {
@@ -112,13 +112,14 @@ export default function IntroPage() {
                   <EchoLogo className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ display: 'inline-block' }} />
                 </div>
                 <p style={{ padding: '40px' }} className={`intro-p has-text-centered is-2 opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
-                  UN Environment Assembly concludes with an urgent call for action
-                  to solve planetary emergencies
+                La asamblea Ambiental de las Naciones Unidas concluye con un urgentee llamado a la acción para 
+                resolver las emergencias planetarias.
                   {' '}
                   <br />
                   <br />
-                  Introducing Echo Index, un proyecto para medir el estado de salud
-                  de los lugares y el efecto en la vida humana, en tiempo real.
+                  <div className="unea-logo-wrapper">
+                    <img src={UneaLogo} alt="UNEA logo"></img>
+                  </div>
                 </p>
                 <button className={`opacity-0 intro-button ${isLoaded ? 'fade-in-delay-1' : ''}`} type="button" onClick={clickEnter}>ENTER</button>
               </div>
