@@ -47,11 +47,11 @@ export default function MapPreview() {
           <br />
           <p style={{ color: 'white' }} className="intro-p">
             <div className={`opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
-              Mide algunos de los factores más importantes
+            Un índice de medida que contempla los factores más importantes
               {' '}
               <br />
               {' '}
-              relacionados con la salud de los lugares.
+              para determinar la salud de los lugares.
             </div>
             <br />
             <div className={`opacity-0 ${isLoaded ? 'fade-in-delay-1' : ''}`}>
