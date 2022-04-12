@@ -111,8 +111,8 @@ export default function IntroPage() {
                   <EchoLogo className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ display: 'inline-block' }} />
                 </div>
                 <p style={{ padding: '40px' }} className={`intro-p is-2 opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
-                La asamblea Ambiental de las Naciones Unidas concluye con un urgentee llamado a la acción para 
-                resolver las emergencias planetarias.
+                  La asamblea Ambiental de las Naciones Unidas concluye con un urgentee llamado a
+                  la acción para resolver las emergencias planetarias.
                   {' '}
                   <br />
                   <br />
