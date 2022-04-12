@@ -46,6 +46,7 @@ export default function MapPreview() {
 
           <br />
           <p style={{ color: 'white' }} className="intro-p">
+<<<<<<< HEAD
             <span className={`opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
               Mide algunos de los factores más importantes
               {' '}
@@ -53,6 +54,15 @@ export default function MapPreview() {
               {' '}
               relacionados con la salud de los lugares.
             </span>
+=======
+            <div className={`opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
+            Un índice de medida que contempla los factores más importantes
+              {' '}
+              <br />
+              {' '}
+              para determinar la salud de los lugares.
+            </div>
+>>>>>>> fd0f85823de82f99c6bf6045a2e50cbe95d10176
             <br />
             <span className={`opacity-0 ${isLoaded ? 'fade-in-delay-1' : ''}`}>
               Marcá con el cursor cuál deseas conocer y

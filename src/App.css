@@ -92,6 +92,7 @@ h3 {
 
 .mask {
   overflow: hidden;
+  display: flex;
 }
 
 .text-animation-up {
@@ -147,9 +148,13 @@ h3 {
   z-index: 200;
 }
 
+.unea-logo-wrapper {
+  width: 20%;
+}
+
 .intro-p {
   font-family: "Sahar", "Arial", sans-serif;
-  font-size: 17px;
+  font-size: 22px;
   font-weight: 400;
   font-stretch: normal;
   font-style: normal;
