@@ -46,21 +46,21 @@ export default function MapPreview() {
 
           <br />
           <p style={{ color: 'white' }} className="intro-p">
-            <div className={`opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
+            <span className={`opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
               Mide algunos de los factores más importantes
               {' '}
               <br />
               {' '}
               relacionados con la salud de los lugares.
-            </div>
+            </span>
             <br />
-            <div className={`opacity-0 ${isLoaded ? 'fade-in-delay-1' : ''}`}>
+            <span className={`opacity-0 ${isLoaded ? 'fade-in-delay-1' : ''}`}>
               Marcá con el cursor cuál deseas conocer y
               {' '}
               <br />
               {' '}
               desplazate por el mapa
-            </div>
+            </span>
           </p>
           <br />
           <div className="preview-line" />

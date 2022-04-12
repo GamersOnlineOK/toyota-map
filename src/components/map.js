@@ -19,6 +19,7 @@ export default function Map(props) {
     let Month;
     const Year = startDate.getFullYear();
     if (startDate.getDate() <= 9) {
+      console.log(typeof startDate.getDate());
       // eslint-disable-next-line
       Day = "0"+startDate.getDate();
     } else {
