@@ -107,7 +107,7 @@ export default function IntroPage() {
         <div style={{ height: '100vh' }} className="container default-background">
           <div style={{ height: '100vh' }} className="columns is-vcentered">
             <div className="column is-half intro-container">
-              <div className={`is-centered has-text-centered is-halfheight intro-p-container ${isLoaded ? 'text-animate-up' : ''}`}>
+              <div id="start" className={`is-centered has-text-centered is-halfheight intro-p-container ${isLoaded ? 'text-animate-up' : ''}`}>
                 <div className="mask" style={{ height: '37px' }}>
                   <EchoLogo className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ display: 'inline-block' }} />
                 </div>
@@ -117,10 +117,10 @@ export default function IntroPage() {
                   {' '}
                   <br />
                   <br />
-                  <div className="unea-logo-wrapper">
-                    <img src={UneaLogo} alt="UNEA logo"></img>
-                  </div>
                 </p>
+                <div className="unea-logo-wrapper">
+                    <img className="une-logo" src={UneaLogo} alt="UNEA logo"></img>
+                  </div>
                 <button className={`opacity-0 intro-button ${isLoaded ? 'fade-in-delay-1' : ''}`} type="button" onClick={clickEnter}>ENTER</button>
               </div>
             </div>
