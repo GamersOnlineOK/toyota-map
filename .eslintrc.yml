@@ -13,11 +13,7 @@ plugins:
   - react
 rules: {
   "react/react-in-jsx-scope": "off",
-<<<<<<< HEAD
-  "react/jsx-filename-extension": [ 1, { "extensions": [ ".js", ".jsx" ] } ],
-=======
   "react/jsx-filename-extension": "off",
->>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
   "react/prop-types": "off",
-  "linebreak-style": 0
+  "linebreak-style": "off"
 }

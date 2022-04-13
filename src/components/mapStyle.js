@@ -3,14 +3,9 @@
 export const styleLayer = {
   id: 'data',
   type: 'fill-extrusion',
-<<<<<<< HEAD
-  paint: {
-    // 'fill-outline-color': '#ffae00',
-=======
   hover: true,
   paint: {
     'fill-outline-color': '#ffae00',
->>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
     'fill-extrusion-color': {
       property: 'co2',
       stops: [
@@ -37,15 +32,11 @@ export const styleLayer = {
       40, 400,
       50, 500,
     ],
-<<<<<<< HEAD
-    'fill-extrusion-opacity': 0.6,
-=======
     'fill-opacity': [
       'case',
       ['boolean', ['feature-state', 'hover'], false],
       1,
       0.2,
     ],
->>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
   },
 };

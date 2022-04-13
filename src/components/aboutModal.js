@@ -53,11 +53,7 @@ export default function AboutModal(props) {
         <div className="columns modal-container">
           <div className="column is-two-fifths pr-6">
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
-<<<<<<< HEAD
-              <p style={active ? { animationDuration: '4s', fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
-=======
               <p style={active ? { animationDuration: 4, fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
->>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
                 Project Echo Index es un sistema de recolección de
                 datos sobre diferentes aspectos
                 relativos a la salud de los espacios y el impacto que
