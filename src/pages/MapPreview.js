@@ -47,23 +47,23 @@ export default function MapPreview() {
           <br />
           <p style={{ color: 'white' }} className="intro-p">
             <div className={`opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
-            Un índice de medida que contempla los factores más importantes
+              Un índice de medida que contempla los factores más importantes
               {' '}
               <br />
               {' '}
               para determinar la salud de los lugares.
             </div>
             <br />
-            <div className={`opacity-0 ${isLoaded ? 'fade-in-delay-1' : ''}`}>
+            <span className={`opacity-0 ${isLoaded ? 'fade-in-delay-1' : ''}`}>
               Marcá con el cursor cuál deseas conocer y
               {' '}
               <br />
               {' '}
               desplazate por el mapa
-            </div>
+            </span>
           </p>
           <br />
-          <div className="preview-line"/>
+          <div className="preview-line" />
         </div>
       </div>
       <div className="map-container">

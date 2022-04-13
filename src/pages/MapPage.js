@@ -69,7 +69,7 @@ export default function MapPage() {
   const [endDate, setEndDate] = useState(new Date());
   const [isPageChange, setPageChange] = useState(false);
   useEffect(() => {
-    const timer = setTimeout(() => setPageChange(true), 500);
+    const timer = setTimeout(() => setPageChange(true), 300);
     return () => clearTimeout(timer);
   }, []);
 
@@ -82,7 +82,7 @@ export default function MapPage() {
 
   const [showValueDescription, setShowValueDescription] = useState(null);
   // const [showBtnWhatIsThis, setshowBtnWhatIsThis] = useState(false);
-  const [selectedValue, setValue] = useState('');
+  const [selectedValue, setValue] = useState({ id: 'uv' });
   const selectValue = (id) => {
     // Load value data to map for selected week
     const val = valueOptions.find((v) => v.id === id);
@@ -118,7 +118,7 @@ export default function MapPage() {
       setActive(!isActive);
     }
   };
-
+  console.log(selectedValue);
   return (
     // eslint-disable-next-line max-len
     <Layout toggleEchoIndexModal={toggleEchoIndexModal} toggleAboutModal={toggleAboutModal} showAboutModal={showAboutModal} showEchoIndexModal={showEchoIndexModal}>

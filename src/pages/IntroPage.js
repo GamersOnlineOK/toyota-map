@@ -21,7 +21,6 @@ export default function IntroPage() {
   };
 
   useEffect(() => {
-    console.log('video loaded', isVideoLoaded);
     if (isVideoLoaded && loaderFinished) {
       // unpause animation and fade out
       const timer = setTimeout(() => {
@@ -112,14 +111,15 @@ export default function IntroPage() {
                   <EchoLogo className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ display: 'inline-block' }} />
                 </div>
                 <p style={{ padding: '40px' }} className={`intro-p is-2 opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
-                La asamblea Ambiental de las Naciones Unidas concluye con un urgente llamado a la acción para 
-                resolver las emergencias planetarias.
+                  La asamblea Ambiental de las Naciones Unidas concluye con un urgente
+                  llamado a la acción para resolver las emergencias planetarias.
+                  {' '}
                   <br />
                   <br />
                 </p>
                 <div className="unea-logo-wrapper">
-                    <img className="une-logo" src={UneaLogo} alt="UNEA logo"></img>
-                  </div>
+                  <img className="une-logo" src={UneaLogo} alt="UNEA logo" />
+                </div>
                 <button className={`opacity-0 intro-button ${isLoaded ? 'fade-in-delay-1' : ''}`} type="button" onClick={clickEnter}>ENTER</button>
               </div>
             </div>
