@@ -1,15 +1,9 @@
 {
   "name": "toyota-map",
   "version": "0.1.0",
-<<<<<<< HEAD
-  "private": true,
-  "dependencies": {
-    "@craco/craco": "^6.4.3",
-=======
   "private": false,
   "dependencies": {
     "@craco/craco": "^5.9.0",
->>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
@@ -54,11 +48,7 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "eslint": "^8.12.0",
-=======
     "eslint": "^7.32.0",
->>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
