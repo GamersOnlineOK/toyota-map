@@ -152,7 +152,22 @@ h3 {
   width: 20%;
 }
 
+#start {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-button {
+  margin-top: 40px;
+}
+
+.une-logo{
+width:30%
+}
+
 .intro-p {
+  
+  padding: 40px 40px 0px 0px;
   font-family: "Sahar", "Arial", sans-serif;
   font-size: 22px;
   font-weight: 400;

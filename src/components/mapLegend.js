@@ -1,27 +1,27 @@
 /* eslint-disable react/prop-types */
 const chartItems = [
   {
-    color: '#00ff02',
+    color: '#98FED6',
     value: 25,
   },
   {
-    color: '#93bd5b',
+    color: '#63FFC2',
     value: 50,
   },
   {
-    color: '#017f01',
+    color: '#32FFB0',
     value: 100,
   },
   {
-    color: '#fefe01',
+    color: '#00FF9D',
     value: 200,
   },
   {
-    color: '#ff9966',
+    color: '#00EB8E',
     value: 300,
   },
   {
-    color: '#fe0000',
+    color: '#02D47E',
     value: 400,
   },
 ];
@@ -57,7 +57,7 @@ export default function MapLegend(props) {
         onClick={toggleValueDescription}
       >
         <span style={{ marginRight: '7px' }} className="map-legend-exclamation">!</span>
-        What is this
+        Qué es esto?
       </button>
     </div>
   );

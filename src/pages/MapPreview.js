@@ -41,7 +41,7 @@ export default function MapPreview() {
       <div style={{ height: '110vh', background: 'rgba(0,0,0,0.5)' }} className="has-text-centered columns is-vcentered">
         <div className="column is-centered has-text-centered is-halfheight intro-container pl-6 pr-6">
           <div className="mask" style={{ height: '37px' }}>
-            <h1 className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ fontSize: '1.5rem' }}>ECHO Index</h1>
+            <h1 className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ fontSize: '1.5rem' }}>Indice ECHO</h1>
           </div>
 
           <br />

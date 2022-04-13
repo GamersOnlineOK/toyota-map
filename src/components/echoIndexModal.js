@@ -2,10 +2,11 @@
 
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useEffect, useState } from 'react';
+// eslint-disable-next-line
 import ToyotaYaris from '../assets/images/toyota-yaris.png';
 import SVG from './svg';
 import EchoLogo from '../assets/images/logo-black.svg';
-
+// eslint-disable-next-line
 const chartItems = [
   {
     color: '#00ff02',
@@ -64,86 +65,44 @@ export default function EchoIndexModal(props) {
             x
           </button>
         </div>
-        <div style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={` ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`}>
-          <div className="columns mt-6 echo-container">
-            <div style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`}>
-              <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
-                <h2 className="modal-index-subtitle">ECHO INDEX</h2>
-                <div className="pt-6">
-                  <b>Adipiscing</b>
-                  <div className="columns">
-                    <div className="column is-half">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Cras non semper diam.
+        <div style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={` ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`} />
+        <div className="columns mt-6 echo-container">
+          <div style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`}>
+            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
+              <h2 className="modal-index-subtitle">ECHO INDEX</h2>
+              <div style={active ? { animationDuration: '2s' } : {}} className={`column opacity-0 is-one-third pl-0 ${active ? 'fade-in-delay-1 animate__fadeInUp' : ''}`}>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
+                    <div className="pr-4">
+                      <b>El Proyecto Echo Index surge como una respuesta necesaria a las emergencias ambientales planetarias.</b>
+                      <br />
+                      <br />
+                      <p>
+                        Se trata de la primera red dinámica encargada de medir el estado de salud medioambiental en
+                        tiempo real, compuesta por una flota de vehículos que funciona como una red interconectada
+                        que captura data, la almacena en la nube y la procesa, para crear el índice Echo,
+                        un algoritmo específico de Toyota para medir el estado de salud de los lugares.
+                      </p>
+                      <b>El Proyecto Echo Index surge como una respuesta necesaria a las emergencias ambientales planetarias.</b>
+                      <br />
+                      <br />
                     </div>
-                    <div className="column is-half">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Cras non semper diam.
-                    </div>
-                  </div>
+                  </ScrollAnimation>
                 </div>
-              </ScrollAnimation>
-            </div>
-            <div style={active ? { animationDuration: '2s' } : {}} className={`column opacity-0 is-one-third pl-0 ${active ? 'fade-in-delay-1 animate__fadeInUp' : ''}`}>
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                }}
-              >
-                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
-                  <div className="pr-4">
-                    <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies elit ut scelerisque fringilla</b>
-                    <br />
-                    <br />
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non semper diam. Pellentesque ultricies
-                      elit ut scelerisque fringilla. Cras convallis pulvinar ante nec auctor. Nulla aliquam eu tellus a accumsan.
-                      Mauris dapibus, risus id auctor pellentesque, turpis mauris pretium sem, eget pulvinar tellus mauris ut tortor
-                    </p>
-                    <br />
-                    <br />
-                  </div>
-                  <div className="scale-container" style={{ marginTop: '40px' }}>
-                    <p style={{ letterSpacing: '3px', fontWeight: 'bold', fontSize: '0.5rem' }}>ESCALA TITLE</p>
-                    <div style={{ display: 'flex', marginTop: '10px' }}>
-                      <div style={{
-                        textAlign: 'right', fontSize: '0.7rem', paddingTop: '11px', fontWeight: 'bold',
-                      }}
-                      >
-                        0
-                      </div>
-                      {chartItems.map((item) => (
-                        <div key={item.value} style={{ flexGrow: 1 }}>
-                          <div style={{ borderBottom: `solid 2px ${item.color}` }} />
-                          <div style={{
-                            textAlign: 'right', fontSize: '0.7rem', paddingTop: '10px', fontWeight: 'bold',
-                          }}
-                          >
-                            {item.value}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </ScrollAnimation>
               </div>
-            </div>
-            <div style={active ? { animationDuration: '4s' } : {}} className={`column opacity-0 is-one-third pl-0 ${active ? 'fade-in-delay-3' : ''}`}>
-              <div
-                className="toyota-yaris-background"
-                style={{
-                  backgroundImage: `url(${ToyotaYaris}`,
-                }}
-              >
-                <img className="is-hidden-tablet" src={ToyotaYaris} alt="toyota yaris" />
-              </div>
-            </div>
-            <button type="button" className="padded-close-button boxy-outline is-hidden-mobile" aria-label="close" onClick={toggle}>
-              CLOSE
-            </button>
+            </ScrollAnimation>
           </div>
-          <div className="columns modal-container" />
+          <div style={active ? { animationDuration: '4s' } : {}} className={`column opacity-0 is-one-third pl-0 ${active ? 'fade-in-delay-3' : ''}`}>
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/bzCuN5SVMQ8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" />
+          </div>
+          <div>
+            <div className="columns modal-container" />
+          </div>
         </div>
       </div>
     </div>
