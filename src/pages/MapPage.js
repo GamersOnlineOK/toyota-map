@@ -66,6 +66,7 @@ const valueOptions = [
 
 export default function MapPage() {
   const [startDate, setStartDate] = useState(new Date());
+<<<<<<< HEAD
   const [endDate, setEndDate] = useState(null);
   const onChange = (dates) => {
     const [start, end] = dates;
@@ -75,6 +76,12 @@ export default function MapPage() {
   const [isPageChange, setPageChange] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => setPageChange(true), 500);
+=======
+  const [endDate, setEndDate] = useState(new Date());
+  const [isPageChange, setPageChange] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setPageChange(true), 300);
+>>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
     return () => clearTimeout(timer);
   }, []);
 
@@ -87,7 +94,11 @@ export default function MapPage() {
 
   const [showValueDescription, setShowValueDescription] = useState(null);
   // const [showBtnWhatIsThis, setshowBtnWhatIsThis] = useState(false);
+<<<<<<< HEAD
   const [selectedValue, setValue] = useState('');
+=======
+  const [selectedValue, setValue] = useState({ id: 'uv' });
+>>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
   const selectValue = (id) => {
     // Load value data to map for selected week
     const val = valueOptions.find((v) => v.id === id);
@@ -111,7 +122,23 @@ export default function MapPage() {
   const toggleAboutModal = () => {
     setShowAboutModal(!showAboutModal);
   };
+<<<<<<< HEAD
 
+=======
+  const [isActive, setActive] = useState(false);
+  const toggleDropdown = () => {
+    setActive(!isActive);
+  };
+  const onChange = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+    if (end != null) {
+      setActive(!isActive);
+    }
+  };
+  console.log(selectedValue);
+>>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
   return (
     // eslint-disable-next-line max-len
     <Layout toggleEchoIndexModal={toggleEchoIndexModal} toggleAboutModal={toggleAboutModal} showAboutModal={showAboutModal} showEchoIndexModal={showEchoIndexModal}>
@@ -120,6 +147,7 @@ export default function MapPage() {
       <AboutModal toggle={toggleAboutModal} active={showAboutModal} />
       <div id="main-info-container" className="controls-container opacity-0 fade-in-delay-2">
         <h1>MONTEVIDEO</h1>
+<<<<<<< HEAD
         <div className="dropdown">
           <DatePicker
             selected={startDate}
@@ -129,6 +157,36 @@ export default function MapPage() {
             selectsRange
             inline
           />
+=======
+        <div>
+          <div className={isActive ? 'dropdown is-active' : 'dropdown'}>
+            <div className="dropdown-trigger">
+              <button type="button" className={`button dropdown-control ${isActive ? 'green-border' : ''}`} aria-haspopup="true" aria-controls="dropdown-menu" onClick={toggleDropdown}>
+                <span>Seleccionar Fecha</span>
+                <span className={`icon is-small dropdown-arrow ${isActive ? 'green-border' : ''}`}>
+                  {/* <i className="fas fa-angle-down" aria-hidden="true" /> */}
+                </span>
+              </button>
+            </div>
+            <div className="dropdown-menu" id="dropdown-menu" role="menu">
+              <div className={`dropdown-content ${isActive ? 'green-border' : ''}`} style={{ marginTop: '-2px' }}>
+                <button
+                  type="button"
+                  style={{ backgroundColor: 'black', border: '1px solid rgba(249, 249, 249, 0.4)', paddingBottom: '4px' }}
+                >
+                  <DatePicker
+                    selected={startDate}
+                    onChange={onChange}
+                    startDate={startDate}
+                    endDate={endDate}
+                    selectsRange
+                    inline
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+>>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
         </div>
         <ControlPanel
           dropdownOptions={dropdownOptions}

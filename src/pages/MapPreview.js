@@ -41,12 +41,17 @@ export default function MapPreview() {
       <div style={{ height: '110vh', background: 'rgba(0,0,0,0.5)' }} className="has-text-centered columns is-vcentered">
         <div className="column is-centered has-text-centered is-halfheight intro-container pl-6 pr-6">
           <div className="mask" style={{ height: '37px' }}>
+<<<<<<< HEAD
             <h1 className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ fontSize: '1.5rem' }}>ECHO Index</h1>
+=======
+            <h1 className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ fontSize: '1.5rem' }}>Indice ECHO</h1>
+>>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
           </div>
 
           <br />
           <p style={{ color: 'white' }} className="intro-p">
             <div className={`opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
+<<<<<<< HEAD
               Mide algunos de los factores más importantes
               {' '}
               <br />
@@ -55,12 +60,26 @@ export default function MapPreview() {
             </div>
             <br />
             <div className={`opacity-0 ${isLoaded ? 'fade-in-delay-1' : ''}`}>
+=======
+              Un índice de medida que contempla los factores más importantes
+              {' '}
+              <br />
+              {' '}
+              para determinar la salud de los lugares.
+            </div>
+            <br />
+            <span className={`opacity-0 ${isLoaded ? 'fade-in-delay-1' : ''}`}>
+>>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
               Marcá con el cursor cuál deseas conocer y
               {' '}
               <br />
               {' '}
               desplazate por el mapa
+<<<<<<< HEAD
             </div>
+=======
+            </span>
+>>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
           </p>
           <br />
           <div className="preview-line" />
