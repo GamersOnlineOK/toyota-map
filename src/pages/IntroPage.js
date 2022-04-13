@@ -114,7 +114,6 @@ export default function IntroPage() {
                 <p style={{ padding: '40px' }} className={`intro-p is-2 opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
                 La asamblea Ambiental de las Naciones Unidas concluye con un urgente llamado a la acción para 
                 resolver las emergencias planetarias.
-                  {' '}
                   <br />
                   <br />
                 </p>
