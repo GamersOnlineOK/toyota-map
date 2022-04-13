@@ -4,11 +4,7 @@ import Lottie from 'react-lottie';
 import * as Routes from '../constants/routes';
 import { ReactComponent as EchoLogo } from '../assets/images/logo-white.svg';
 import GlobeVid from '../assets/video/globe.webm';
-<<<<<<< HEAD
-
-=======
 import UneaLogo from '../assets/images/unea-logo-white.png';
->>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
 import echoAnimation from '../assets/lotties/echo.json';
 
 export default function IntroPage() {
@@ -25,10 +21,6 @@ export default function IntroPage() {
   };
 
   useEffect(() => {
-<<<<<<< HEAD
-    console.log('video loaded', isVideoLoaded);
-=======
->>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
     if (isVideoLoaded && loaderFinished) {
       // unpause animation and fade out
       const timer = setTimeout(() => {
@@ -114,21 +106,6 @@ export default function IntroPage() {
         <div style={{ height: '100vh' }} className="container default-background">
           <div style={{ height: '100vh' }} className="columns is-vcentered">
             <div className="column is-half intro-container">
-<<<<<<< HEAD
-              <div className={`is-centered has-text-centered is-halfheight intro-p-container ${isLoaded ? 'text-animate-up' : ''}`}>
-                <div className="mask" style={{ height: '37px' }}>
-                  <EchoLogo className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ display: 'inline-block' }} />
-                </div>
-                <p style={{ padding: '40px' }} className={`intro-p has-text-centered is-2 opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
-                  UN Environment Assembly concludes with an urgent call for action
-                  to solve planetary emergencies
-                  {' '}
-                  <br />
-                  <br />
-                  Introducing Echo Index, un proyecto para medir el estado de salud
-                  de los lugares y el efecto en la vida humana, en tiempo real.
-                </p>
-=======
               <div id="start" className={`is-centered has-text-centered is-halfheight intro-p-container ${isLoaded ? 'text-animate-up' : ''}`}>
                 <div className="mask" style={{ height: '37px' }}>
                   <EchoLogo className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ display: 'inline-block' }} />
@@ -143,7 +120,6 @@ export default function IntroPage() {
                 <div className="unea-logo-wrapper">
                   <img className="une-logo" src={UneaLogo} alt="UNEA logo" />
                 </div>
->>>>>>> 197406b87a494bd63d9c32a0e1392849df111bff
                 <button className={`opacity-0 intro-button ${isLoaded ? 'fade-in-delay-1' : ''}`} type="button" onClick={clickEnter}>ENTER</button>
               </div>
             </div>
