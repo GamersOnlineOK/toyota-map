@@ -98,14 +98,7 @@ export default function EchoIndexModal(props) {
             </ScrollAnimation>
           </div>
           <div style={active ? { animationDuration: '4s' } : {}} className={`column opacity-0 is-one-third pl-0 ${active ? 'fade-in-delay-3' : ''}`}>
-            <div
-              className="toyota-yaris-background"
-              style={{
-                backgroundImage: `url(${ToyotaYaris}`,
-              }}
-            >
-              <img className="is-hidden-tablet" src={ToyotaYaris} alt="toyota yaris" />
-            </div>
+          <iframe width="100%" height="600" src="https://www.youtube.com/embed/bzCuN5SVMQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
           </div>
           <button type="button" className="padded-close-button boxy-outline is-hidden-mobile" aria-label="close" onClick={toggle}>
             CLOSE
