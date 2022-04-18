@@ -2,6 +2,7 @@ import EchoLogo from '../assets/images/logo-white.svg';
 import SVG from '../components/svg';
 
 // eslint-disable-next-line react/prop-types
+// eslint-disable-next-line
 const Layout = ({
   children, toggleEchoIndexModal, toggleAboutModal, showAboutModal, showEchoIndexModal,
 }) => (
