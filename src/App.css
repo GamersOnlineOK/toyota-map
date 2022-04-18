@@ -65,6 +65,7 @@ h3 {
 
 .default-background {
   background-color: #040b10;
+  /* background-color: #040b10; */
 }
 
 .nav-logo {
@@ -149,7 +150,7 @@ h3 {
 }
 
 .unea-logo-wrapper {
-  width: 20%;
+  /* width: 20%; */
 }
 
 #start {
@@ -1063,6 +1064,38 @@ button{
   .scale-container {
     border: unset;
     padding: 30px
+  }
+  .mask{
+    justify-content: center;
+  }
+  #start{
+    align-items: center;
+  }
+  .une-logo{
+    width: 25%;
+  }
+  .intro-p{
+    padding: 0px 20px;
+    font-size: 18px;
+    text-align: center!important;
+    margin-top: 20px;
+  }
+  #globe-video{
+    right: 0%;
+    top:98%;
+    width: 274vw;
+  }
+  .unea-logo-wrapper{
+    text-align: center;
+  }
+  .intro-container{
+    margin: auto;
+  }
+  #main-info-container{
+    margin: auto;
+  }
+  .intro-button{
+    margin-top: 30px;
   }
 }
 

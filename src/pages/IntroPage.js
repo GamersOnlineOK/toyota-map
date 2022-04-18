@@ -106,11 +106,11 @@ export default function IntroPage() {
         <div style={{ height: '100vh' }} className="container default-background">
           <div style={{ height: '100vh' }} className="columns is-vcentered">
             <div className="column is-half intro-container">
-              <div id="start" className={`is-centered has-text-centered is-halfheight intro-p-container ${isLoaded ? 'text-animate-up' : ''}`}>
+              <div id="start" className={`is-halfheight intro-p-container ${isLoaded ? 'text-animate-up' : ''}`}>
                 <div className="mask" style={{ height: '37px' }}>
                   <EchoLogo className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ display: 'inline-block' }} />
                 </div>
-                <p style={{ padding: '40px' }} className={`intro-p is-2 opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
+                <p style={{ paddingTop: '40px', textAlign: 'left' }} className={`intro-p is-2 opacity-0 ${isLoaded ? 'fade-in' : ''}`}>
                   La asamblea Ambiental de las Naciones Unidas concluye con un urgente
                   llamado a la acción para resolver las emergencias planetarias.
                   {' '}
