@@ -117,7 +117,7 @@ export default function IntroPage() {
                   <br />
                   <br />
                 </p>
-                <div className="unea-logo-wrapper">
+                <div className={`unea-logo-wrapper  opacity-0 ${isLoaded ? 'fade-in-delay-1' : ''}`}>
                   <img className="une-logo" src={UneaLogo} alt="UNEA logo" />
                 </div>
                 <button className={`opacity-0 intro-button ${isLoaded ? 'fade-in-delay-1' : ''}`} type="button" onClick={clickEnter}>ENTER</button>
