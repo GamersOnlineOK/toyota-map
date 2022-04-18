@@ -88,7 +88,9 @@ export default function EchoIndexModal(props) {
                         que captura data, la almacena en la nube y la procesa, para crear el índice Echo,
                         un algoritmo específico de Toyota para medir el estado de salud de los lugares.
                       </p>
-                      <b>El Proyecto Echo Index surge como una respuesta necesaria a las emergencias ambientales planetarias.</b>
+                      <br />
+                      <br />
+                      <b>Para comenzar a cambiar el mundo ahora, debemos saber por dónde empezar.</b>
                       <br />
                       <br />
                     </div>
