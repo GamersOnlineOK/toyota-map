@@ -67,10 +67,10 @@ export default function EchoIndexModal(props) {
         </div>
         <div style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={` ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`} />
         <div className="columns mt-6 echo-container">
-          <div style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={`column is-one-third ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`}>
+          <div style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={`w-50per ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`}>
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
               <h2 className="modal-index-subtitle">ECHO INDEX</h2>
-              <div style={active ? { animationDuration: '2s' } : {}} className={`column opacity-0 is-one-third pl-0 ${active ? 'fade-in-delay-1 animate__fadeInUp' : ''}`}>
+              <div style={active ? { animationDuration: '2s' } : {}} className={` opacity-0 pl-0 ${active ? 'fade-in-delay-1 animate__fadeInUp' : ''}`}>
                 <div
                   style={{
                     display: 'flex',
@@ -99,8 +99,8 @@ export default function EchoIndexModal(props) {
               </div>
             </ScrollAnimation>
           </div>
-          <div style={active ? { animationDuration: '4s' } : {}} className={`column opacity-0 is-one-third pl-0 ${active ? 'fade-in-delay-3' : ''}`}>
-            <iframe width="100%" height="600" src="https://www.youtube.com/embed/bzCuN5SVMQ8" title="globe" frameBorder="0" allowFullScreen="" />
+          <div style={active ? { animationDuration: '4s' } : {}} className={`w-50per opacity-0  pl-0 ${active ? 'fade-in-delay-3' : ''}`}>
+            <iframe width="100%" height="450" src="https://www.youtube.com/embed/bzCuN5SVMQ8" title="globe" frameBorder="0" allowFullScreen="" />
           </div>
           <button type="button" className="padded-close-button boxy-outline is-hidden-mobile" aria-label="close" onClick={toggle}>
             CLOSE

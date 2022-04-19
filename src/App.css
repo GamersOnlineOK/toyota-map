@@ -149,10 +149,6 @@ h3 {
   z-index: 200;
 }
 
-.unea-logo-wrapper {
-  /* width: 20%; */
-}
-
 #start {
   display: flex;
   flex-direction: column;
@@ -1949,4 +1945,8 @@ button{
 }
 .react-datepicker__day--outside-month{
   background-color: #edf2f50d;
+}
+.w-50per{
+  width: 49%;
+  padding: 15px;
 }
