@@ -158,7 +158,7 @@ h3 {
 }
 
 .une-logo{
-width:30%
+width:15%;
 }
 
 .intro-p {
@@ -200,6 +200,11 @@ button{
 .dropdown{
   pointer-events:all;
   margin-top: 0.9rem;
+}
+
+.column.is-half.intro-container {
+  height: 100%;
+  padding-top: 50%;
 }
 
 .property-selector {
@@ -850,7 +855,8 @@ button{
   }
 
   .modal-index-subtitle {
-    font-size: 7rem !important;
+    font-size: 5rem !important;
+    margin-bottom: 40px;
   }
   .modal-card {
     padding: 0 0px 0 70px;
@@ -966,9 +972,25 @@ button{
     margin-right: 20px;
   }
 
-  .intro-container {
-    padding-top: 30% !important;
+.intro-container{
+  padding-top:0%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+  .default-background{
+
+    background-color:transparent;
   }
+
+
+.container.default-background{
+
+  z-index: index 999;
+}
+
+
 
   .controls-container {
     padding-right: 0;
@@ -1076,9 +1098,10 @@ button{
     margin-top: 20px;
   }
   #globe-video{
-    right: 0%;
-    top:98%;
-    width: 274vw;
+    right: 21%;
+    top:19%;
+    width: 100%;
+    position: absolute;
   }
   .unea-logo-wrapper{
     text-align: center;
