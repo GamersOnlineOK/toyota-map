@@ -93,7 +93,7 @@ h3 {
 
 .mask {
   overflow: hidden;
-  display: flex;
+  text-align: center;
 }
 
 .text-animation-up {
@@ -164,7 +164,7 @@ width:30%
 
 .intro-p {
   
-  padding: 40px 40px 0px 0px;
+  padding: 40px 0px 0px 0px;
   font-family: "Sahar", "Arial", sans-serif;
   font-size: 22px;
   font-weight: 400;
