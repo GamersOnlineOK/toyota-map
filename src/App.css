@@ -1105,6 +1105,12 @@ button{
     position: absolute;
     z-index:0;
   }
+
+  .w-50per {
+    padding: 0;
+    width: 100%;
+}
+
   .unea-logo-wrapper{
     text-align: center;
   }
