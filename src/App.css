@@ -976,7 +976,7 @@ button{
   }
 
 .intro-container{
-  padding-top:0%;
+  padding-top:24vh;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -992,8 +992,6 @@ button{
 
   z-index: index 999;
 }
-
-
 
   .controls-container {
     padding-right: 0;
@@ -1101,10 +1099,11 @@ button{
     margin-top: 20px;
   }
   #globe-video{
-    right: 21%;
+    right: 0%;
     top:19%;
     width: 100%;
     position: absolute;
+    z-index:0;
   }
   .unea-logo-wrapper{
     text-align: center;
