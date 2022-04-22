@@ -23,7 +23,7 @@ export const styleLayer = {
     'fill-extrusion-height': [
       'interpolate',
       ['linear'],
-      ['case', ['==', ['get', 'co2'], null], 0.1, 0.7],
+      ['get', 'co2'],
       // stop pairs
       0, 0,
       10, 100,

@@ -142,7 +142,7 @@ export default function Map(props) {
       'fill-extrusion-height': [
         'interpolate',
         ['linear'],
-        ['case', ['==', ['get', selectedValue.id], null], 0.1, 0.7],
+        ["get", selectedValue.id],
         // stop pairs
         0, 0,
         100, 100,
