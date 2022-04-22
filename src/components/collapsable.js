@@ -7,7 +7,7 @@ const items = [
     title: 'Toyota Hybrid Synergy Drive.',
     subtitle: 'Introducción y liderazgo en tecnologías híbridas',
     active: true,
-    content: '<div style="padding: 0px 20px;"><iframe width="100%" height="600" src="https://www.youtube.com/embed/bzCuN5SVMQ8"  frameborder="0" allowfullscreen></iframe><div>',
+    content: '<div style="padding: 0px 20px;"><iframe id="videoAboutModal" width="100%" height="600" src="https://www.youtube.com/embed/bzCuN5SVMQ8"  frameborder="0" allowfullscreen></iframe><div>',
   },
   {
     id: 2,

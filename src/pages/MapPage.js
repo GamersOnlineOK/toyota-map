@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import * as React from 'react';
 import DatePicker from 'react-datepicker';
+import $ from 'jquery';
 import Map from '../components/map';
 import Layout from './Layout';
 import ControlPanel from '../components/controlPanel';
@@ -82,7 +83,7 @@ export default function MapPage() {
 
   const [showValueDescription, setShowValueDescription] = useState(null);
   // const [showBtnWhatIsThis, setshowBtnWhatIsThis] = useState(false);
-  const [selectedValue, setValue] = useState({ id: 'uv' });
+  const [selectedValue, setValue] = useState({ id: 'none' });
   const selectValue = (id) => {
     // Load value data to map for selected week
     const val = valueOptions.find((v) => v.id === id);
@@ -98,18 +99,30 @@ export default function MapPage() {
   };
 
   const [showEchoIndexModal, setShowEchoIndexModal] = useState(false);
+  const [playVideo, setPlayvideo] = useState(false);
   const toggleEchoIndexModal = () => {
+    setPlayvideo(!playVideo);
     setShowEchoIndexModal(!showEchoIndexModal);
+    if (playVideo) {
+      $('#videoIndexModal').attr('src', '');
+    } else {
+      $('#videoIndexModal').attr('src', 'https://www.youtube.com/embed/bzCuN5SVMQ8');
+    }
   };
-
   const [showAboutModal, setShowAboutModal] = useState(false);
   const toggleAboutModal = () => {
     setShowAboutModal(!showAboutModal);
+    if (playVideo) {
+      $('#videoAboutModal').attr('src', '');
+    } else {
+      $('#videoAboutModal').attr('src', 'https://www.youtube.com/embed/bzCuN5SVMQ8');
+    }
   };
   const [isActive, setActive] = useState(false);
   const toggleDropdown = () => {
     setActive(!isActive);
   };
+  const [textDatepicker, setTextdatepicker] = useState('Seleccione una Fecha');
   const onChange = (dates) => {
     const [start, end] = dates;
     setStartDate(start);
@@ -117,8 +130,11 @@ export default function MapPage() {
     if (end != null) {
       setActive(!isActive);
     }
+    // eslint-disable-next-line
+    const text = start.getDate() + '-' + (start.getMonth()+1) + '-' + start.getFullYear() + ' al ' + end.getDate() + '-' + (end.getMonth()+1) + '-' + end.getFullYear()
+    setTextdatepicker(text);
   };
-  console.log(selectedValue);
+
   return (
     // eslint-disable-next-line max-len
     <Layout toggleEchoIndexModal={toggleEchoIndexModal} toggleAboutModal={toggleAboutModal} showAboutModal={showAboutModal} showEchoIndexModal={showEchoIndexModal}>
@@ -131,7 +147,7 @@ export default function MapPage() {
           <div className={isActive ? 'dropdown is-active' : 'dropdown'}>
             <div className="dropdown-trigger">
               <button type="button" className={`button dropdown-control ${isActive ? 'green-border' : ''}`} aria-haspopup="true" aria-controls="dropdown-menu" onClick={toggleDropdown}>
-                <span>Seleccionar Fecha</span>
+                <span>{textDatepicker}</span>
                 <span className={`icon is-small dropdown-arrow ${isActive ? 'green-border' : ''}`}>
                   {/* <i className="fas fa-angle-down" aria-hidden="true" /> */}
                 </span>

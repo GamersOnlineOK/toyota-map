@@ -52,7 +52,7 @@ export default function MapLegend(props) {
         ))}
       </div>
       <button
-        className={selectedValue !== '' ? 'map-legend-button' : 'opacity-0'}
+        className={selectedValue.id !== 'none' ? 'map-legend-button' : 'opacity-0'}
         type="button"
         onClick={toggleValueDescription}
       >

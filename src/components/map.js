@@ -19,7 +19,6 @@ export default function Map(props) {
     let Month;
     const Year = startDate.getFullYear();
     if (startDate.getDate() <= 9) {
-      console.log(typeof startDate.getDate());
       // eslint-disable-next-line
       Day = "0"+startDate.getDate();
     } else {
@@ -68,7 +67,6 @@ export default function Map(props) {
   useEffect(() => {
     // eslint-disable-next-line
     const URLAPI = "https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryByDateRangeByZone&from="+initDateApi+"&to="+endDateApi+"";
-    console.log(URLAPI);
     fetch(URLAPI)
       .then((res) => res.json())
       // eslint-disable-next-line
@@ -144,7 +142,7 @@ export default function Map(props) {
       'fill-extrusion-height': [
         'interpolate',
         ['linear'],
-        ["case", ["==", ["get", selectedValue.id], null], 0.1, 0.7],
+        ['case', ['==', ['get', selectedValue.id], null], 0.1, 0.7],
         // stop pairs
         0, 0,
         100, 100,

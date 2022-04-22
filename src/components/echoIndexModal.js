@@ -99,8 +99,8 @@ export default function EchoIndexModal(props) {
               </div>
             </ScrollAnimation>
           </div>
-          <div style={active ? { animationDuration: '4s' } : {}} className={`w-50per opacity-0  pl-0 ${active ? 'fade-in-delay-3' : ''}`}>
-            <iframe width="100%" height="450" src="https://www.youtube.com/embed/bzCuN5SVMQ8" title="globe" frameBorder="0" allowFullScreen="" />
+          <div id="videoContainer" style={active ? { animationDuration: '4s' } : {}} className={`w-50per opacity-0  pl-0 ${active ? 'fade-in-delay-3' : ''}`}>
+            <iframe id="videoIndexModal" width="100%" height="450" src="https://www.youtube.com/embed/bzCuN5SVMQ8" title="globe" frameBorder="0" allowFullScreen="" />
           </div>
           <button type="button" className="padded-close-button boxy-outline is-hidden-mobile" aria-label="close" onClick={toggle}>
             CLOSE
