@@ -22,7 +22,7 @@ export default function MapPreview() {
     const timer = setTimeout(() => {
       history.push(Routes.MAP_PAGE);
       return () => clearTimeout(timer);
-    }, 10000);
+    }, 8000);
   }, []);
 
   const [viewport, setViewport] = useState({

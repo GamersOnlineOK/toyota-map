@@ -34,7 +34,7 @@ export const styleLayer = {
     ],
     'fill-opacity': [
       'case',
-      ['boolean', ['feature-state', 'hover'], false],
+      ['boolean', ['feature-state', 'hover'], true],
       1,
       0.2,
     ],

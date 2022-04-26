@@ -127,7 +127,6 @@ export default function Map(props) {
     // TODO figure out animation
     // Grab selected value and modify map style.paint
     const animation = window.requestAnimationFrame(() => setPaintLayer({
-      // 'fill-outline-color': '#ffae00',
       'fill-extrusion-color': {
         property: selectedValue.id,
         stops: [
@@ -142,7 +141,7 @@ export default function Map(props) {
       'fill-extrusion-height': [
         'interpolate',
         ['linear'],
-        ["get", selectedValue.id],
+        ['get', selectedValue.id],
         // stop pairs
         0, 0,
         100, 100,
