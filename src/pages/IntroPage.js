@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import Lottie from 'react-lottie';
+import Lottie from 'react-lottie-player';
 import * as Routes from '../constants/routes';
 import { ReactComponent as EchoLogo } from '../assets/images/logo-white.svg';
 import GlobeVid from '../assets/video/globe.webm';
