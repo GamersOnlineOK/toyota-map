@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import * as React from 'react';
 import DatePicker from 'react-datepicker';
+// eslint-disable-next-line import/no-unresolved
 import $ from 'jquery';
 import Map from '../components/map';
 import Layout from './Layout';
