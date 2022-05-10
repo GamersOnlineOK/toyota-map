@@ -85,6 +85,7 @@ export default function IntroPage() {
       <div className={`default-background loading-screen opacity-0 ${isPageChange ? 'fade-in-fast' : 'is-hidden'}`} />
       <div
         style={{
+          justifyContent:'center',
           height: '100vh',
           display: 'flex',
           alignItems: 'center',
