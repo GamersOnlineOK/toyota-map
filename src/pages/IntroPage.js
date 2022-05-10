@@ -76,9 +76,10 @@ export default function IntroPage() {
     loop:false,
     autoplay:true,
     animationData:echoAnimation,
-    rendererSettings= {
+    rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
-    }
+    },
+  };
 
   return (
     <>
