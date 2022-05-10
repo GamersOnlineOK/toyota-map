@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import Lottie from 'react-lottie-player';
+import Lottie from 'react-lottie';
 import * as Routes from '../constants/routes';
 import { ReactComponent as EchoLogo } from '../assets/images/logo-white.svg';
 import GlobeVid from '../assets/video/globe.webm';
@@ -95,7 +95,7 @@ export default function IntroPage() {
         <Lottie
           options={echoLottieOptions}
           loop={false}
-          autoplay
+          autoplay={true}
           animationData={echoAnimation}
           rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
           height={50}
