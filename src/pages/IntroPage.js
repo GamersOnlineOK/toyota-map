@@ -72,26 +72,6 @@ export default function IntroPage() {
     }, 500);
   };
 
-/*
-  const echoLottieOptions = {
-    loop: false,
-    autoplay: true,
-    animationData: echoAnimation,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
-
-  const echoLottieOptions = {
-    loop={false}
-    autoplay= {true}
-    animationData= {echoAnimation}
-    rendererSettings= {
-      preserveAspectRatio: 'xMidYMid slice',
-    }
-  };*/
-
-
   return (
     <>
       <div className={`default-background loading-screen opacity-0 ${isPageChange ? 'fade-in-fast' : 'is-hidden'}`} />
@@ -107,11 +87,8 @@ export default function IntroPage() {
           loop={false}
           autoplay= {true}
           animationData= {echoAnimation}
-          rendererSettings= {{
-            preserveAspectRatio: 'xMidYMid slice'
-          }}
+          rendererSettings= {{preserveAspectRatio: 'xMidYMid slice'}}
         />
-      
       </div>
       <div className="show-loaded">
         <video autoPlay loop muted id="globe-video" onLoadedData={onLoadedVideo} className={`${isLoaded ? 'animate-up' : ''}`}>
