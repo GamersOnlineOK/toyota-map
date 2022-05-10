@@ -94,10 +94,6 @@ export default function IntroPage() {
       >
         <Lottie
           options={echoLottieOptions}
-          loop={false}
-          autoplay
-          animationData={echoAnimation}
-          rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
           height={50}
           width={200}
           isPaused={isPaused}
