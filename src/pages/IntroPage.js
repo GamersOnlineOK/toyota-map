@@ -107,9 +107,9 @@ export default function IntroPage() {
           loop={false}
           autoplay= {true}
           animationData= {echoAnimation}
-          rendererSettings= {
-            preserveAspectRatio: 'xMidYMid slice',
-          }
+          rendererSettings= {{
+            preserveAspectRatio: 'xMidYMid slice'
+          }}
         />
       
       </div>
