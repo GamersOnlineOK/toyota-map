@@ -14,7 +14,7 @@ export default function IntroPage() {
   const [isVideoLoaded, setVideoLoaded] = useState(false);
   const [loaderFinished, setLoaderFinished] = useState(false);
   const [loadedFadeOut, setLoadedFadeOut] = useState(false);
-  const [isPaused, setPaused] = useState(false);
+ /* const [isPaused, setPaused] = useState(false);*/
 
   const onLoadedVideo = () => {
     setVideoLoaded(true);
@@ -73,7 +73,7 @@ export default function IntroPage() {
   };
 
   const echoLottieOptions = {
-    loop: false,
+    loop:false,
     autoplay: true,
     animationData: echoAnimation,
     rendererSettings: {
@@ -94,9 +94,11 @@ export default function IntroPage() {
       >
         <Lottie
           options={echoLottieOptions}
+          loop={false}
+          animationData={echoAnimation}
+          rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
           height={50}
           width={200}
-          isPaused={isPaused}
         />
       </div>
       <div className="show-loaded">
