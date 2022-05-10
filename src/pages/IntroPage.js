@@ -72,6 +72,7 @@ export default function IntroPage() {
     }, 500);
   };
 
+/*
   const echoLottieOptions = {
     loop: false,
     autoplay: true,
@@ -80,6 +81,16 @@ export default function IntroPage() {
       preserveAspectRatio: 'xMidYMid slice',
     },
   };
+
+  const echoLottieOptions = {
+    loop={false}
+    autoplay= {true}
+    animationData= {echoAnimation}
+    rendererSettings= {
+      preserveAspectRatio: 'xMidYMid slice',
+    }
+  };*/
+
 
   return (
     <>
@@ -93,11 +104,14 @@ export default function IntroPage() {
         className={`default-background loading-screen  ${loadedFadeOut ? 'loaded-fade-out' : ''} ${isLoaded ? 'is-hidden' : ''}`}
       >
         <Lottie
-          options={echoLottieOptions}
-          height={50}
-          width={200}
-          isPaused={isPaused}
+          loop={false}
+          autoplay= {true}
+          animationData= {echoAnimation}
+          rendererSettings= {
+            preserveAspectRatio: 'xMidYMid slice',
+          }
         />
+      
       </div>
       <div className="show-loaded">
         <video autoPlay loop muted id="globe-video" onLoadedData={onLoadedVideo} className={`${isLoaded ? 'animate-up' : ''}`}>
