@@ -73,8 +73,7 @@ export default function IntroPage() {
   };
 
   const echoLottieOptions = {
-    loop:false,
-    autoplay: true,
+    loop: false,
     animationData: echoAnimation,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
@@ -95,10 +94,12 @@ export default function IntroPage() {
         <Lottie
           options={echoLottieOptions}
           loop={false}
+          play
           animationData={echoAnimation}
           rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
           height={50}
           width={200}
+          isPaused={isPaused}
         />
       </div>
       <div className="show-loaded">
