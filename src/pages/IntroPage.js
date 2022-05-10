@@ -73,9 +73,9 @@ export default function IntroPage() {
   };
 
   const echoLottieOptions = {
-    loop:false,
-    autoplay:true,
-    animationData:echoAnimation,
+    loop: false,
+    autoplay: true,
+    animationData: echoAnimation,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
     },
@@ -95,7 +95,6 @@ export default function IntroPage() {
         <Lottie
           options={echoLottieOptions}
           loop={false}
-          autoplay={true}
           animationData={echoAnimation}
           rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
           height={50}
