@@ -14,7 +14,7 @@ export default function IntroPage() {
   const [isVideoLoaded, setVideoLoaded] = useState(false);
   const [loaderFinished, setLoaderFinished] = useState(false);
   const [loadedFadeOut, setLoadedFadeOut] = useState(false);
- /* const [isPaused, setPaused] = useState(false);*/
+  const [isPaused, setPaused] = useState(false);
 
   const onLoadedVideo = () => {
     setVideoLoaded(true);
