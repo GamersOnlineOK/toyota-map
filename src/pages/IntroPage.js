@@ -92,16 +92,19 @@ export default function IntroPage() {
         }}
         className={`default-background loading-screen  ${loadedFadeOut ? 'loaded-fade-out' : ''} ${isLoaded ? 'is-hidden' : ''}`}
       >
-        <Lottie
-          options={echoLottieOptions}
-          loop={false}
-          autoplay={true}
-          animationData={echoAnimation}
-          rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
-          height={50}
-          width={200}
-          isPaused={isPaused}
-        />
+        export default function Animation() {
+          return (
+            <Lottie
+              options={echoLottieOptions}
+              loop={false}
+              autoplay={true}
+              animationData={echoAnimation}
+              rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+              height={50}
+              width={200}
+              isPaused={isPaused}/>
+          )
+        }
       </div>
       <div className="show-loaded">
         <video autoPlay loop muted id="globe-video" onLoadedData={onLoadedVideo} className={`${isLoaded ? 'animate-up' : ''}`}>
