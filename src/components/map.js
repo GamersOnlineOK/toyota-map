@@ -6,6 +6,8 @@ import ReactMapGL, { Layer, Source } from 'react-map-gl';
 import { styleLayer } from './mapStyle';
 import updateWeek from '../helpers/utils';
 import useWindowSize from './windowSize';
+import WeeklyValuesLocal from '../assets/data/weekValues.json';
+import { ENDPOINT } from '../constants/routes';
 
 export default function Map(props) {
   // eslint-disable-next-line
@@ -13,7 +15,7 @@ export default function Map(props) {
   const [geoData, setgeoData] = useState(null);
   const [initDateApi, setInitDateApi] = useState('2022-03-01');
   const [endDateApi, setEndDateApi] = useState('2022-03-01');
-  const [weeklyValues, setWeeklyvalues] = useState({});
+  const [weeklyValues, setWeeklyvalues] = useState(WeeklyValuesLocal);
   useEffect(() => {
     let Day;
     let Month;
@@ -66,7 +68,9 @@ export default function Map(props) {
   }, []);
   useEffect(() => {
     // eslint-disable-next-line
-    const URLAPI = "https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryByDateRangeByZone&from="+initDateApi+"&to="+endDateApi+"";
+    const URLAPI = ""+ENDPOINT+initDateApi+"&to="+endDateApi+"";
+    // eslint-disable-next-line
+    console.log(URLAPI);
     fetch(URLAPI)
       .then((res) => res.json())
       // eslint-disable-next-line
