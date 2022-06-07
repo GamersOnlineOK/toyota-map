@@ -131,8 +131,11 @@ export default function MapPage() {
       setActive(!isActive);
     }
     // eslint-disable-next-line
-    const text = start.getDate() + '-' + (start.getMonth()+1) + '-' + start.getFullYear() + ' al ' + end.getDate() + '-' + (end.getMonth()+1) + '-' + end.getFullYear()
-    setTextdatepicker(text);
+    if ((start !== null) && (end !== null)) {
+      // eslint-disable-next-line
+      const text = start.getDate() + '-' + (start.getMonth()+1) + '-' + start.getFullYear() + ' al ' + end.getDate() + '-' + (end.getMonth()+1) + '-' + end.getFullYear()
+      setTextdatepicker(text);
+    }
   };
 
   return (

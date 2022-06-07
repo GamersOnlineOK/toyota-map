@@ -70,7 +70,6 @@ export default function Map(props) {
     // eslint-disable-next-line
     const URLAPI = ""+ENDPOINT+initDateApi+"&to="+endDateApi+"";
     // eslint-disable-next-line
-    console.log(URLAPI);
     fetch(URLAPI)
       .then((res) => res.json())
       // eslint-disable-next-line
