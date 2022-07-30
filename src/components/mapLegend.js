@@ -1,27 +1,43 @@
 /* eslint-disable react/prop-types */
 const chartItems = [
   {
-    color: '#98FED6',
-    value: 25,
-  },
-  {
-    color: '#63FFC2',
-    value: 50,
-  },
-  {
-    color: '#32FFB0',
-    value: 100,
-  },
-  {
     color: '#00FF9D',
-    value: 200,
   },
   {
-    color: '#00EB8E',
-    value: 300,
+    color: '#2BFD93',
   },
   {
-    color: '#02D47E',
+    color: '#55FB89',
+  },
+  {
+    color: '#80F97F',
+  },
+  {
+    color: '#AAF775',
+  },
+  {
+    color: '#D4F56B',
+  },
+  {
+    color: '#FFF361',
+  },
+  {
+    color: '#FFD45B',
+  },
+  {
+    color: '#FFB654',
+  },
+  {
+    color: '#FF974E',
+  },
+  {
+    color: '#FF7848',
+  },
+  {
+    color: '#FF5A41',
+  },
+  {
+    color: '#FF3B3B',
     value: 400,
   },
 ];
