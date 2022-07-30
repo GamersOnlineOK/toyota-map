@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import * as React from 'react';
 import DatePicker from 'react-datepicker';
+import addDays from 'date-fns/addDays';
 import $ from 'jquery';
 import Map from '../components/map';
 import Layout from './Layout';
@@ -136,6 +137,8 @@ export default function MapPage() {
       const text = start.getDate() + '-' + (start.getMonth()+1) + '-' + start.getFullYear() + ' al ' + end.getDate() + '-' + (end.getMonth()+1) + '-' + end.getFullYear()
       setTextdatepicker(text);
     }
+    const btnOutSideMonth = document.getElementsByClassName('react-datepicker__day--outside-month');
+    btnOutSideMonth.disabled = true;
   };
 
   return (
@@ -169,6 +172,7 @@ export default function MapPage() {
                     endDate={endDate}
                     selectsRange
                     inline
+                    maxDate={addDays(new Date(), 1)}
                   />
                 </button>
               </div>

@@ -1623,6 +1623,7 @@ button{
 }
 .react-datepicker__day,
 .react-datepicker__time-name {
+  background: #FFFFFF;
   color: #2c3135;
   display: inline-block;
   width: 2.5rem;
@@ -1985,6 +1986,7 @@ button{
 }
 .react-datepicker__day--outside-month{
   background-color: #edf2f50d;
+  pointer-events: none!important;
 }
 .w-50per{
   width: 49%;
