@@ -7,7 +7,6 @@ import { styleLayer } from './mapStyle';
 import updateWeek from '../helpers/utils';
 import useWindowSize from './windowSize';
 import WeeklyValuesLocal from '../assets/data/weekValues.json';
-import { ENDPOINT } from '../constants/routes';
 
 export default function Map(props) {
   // eslint-disable-next-line
@@ -60,15 +59,39 @@ export default function Map(props) {
       setEndDateApi(initDateApi);
     }
   }, [endDate]);
+  const [viewport, setViewport] = useState({
+    width: '100%',
+    height: '119vh',
+    latitude: -34.900290,
+    longitude: -56.177892,
+    zoom: 13,
+    pitch: 60, // pitch in degrees
+    bearing: 50,
+  });
   useEffect(() => {
     // eslint-disable-next-line
-    fetch("https://staging.boronstudio.com/focusapi/api/api.php?action=getZones")
+    const URLAPI = "https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryAndZonesInfoByDateRange&from="+initDateApi+"&to="+endDateApi+"";
+    // eslint-disable-next-line
+    fetch(URLAPI)
       .then((res) => res.json())
-      .then((res) => setgeoData(res));
-  }, []);
+      .then((res) => {
+        setgeoData(res);
+        console.log(res);
+        setViewport({
+          width: '100%',
+          height: '119vh',
+          latitude: res.init_map.lat,
+          longitude: res.init_map.lng,
+          zoom: 15, // estaba en 13
+          pitch: 60, // pitch in degrees
+          bearing: 50,
+        });
+      });
+  }, [endDateApi]);
   useEffect(() => {
     // eslint-disable-next-line
-    const URLAPI = ""+ENDPOINT+initDateApi+"&to="+endDateApi+"";
+    const URLAPI = "https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryAndZonesInfoByDateRange&from="+initDateApi+"&to="+endDateApi+"";
+    console.log(URLAPI);
     // eslint-disable-next-line
     fetch(URLAPI)
       .then((res) => res.json())
@@ -99,16 +122,6 @@ export default function Map(props) {
         setWeeklyvalues(nuevoJSemana);
       });
   }, [endDateApi]);
-  const [viewport, setViewport] = useState({
-    width: '100%',
-    height: '119vh',
-    latitude: -34.900290,
-    longitude: -56.177892,
-    zoom: 13,
-    pitch: 60, // pitch in degrees
-    bearing: 50,
-  });
-
   function redrawMap() {
     setViewport({
       ...viewport,
@@ -133,19 +146,12 @@ export default function Map(props) {
       'fill-extrusion-color': {
         property: selectedValue.id,
         stops: [
-          [10, '#00FF9D'],
-          [30, '#2BFD93'],
-          [50, '#55FB89'],
-          [70, '#80F97F'],
-          [90, '#AAF775'],
-          [120, '#D4F56B'],
-          [140, '#FFF361'],
-          [150, '#FFD45B'],
-          [160, '#FFB654'],
-          [170, '#FF974E'],
-          [180, '#FF7848'],
-          [190, '#FF5A41'],
-          [200, '#FF3B3B'],
+          [10, '#98FED6'],
+          [30, '#63FFC2'],
+          [50, '#32FFB0'],
+          [70, '#00FF9D'],
+          [90, '#00EB8E'],
+          [120, '#02D47E'],
         ],
       },
       'fill-extrusion-height': [
@@ -166,7 +172,8 @@ export default function Map(props) {
 
   // eslint-disable-next-line max-len
   const data = useMemo(() => geoData && updateWeek(geoData, weeklyValues), [[selectedValue]]);
-
+  console.log(geoData);
+  console.log(weeklyValues);
   // eslint-disable-next-line max-len
   return (
     <ReactMapGL
