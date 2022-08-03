@@ -1788,7 +1788,8 @@ button{
 .react-datepicker__quarter-text--disabled,
 .react-datepicker__year-text--disabled {
   cursor: default;
-  color: #ccc;
+  /*color: #ccc;*/
+  background-color: transparent;
 }
 .react-datepicker__day--disabled:hover,
 .react-datepicker__month-text--disabled:hover,
@@ -1991,4 +1992,7 @@ button{
 .w-50per{
   width: 49%;
   padding: 15px;
+}
+.react-datepicker__day {
+  border-radius: 3px;
 }

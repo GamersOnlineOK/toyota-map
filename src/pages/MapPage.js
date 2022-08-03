@@ -172,7 +172,7 @@ export default function MapPage() {
                     endDate={endDate}
                     selectsRange
                     inline
-                    maxDate={addDays(new Date(), 1)}
+                    maxDate={addDays(new Date(), 0)}
                   />
                 </button>
               </div>
