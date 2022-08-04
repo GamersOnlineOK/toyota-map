@@ -8,30 +8,35 @@ const chartItems = [
   },
   {
     color: '#55FB89',
+    value: 25,
   },
   {
     color: '#80F97F',
   },
   {
     color: '#AAF775',
+    value: 50,
   },
   {
     color: '#D4F56B',
   },
   {
     color: '#FFF361',
+    value: 100,
   },
   {
     color: '#FFD45B',
   },
   {
     color: '#FFB654',
+    value: 200,
   },
   {
     color: '#FF974E',
   },
   {
     color: '#FF7848',
+    value: 300,
   },
   {
     color: '#FF5A41',
