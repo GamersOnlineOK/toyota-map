@@ -16,7 +16,7 @@ function ControlPanel(props) {
     selectWeek(id);
   };
 
-  const [activeValueId, setActiveValue] = useState();
+  const [activeValueId, setActiveValue] = useState('pm2.5');
   const proxySelectValue = (id) => {
     setActiveValue(id);
     selectValue(id);

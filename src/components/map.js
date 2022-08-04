@@ -16,6 +16,28 @@ export default function Map(props) {
   const [endDateApi, setEndDateApi] = useState('2022-03-01');
   const [weeklyValues, setWeeklyvalues] = useState(WeeklyValuesLocal);
   useEffect(() => {
+    const NowDate = new Date();
+    let Day;
+    let Month;
+    const Year = NowDate.getFullYear();
+    if (NowDate.getDate() <= 9) {
+      // eslint-disable-next-line
+      Day = "0"+NowDate.getDate();
+    } else {
+      Day = NowDate.getDate();
+    }
+    if (NowDate.getMonth() <= 8) {
+      // eslint-disable-next-line
+      Month = "0"+(NowDate.getMonth()+1);
+    } else {
+      Month = NowDate.getMonth() + 1;
+    }
+    // eslint-disable-next-line
+    const InitDate = Year + "-" + Month + "-" + Day;
+    setInitDateApi(InitDate);
+    setEndDateApi(InitDate);
+  }, []);
+  useEffect(() => {
     let Day;
     let Month;
     const Year = startDate.getFullYear();
@@ -74,27 +96,6 @@ export default function Map(props) {
     // eslint-disable-next-line
     fetch(URLAPI)
       .then((res) => res.json())
-      .then((res) => {
-        setgeoData(res);
-        console.log(res);
-        setViewport({
-          width: '100%',
-          height: '119vh',
-          latitude: res.init_map.lat,
-          longitude: res.init_map.lng,
-          zoom: 15, // estaba en 13
-          pitch: 60, // pitch in degrees
-          bearing: 50,
-        });
-      });
-  }, [endDateApi]);
-  useEffect(() => {
-    // eslint-disable-next-line
-    const URLAPI = "https://staging.boronstudio.com/focusapi/api/api.php?action=getTelemetryAndZonesInfoByDateRange&from="+initDateApi+"&to="+endDateApi+"";
-    console.log(URLAPI);
-    // eslint-disable-next-line
-    fetch(URLAPI)
-      .then((res) => res.json())
       // eslint-disable-next-line
       .then((response) => {
         // eslint-disable-next-line
@@ -120,6 +121,16 @@ export default function Map(props) {
         var nuevoJSemana=JSON.parse(JSON.stringify(weekvalues));
         // eslint-disable-next-line
         setWeeklyvalues(nuevoJSemana);
+        setgeoData(response);
+        setViewport({
+          width: '100%',
+          height: '119vh',
+          latitude: response.init_map.lat,
+          longitude: response.init_map.lng,
+          zoom: 15, // estaba en 13
+          pitch: 60, // pitch in degrees
+          bearing: 50,
+        });
       });
   }, [endDateApi]);
   function redrawMap() {
@@ -129,9 +140,7 @@ export default function Map(props) {
       height: '119vh',
     });
   }
-
   const { windowWidth, windowHeight } = useWindowSize();
-
   // redraw if the map's parent container or window changes size
   useEffect(() => {
     redrawMap();
@@ -146,12 +155,19 @@ export default function Map(props) {
       'fill-extrusion-color': {
         property: selectedValue.id,
         stops: [
-          [10, '#98FED6'],
-          [30, '#63FFC2'],
-          [50, '#32FFB0'],
-          [70, '#00FF9D'],
-          [90, '#00EB8E'],
-          [120, '#02D47E'],
+          [10, '#00FF9D'],
+          [30, '#2BFD93'],
+          [50, '#55FB89'],
+          [70, '#80F97F'],
+          [90, '#AAF775'],
+          [120, '#D4F56B'],
+          [150, '#FFF361'],
+          [180, '#FFD45B'],
+          [210, '#FFB654'],
+          [250, '#FF974E'],
+          [280, '#FF7848'],
+          [320, '#FF5A41'],
+          [400, '#FF3B3B'],
         ],
       },
       'fill-extrusion-height': [
@@ -172,8 +188,6 @@ export default function Map(props) {
 
   // eslint-disable-next-line max-len
   const data = useMemo(() => geoData && updateWeek(geoData, weeklyValues), [[selectedValue]]);
-  console.log(geoData);
-  console.log(weeklyValues);
   // eslint-disable-next-line max-len
   return (
     <ReactMapGL

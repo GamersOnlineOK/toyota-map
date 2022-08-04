@@ -84,7 +84,7 @@ export default function MapPage() {
 
   const [showValueDescription, setShowValueDescription] = useState(null);
   // const [showBtnWhatIsThis, setshowBtnWhatIsThis] = useState(false);
-  const [selectedValue, setValue] = useState({ id: 'none' });
+  const [selectedValue, setValue] = useState({ id: 'pm2.5' });
   const selectValue = (id) => {
     // Load value data to map for selected week
     const val = valueOptions.find((v) => v.id === id);
