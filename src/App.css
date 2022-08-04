@@ -1718,7 +1718,7 @@ button{
 .react-datepicker__year-text--in-range {
   /*border-radius: 0.3rem;*/
   background-color: #00ff9d;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 .react-datepicker__day--selected:hover, .react-datepicker__day--in-selecting-range:hover, .react-datepicker__day--in-range:hover,
 .react-datepicker__month-text--selected:hover,
@@ -1738,7 +1738,7 @@ button{
 .react-datepicker__year-text--keyboard-selected {
   /*border-radius: 0.3rem;*/
   background-color: #00ff9d;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 .react-datepicker__day--keyboard-selected:hover,
 .react-datepicker__month-text--keyboard-selected:hover,
