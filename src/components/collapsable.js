@@ -57,8 +57,8 @@ export default function Collapsable() {
             >
               {item.active ? '-' : '+'}
             </button>
-            <h4 style={{ fontSize: '2rem', color: 'black' }}>{item.title}</h4>
-            <h5 style={{ color: 'black' }}>{item.subtitle}</h5>
+            <h4 className="pd-x" style={{ fontSize: '2rem', color: 'black' }}>{item.title}</h4>
+            <h5 className="pd-x" style={{ color: 'black' }}>{item.subtitle}</h5>
             <div className={`collapsable-content ${item.active ? 'expanded' : ''}`} dangerouslySetInnerHTML={{ __html: item.content }}>
               {/* {item.content} */}
             </div>

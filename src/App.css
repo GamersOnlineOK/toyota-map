@@ -940,225 +940,6 @@ button{
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 768px) {
-  .navbar {
-    padding: 20px 20px 0;
-  }
-
-  .react-datepicker__day, .react-datepicker__time-name {
-    color: #2c3135;
-    height: 44px;
-    padding: 18px 17px;
-    width: 2.5rem;
-    width: 44px;
-
-}
-
-  .navbar-burger {
-    margin-left: 0 !important;
-  }
-
-  .nav-logo {
-    height: 20px;
-  }
-
-  #about-title{
-    font-size: 4rem!important;
-  }
-
-  .echo-container {
-    padding-top: 20px;
-  }
-
-  .modal-index-subtitle {
-    font-size: 5rem !important;
-  }
-  .modal-index-subtitlew {
-    font-size: 4rem !important;
-    margin-bottom: -60px;
-  }
-
-  .mobile-echo-button {
-    position: relative;
-    display: inline !important;
-    margin-left: auto;
-    margin-right: 20px;
-  }
-
-.intro-container{
-  padding-top:24vh;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-  .default-background{
-
-    background-color:transparent;
-  }
-
-
-.container.default-background{
-
-  z-index: index 999;
-}
-
-  .controls-container {
-    padding-right: 0;
-    padding-left: 20px;
-    width: 90px;
-    top: 80px !important;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.45), rgba(0, 0, 0, 0.4) 100%);
-    border-top-left-radius: 250px;
-    box-shadow: -20px 0px 100px 100px rgba(0,0,0,0.43);
-  }
-
-  .control-panel {
-    margin-top: 1rem;
-  }
-
-  .bottom-container {
-    padding-left: 20px;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.45), rgba(0, 0, 0, 0.4) 100%);
-    border-top-left-radius: 250px;
-    box-shadow: -20px 0px 100px 100px rgba(0,0,0,0.43);
-  }
-
-  .value-legend {
-    width: 60%;
-    bottom: 10px;
-    right: 20px;
-  }
-
-  .map-value-desc-container {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    bottom: 0;
-    border-radius: unset;
-    background: rgba(0,0,0,0.93);
-    z-index: 1000;
-    overflow: scroll;
-    padding: 200px 50px 100px 30px;
-  }
-
-  .map-value-desc-container-hide {
-    right: -1000px;
-  }
-
-  .map-value-desc-title {
-    margin-left: 0;
-    margin-bottom: 50px;
-    padding-bottom: 10px;
-  }
-
-  .map-value-desc-title:before {
-    left: 24px;
-  }
-
-  .map-value-desc-text {
-    padding: 0px;
-  }
-
-  .modal-full-screen {
-    position: absolute !important;
-  }
-
-  .modal-nav {
-    padding: 0 10px;
-  }
-
-  .modal-card {
-    padding: 0 22px;
-  }
-
-  .modal-index-title {
-    margin-top: 30px;
-  }
-
-  h2 {
-    text-align: left;
-    font-size: 1.8rem !important;
-  }
-
-  .mobile-section {
-    padding: 15px !important;
-  }
-
-  .profile-picture {
-    width: 100%;
-  }
-
-  .scale-container {
-    border: unset;
-    padding: 30px
-  }
-  .mask{
-    justify-content: center;
-  }
-  #start{
-    align-items: center;
-  }
-  .une-logo{
-    width: 25%;
-  }
-  .intro-p{
-    padding: 0px 20px;
-    font-size: 18px;
-    text-align: center!important;
-    margin-top: 20px;
-  }
-  #globe-video{
-    right: 0%;
-    top:19%;
-    width: 100%;
-    position: absolute;
-    z-index:0;
-  }
-
-  .w-50per {
-    padding: 0;
-    width: 100%;
-}
-
-  .unea-logo-wrapper{
-    text-align: center;
-  }
-  .intro-container{
-    margin: auto;
-  }
-  #main-info-container{
-    margin: auto;
-  }
-  .intro-button{
-    margin-top: 30px;
-  }
-}
-
-@media screen and (min-height: 0) and (max-height: 750px) {
-  
-  .controls-container {
-    top: 120px;
-  }
-
-  .property-selector {
-    margin-top: 1rem !important;
-  }
-
-  .property-selector button {
-    font-size: 0.7rem;
-    padding: 10px;
-  }
-
-  .property-selector button.is-active {
-    width: 100px;
-    /*padding: 10px;*/
-    padding-left: 15px;
-    padding-right: 30px;
-    font-size: 0.7rem;
-  }
-}
-
 /* animations */
 @keyframes fadein {
   0% { opacity: 0; }
@@ -1973,12 +1754,241 @@ button{
   width: 3rem;
   line-height: 3rem;
 }
+.w-50per{
+  width: 49%;
+  padding: 15px;
+}
 @media (max-width: 400px), (max-height: 550px) {
   .react-datepicker__portal .react-datepicker__day-name,
 .react-datepicker__portal .react-datepicker__day,
 .react-datepicker__portal .react-datepicker__time-name {
     width: 2rem;
     line-height: 2rem;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 768px) {
+  .navbar {
+    padding: 20px 20px 0;
+  }
+
+  .react-datepicker__day, .react-datepicker__time-name {
+    color: #2c3135;
+    height: 44px;
+    padding: 18px 17px;
+    width: 2.5rem;
+    width: 44px;
+
+}
+
+  .navbar-burger {
+    margin-left: 0 !important;
+  }
+
+  .nav-logo {
+    height: 20px;
+  }
+
+  #about-title{
+    font-size: 4rem!important;
+  }
+
+  .echo-container {
+    padding-top: 20px;
+  }
+
+  .modal-index-subtitle {
+    font-size: 5rem !important;
+  }
+  .modal-index-subtitlew {
+    font-size: 4rem !important;
+    margin-bottom: -60px;
+  }
+
+  .mobile-echo-button {
+    position: relative;
+    display: inline !important;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+.intro-container{
+  padding-top:24vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+  .default-background{
+
+    background-color:transparent;
+  }
+
+
+.container.default-background{
+
+  z-index: index 999;
+}
+
+  .controls-container {
+    padding-right: 0;
+    padding-left: 20px;
+    width: 90px;
+    top: 80px !important;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.45), rgba(0, 0, 0, 0.4) 100%);
+    border-top-left-radius: 250px;
+    box-shadow: -20px 0px 100px 100px rgba(0,0,0,0.43);
+  }
+
+  .control-panel {
+    margin-top: 1rem;
+  }
+
+  .bottom-container {
+    padding-left: 20px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.45), rgba(0, 0, 0, 0.4) 100%);
+    border-top-left-radius: 250px;
+    box-shadow: -20px 0px 100px 100px rgba(0,0,0,0.43);
+  }
+
+  .value-legend {
+    width: 60%;
+    bottom: 10px;
+    right: 20px;
+  }
+
+  .map-value-desc-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    border-radius: unset;
+    background: rgba(0,0,0,0.93);
+    z-index: 1000;
+    overflow: scroll;
+    padding: 200px 50px 100px 30px;
+  }
+
+  .map-value-desc-container-hide {
+    right: -1000px;
+  }
+
+  .map-value-desc-title {
+    margin-left: 0;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+  }
+
+  .map-value-desc-title:before {
+    left: 24px;
+  }
+
+  .map-value-desc-text {
+    padding: 0px;
+  }
+
+  .modal-full-screen {
+    position: absolute !important;
+  }
+
+  .modal-nav {
+    padding: 0 10px;
+  }
+
+  .modal-card {
+    padding: 0px;
+  }
+
+  .modal-index-title {
+    margin-top: 30px;
+  }
+
+  h2 {
+    text-align: left;
+    font-size: 1.8rem !important;
+  }
+
+  .mobile-section {
+    padding: 15px !important;
+  }
+
+  .profile-picture {
+    width: 100%;
+  }
+
+  .scale-container {
+    border: unset;
+    padding: 30px
+  }
+  .mask{
+    justify-content: center;
+  }
+  #start{
+    align-items: center;
+  }
+  .une-logo{
+    width: 25%;
+  }
+  .intro-p{
+    padding: 0px 20px;
+    font-size: 18px;
+    text-align: center!important;
+    margin-top: 20px;
+  }
+  #globe-video{
+    right: 0%;
+    top:19%;
+    width: 100%;
+    position: absolute;
+    z-index:0;
+  }
+
+  .w-50per {
+    padding: 0;
+    width: 100%;
+}
+
+  .unea-logo-wrapper{
+    text-align: center;
+  }
+  .intro-container{
+    margin: auto;
+  }
+  #main-info-container{
+    margin: auto;
+  }
+  .intro-button{
+    margin-top: 30px;
+  }
+  .pd-x{
+    padding: 0px 20px;
+  }
+  iframe{    
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media screen and (min-height: 0) and (max-height: 750px) {
+  
+  .controls-container {
+    top: 120px;
+  }
+
+  .property-selector {
+    margin-top: 1rem !important;
+  }
+
+  .property-selector button {
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+
+  .property-selector button.is-active {
+    width: 100px;
+    /*padding: 10px;*/
+    padding-left: 15px;
+    padding-right: 30px;
+    font-size: 0.7rem;
   }
 }
 .react-datepicker__portal .react-datepicker__current-month,
@@ -1989,10 +1999,7 @@ button{
   background-color: #edf2f50d;
   pointer-events: none!important;
 }
-.w-50per{
-  width: 49%;
-  padding: 15px;
-}
+
 .react-datepicker__day {
   border-radius: 3px;
 }

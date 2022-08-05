@@ -28,7 +28,7 @@ export default function AboutModal(props) {
   return (
     <div id="modal-fadeIn-fs" className={`modal modal-full-screen modal-fx-fadeIn ${activeModal ? 'is-active' : ''}`}>
       <div id="about-modal" className="modal-content modal-card">
-        <div className="columns mt-6">
+        <div className="columns mt-6 pd-x">
           <div className="modal-nav is-hidden-tablet">
             <SVG svgImage={EchoLogo} className="nav-logo" />
             <button
@@ -50,7 +50,7 @@ export default function AboutModal(props) {
             </button>
           </div>
         </div>
-        <div className="columns modal-container">
+        <div className="columns modal-container pd-x">
           <div className="column is-two-fifths pr-6">
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
               <p style={active ? { animationDuration: 4, fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
@@ -110,17 +110,17 @@ export default function AboutModal(props) {
         </div>
         <div style={active ? { animationDuration: '10s' } : {}} className={`opacity-0 ${active ? 'fade-in-delay-3' : ''}`}>
           <ScrollAnimation animateIn="fadeIn" animationDuration="3s" animateOnce="true" scrollableParentSelector="#about-modal">
-            <img src={devicePiecesMobile} alt="device pieces" className="is-hidden-tablet" />
+            <img src={devicePiecesMobile} alt="device pieces" className="is-hidden-tablet img-100" />
           </ScrollAnimation>
         </div>
         <ScrollAnimation animateIn="animate__fadeIn" animationDuration="6s" scrollableParentSelector="#about-modal">
           <img style={{ minWidth: 'calc(100% + 300px)', marginLeft: '-150px' }} src={carImage} alt="car" />
         </ScrollAnimation>
         <div className="section mobile-section" />
-        <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
-          <h3>About Curcio Capitals</h3>
+        <ScrollAnimation className="pd-x" animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#about-modal">
+          <h3 style={{ lineHeight: '1' }}>About Curcio Capitals</h3>
         </ScrollAnimation>
-        <div style={{ marginTop: '20px' }} className="columns">
+        <div style={{ marginTop: '20px' }} className="columns pd-x">
           <div className="column is-three-fifths pr-6">
             <ScrollAnimation animateIn="animate__fadeInUp" scrollableParentSelector="#about-modal">
               <p style={active ? { animationDuration: '3.6s', fontSize: '1rem', opacity: '1' } : {}} className={`${active ? 'animated animate__fadeInUp' : ''}`}>
