@@ -84,7 +84,9 @@ export default function MapPage() {
 
   const [showValueDescription, setShowValueDescription] = useState(null);
   // const [showBtnWhatIsThis, setshowBtnWhatIsThis] = useState(false);
-  const [selectedValue, setValue] = useState({ id: 'pm2.5' });
+  const [selectedValue, setValue] = useState({
+    id: 'pm2.5', text: 'PM2.5', title: 'PM2.5', description: 'La materia articulada fina o PM2.5 es un contamina…nen principalmente de los escapes de automotores.',
+  });
   const selectValue = (id) => {
     // Load value data to map for selected week
     const val = valueOptions.find((v) => v.id === id);
@@ -94,7 +96,6 @@ export default function MapPage() {
       // setshowBtnWhatIsThis(true);
     }
   };
-
   const toggleValueDescription = () => {
     setShowValueDescription(selectedValue);
   };

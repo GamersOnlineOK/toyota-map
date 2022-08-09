@@ -38,7 +38,7 @@ export default function MapPreview() {
   return (
     <>
       <div className={`default-background loading-screen fade-out-fast ${isPageChange ? 'is-hidden' : ''}`} />
-      <div style={{ height: '110vh', background: 'rgba(0,0,0,0.5)' }} className="has-text-centered columns is-vcentered">
+      <div style={{ height: '110vh', background: 'rgba(0,0,0,0.5)', paddingTop: '50px' }} className="has-text-centered columns is-vcentered">
         <div className="column is-centered has-text-centered is-halfheight intro-container pl-6 pr-6">
           <div className="mask" style={{ height: '37px' }}>
             <h1 className={`text-animation-up ${isLoaded ? 'show' : ''}`} style={{ fontSize: '1.5rem' }}>Indice ECHO</h1>

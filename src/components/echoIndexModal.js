@@ -52,7 +52,7 @@ export default function EchoIndexModal(props) {
   return (
     <div id="modal-fadeIn-fs" className={`modal modal-full-screen modal-fx-fadeIn ${activeModal ? 'is-active' : ''}`}>
       <div id="index-modal" className="modal-content modal-card modal-index">
-        <div style={{ marginTop: '40px' }} className="modal-nav is-hidden-tablet">
+        <div style={{ marginTop: '40px' }} className="modal-nav is-hidden-tablet pd-x">
           <SVG svgImage={EchoLogo} className="nav-logo" />
           <button
             type="button"
@@ -66,10 +66,10 @@ export default function EchoIndexModal(props) {
           </button>
         </div>
         <div style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={` ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`} />
-        <div className="columns mt-6 echo-container">
+        <div className="columns mt-6 echo-container ">
           <div style={active ? { animationDuration: '3s', opacity: '1' } : {}} className={`w-50per ${active ? 'animated animate__fadeInUp animate__delay-2s' : ''}`}>
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
-              <h2 className="modal-index-subtitle">ECHO INDEX</h2>
+              <h2 className="modal-index-subtitle pd-x">ECHO INDEX</h2>
               <div style={active ? { animationDuration: '2s' } : {}} className={` opacity-0 pl-0 ${active ? 'fade-in-delay-1 animate__fadeInUp' : ''}`}>
                 <div
                   style={{
@@ -78,7 +78,7 @@ export default function EchoIndexModal(props) {
                   }}
                 >
                   <ScrollAnimation animateIn="animate__fadeInUp" animateOnce="true" scrollableParentSelector="#index-modal">
-                    <div className="pr-4">
+                    <div className="pr-4 pd-x">
                       <b>El Proyecto Echo Index surge como una respuesta necesaria a las emergencias ambientales planetarias.</b>
                       <br />
                       <br />

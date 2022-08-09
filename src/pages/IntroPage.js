@@ -100,7 +100,6 @@ export default function IntroPage() {
           rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
           height={50}
           width={200}
-          isPaused={isPaused}
         />
       </div>
       <div className="show-loaded">

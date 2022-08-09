@@ -21,6 +21,7 @@ function ControlPanel(props) {
     setActiveValue(id);
     selectValue(id);
   };
+  console.log(activeValueId);
 
   return (
     <div className="control-panel">
