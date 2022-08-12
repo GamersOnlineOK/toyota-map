@@ -64,6 +64,12 @@ const valueOptions = [
     title: 'UV',
     description: 'La radiación ultravioleta (UV) es una forma de radiación electromagnética que proviene mayormente del Sol. La exposición sin cuidado a los mismos dañan las células de la piel, lo que puede terminar provocando diferentes tipos de enfermedades.',
   },
+  {
+    id: 'co2',
+    text: 'CO2',
+    title: 'Co2',
+    description: 'Es el principal gas de efecto invernadero de origen humano. Proviene del carbón, petróleo y gas natural, al mismo tiempo que nuestra respiración. Energía y calefacción, transporte, industria manufacturera y la construcción, son los principales generadores de este gas.',
+  },
 ];
 
 export default function MapPage() {
